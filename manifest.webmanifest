@@ -1,0 +1,9 @@
+{
+  "name": "Amimul Ehsan",
+  "short_name": "A. Ehsan",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#EEF0EC",
+  "theme_color": "#121513",
+  "icons": [{ "src": "assets/mark.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

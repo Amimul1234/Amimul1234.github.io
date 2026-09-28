@@ -1,1 +1,397 @@
-<!doctype html><meta charset="utf-8"><title>The Elite Force</title><p>Games by The Elite Force. Contact: amimulehsan56@gmail.com</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Amimul Ehsan · Backend &amp; field systems engineer</title>
+<meta name="description" content="Amimul Ehsan builds software that keeps working when the network doesn't: Go APIs, offline-first apps, payment rails and hardware at the door. Contract work at fixed prices, from Bangladesh.">
+<link rel="canonical" href="https://amimul1234.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://amimul1234.github.io/">
+<meta property="og:title" content="Amimul Ehsan · Backend & field systems engineer">
+<meta property="og:description" content="Software that keeps working when the network doesn't. Go, Flutter, offline-first, payment rails. Fixed-price contract work.">
+<meta property="og:image" content="https://amimul1234.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#EEF0EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121513" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-condensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark"){document.documentElement.dataset.theme=t;document.querySelector('meta[name="color-scheme"]').content=t}}catch(e){}</script>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1.5 9 5 1 8.5" fill="none" stroke="context-stroke" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="tick" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M5 1v8" stroke="context-stroke" stroke-width="1.4"/></marker>
+  </defs>
+</svg>
+
+<a class="skip" href="#work">Skip to the work</a>
+
+<div class="offline-strip" id="offline" role="status" hidden>
+  <span class="dot"></span>You are offline. This page still works — that is the whole job.
+</div>
+
+<div class="zones zones-top" aria-hidden="true"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span></div>
+
+<div class="sheet">
+  <header class="masthead">
+    <a class="wordmark" href="#top" aria-label="Amimul Ehsan, top of page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.25"/><path d="M12 1.75v5M12 17.25v5M1.75 12h5M17.25 12h5"/></svg>
+      <span>Amimul Ehsan</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work"><span class="n">01</span>Work</a>
+      <a href="#rules"><span class="n">02</span>Rules</a>
+      <a href="#hire"><span class="n">03</span>Hire</a>
+      <a href="#contact" class="nav-cta">Email me</a>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-label="Colour theme: system">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.25"/><path d="M12 3.75v16.5a8.25 8.25 0 0 0 0-16.5Z" class="fill"/></svg>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="hero-copy">
+        <p class="kicker mono">Backend &amp; field systems · Bangladesh · UTC+6</p>
+        <h1 id="hero-h">Software that keeps working when the network&nbsp;doesn’t.</h1>
+        <p class="lede">I design, write and ship whole systems on my own — Go APIs, offline-first apps, payment rails, RFID at the door — for shops, clinics and counters where the connection is a maybe. <strong>Available for contract work, at fixed prices.</strong></p>
+        <div class="cta-row">
+          <a class="btn btn-ink" href="#contact">Send me the problem</a>
+          <a class="btn btn-line" href="#hire">See prices</a>
+        </div>
+      </div>
+
+      <figure class="fig fig-hero" id="till">
+        <div class="fig-plate">
+          <svg class="till-svg" viewBox="0 0 580 330" role="img" aria-labelledby="till-t">
+            <title id="till-t">A counter till sending sales to a server. When the line is cut, sales wait on the device and send when it returns.</title>
+            <g class="dim">
+              <path d="M34 300h500" marker-start="url(#tick)" marker-end="url(#tick)"/>
+              <text x="284" y="318" text-anchor="middle">one binary · one deploy · one source of truth</text>
+            </g>
+
+            <g class="node" transform="translate(34 46)">
+              <rect width="150" height="206" rx="16"/>
+              <rect class="screen" x="12" y="22" width="126" height="160" rx="4"/>
+              <path d="M62 11h26" class="thin"/>
+              <text x="75" y="198" text-anchor="middle" class="cap">COUNTER T-01</text>
+              <g id="till-slips" transform="translate(20 34)"></g>
+            </g>
+
+            <g class="node" transform="translate(212 188)">
+              <rect width="112" height="64" rx="3"/>
+              <text x="12" y="22" class="cap">OUTBOX</text>
+              <text x="12" y="50" class="big" id="till-q">0</text>
+              <text x="100" y="50" text-anchor="end" class="cap" id="till-q-l">empty</text>
+            </g>
+            <path class="wire" d="M184 220h28"/>
+
+            <path class="link" id="till-link" d="M184 110 C 260 110, 330 110, 408 110"/>
+            <g class="cut" id="till-cut" transform="translate(296 110)">
+              <path d="M-9 -13 L-3 13M3 -13 L9 13"/>
+            </g>
+            <text x="296" y="94" text-anchor="middle" class="cap" id="till-link-l">LINE · UP</text>
+
+            <g class="node" transform="translate(408 58)">
+              <rect width="126" height="104" rx="3"/>
+              <text x="14" y="24" class="cap">API</text>
+              <text x="14" y="50" class="lbl">Go binary</text>
+              <text x="14" y="68" class="lbl sub">web app embedded</text>
+              <text x="14" y="90" class="cap" id="till-ok">SYNCED 12</text>
+            </g>
+
+            <path class="wire" d="M471 162v46" marker-end="url(#arw)"/>
+            <g class="node" transform="translate(422 212)">
+              <path d="M0 10c0-13 98-13 98 0v48c0 13-98 13-98 0Z"/>
+              <path d="M0 10c0 13 98 13 98 0" class="thin"/>
+              <text x="49" y="46" text-anchor="middle" class="lbl">MySQL</text>
+            </g>
+
+            <g class="note">
+              <path d="M436 170l12-8"/>
+              <text x="338" y="176">409s are shown,</text>
+              <text x="338" y="190">never swallowed</text>
+            </g>
+            <circle class="pkt" id="till-pkt" r="5" cx="-20" cy="-20"/>
+          </svg>
+        </div>
+        <div class="till-ctl">
+          <button class="btn btn-ink sm" id="till-sale" type="button">Ring up a sale</button>
+          <button class="btn btn-line sm" id="till-net" type="button" aria-pressed="false">Cut the line</button>
+          <ol class="till-log mono" id="till-log" aria-live="polite">
+            <li>Sale #0112 sent · 38 ms</li>
+          </ol>
+        </div>
+        <figcaption><span class="mono">Fig. 1</span> A till that keeps selling when the line drops. Cut it, ring up a few sales, then restore it. One of them will come back refused, because another counter sold the last box first. That refusal is shown to the cashier, not buried.</figcaption>
+      </figure>
+    </section>
+
+    <dl class="titleblock" aria-label="At a glance">
+      <div><dt>Rate</dt><dd class="mono">$45/hr · fixed bids</dd></div>
+      <div><dt>Primary stack</dt><dd class="mono">Go · Flutter · Vue</dd></div>
+      <div><dt>Runs on</dt><dd class="mono">AWS · Postgres</dd></div>
+      <div><dt>Payments shipped</dt><dd class="mono">bKash · live</dd></div>
+      <div><dt>Trained</dt><dd class="mono">CSE, BUET</dd></div>
+      <div><dt>Now in Bogura</dt><dd class="mono" id="clock">UTC+6</dd></div>
+    </dl>
+
+    <section class="sec" id="work" aria-labelledby="work-h">
+      <header class="sec-head">
+        <span class="sec-num mono">01</span>
+        <h2 id="work-h">Record of work</h2>
+        <p class="sec-note">Every system here I designed, wrote and released myself: schema, API, apps, deploy. The status next to each is the honest one. “Live” means it is serving people today, and nothing else.</p>
+      </header>
+
+      <article class="case" aria-labelledby="c1-h">
+        <div class="case-head">
+          <p class="case-no mono">Sheet 1.1</p>
+          <h3 id="c1-h">NEXA / Easy Print</h3>
+          <p class="case-kind">Pay-per-print kiosk</p>
+          <p class="status live mono"><span class="dot"></span>Live · real payments</p>
+        </div>
+        <div class="case-body">
+          <p class="case-sum">A shop printer, a customer with a phone, and no cashier. The customer scans a QR sticker on the machine, uploads a document and pays with bKash. A print agent on the shop PC releases the job.</p>
+          <figure class="fig">
+            <div class="fig-plate">
+              <svg class="dg" viewBox="0 0 620 210" role="img" aria-label="Phone scans a QR sticker, talks to one Go binary that also serves the web app; the binary stores jobs in RDS, takes payment from bKash, and a print agent on the shop PC pulls released jobs.">
+                <g class="node"><rect x="10" y="62" width="96" height="70" rx="12"/><text x="58" y="94" text-anchor="middle" class="lbl">Phone</text><text x="58" y="112" text-anchor="middle" class="cap">SCANS QR</text></g>
+                <path class="wire" d="M106 97h86" marker-end="url(#arw)"/>
+                <text x="149" y="88" text-anchor="middle" class="cap">HTTPS</text>
+                <g class="node"><rect x="194" y="44" width="170" height="106" rx="3"/><text x="210" y="70" class="cap">ONE BINARY</text><text x="210" y="96" class="lbl">Go API</text><rect x="210" y="108" width="138" height="28" rx="2" class="inset"/><text x="220" y="127" class="lbl sub">Vue PWA, go:embed</text></g>
+                <path class="wire" d="M364 70h84" marker-end="url(#arw)"/>
+                <g class="node"><rect x="450" y="44" width="160" height="50" rx="3"/><text x="466" y="74" class="lbl">bKash · production</text></g>
+                <path class="wire" d="M364 126h84" marker-end="url(#arw)"/>
+                <g class="node"><rect x="450" y="104" width="160" height="50" rx="3"/><text x="466" y="134" class="lbl">RDS · ap-south-1</text></g>
+                <path class="wire dash" d="M279 150v34h-80" marker-end="url(#arw)"/>
+                <g class="node"><rect x="10" y="160" width="186" height="42" rx="3"/><text x="24" y="186" class="lbl">Print agent · shop PC</text></g>
+                <g class="note"><path d="M58 62V34"/><text x="66" y="30">The sticker is permanent.</text><text x="66" y="44">So is the hostname it encodes.</text></g>
+              </svg>
+            </div>
+          </figure>
+          <dl class="decisions">
+            <div><dt>Decision</dt><dd>The web app is compiled into the Go binary and served by the same process, with a content hash stamped into the HTML at boot. One artifact deploys both; there is no cache-busting step to forget.</dd></div>
+            <div><dt>Decision</dt><dd>QR stickers are glued to machines, so the public URL they encode is treated as infrastructure that can never change. Recreate the environment carelessly and every sticker in the field dies.</dd></div>
+            <div><dt>Learned</dt><dd>Rotating the JWT secret signs out every customer, and an empty secrets file silently kills OTP SMS. Deploys now restore secrets from the live environment instead of regenerating them.</dd></div>
+          </dl>
+          <p class="stack mono">Go · Vue 3 PWA · Go print agent · Elastic Beanstalk · RDS · bKash</p>
+        </div>
+      </article>
+
+      <article class="case" aria-labelledby="c2-h">
+        <div class="case-head">
+          <p class="case-no mono">Sheet 1.2</p>
+          <h3 id="c2-h"><span lang="bn">আখড়া</span> / Akhra</h3>
+          <p class="case-kind">Multi-gym access &amp; billing</p>
+          <p class="status demo mono" data-ping="https://akhra.147.93.168.43.sslip.io/"><span class="dot"></span>Demo live</p>
+          <a class="case-link mono" href="https://akhra.147.93.168.43.sslip.io/" rel="noopener">Open the demo <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="case-body">
+          <p class="case-sum">A member taps an RFID card, the door decides, and the front desk sees the consequence: paid, 21 days over, or frozen. One install serves many gyms, and an operator console enrols and bills them.</p>
+          <figure class="fig">
+            <div class="fig-plate">
+              <svg class="dg" viewBox="0 0 620 210" role="img" aria-label="RFID reader at the door calls the Go API, which resolves the gym and uses that gym's own database; a control schema owns enrolment and billing.">
+                <g class="node"><rect x="10" y="40" width="112" height="66" rx="3"/><text x="24" y="66" class="cap">DOOR</text><text x="24" y="90" class="lbl">RFID reader</text></g>
+                <path class="wire" d="M122 73h78" marker-end="url(#arw)"/>
+                <text x="161" y="64" text-anchor="middle" class="cap">TAP</text>
+                <g class="node"><rect x="202" y="28" width="164" height="92" rx="3"/><text x="218" y="54" class="cap">API</text><text x="218" y="78" class="lbl">Go · Gin</text><text x="218" y="102" class="lbl sub">resolve(gym) → db</text></g>
+                <path class="wire" d="M366 58h58" marker-end="url(#arw)"/>
+                <path class="wire" d="M366 90h58" marker-end="url(#arw)"/>
+                <g class="node"><path d="M428 36c0-10 60-10 60 0v34c0 10-60 10-60 0Z"/><text x="458" y="62" text-anchor="middle" class="cap">GYM A</text></g>
+                <g class="node"><path d="M500 36c0-10 60-10 60 0v34c0 10-60 10-60 0Z"/><text x="530" y="62" text-anchor="middle" class="cap">GYM B</text></g>
+                <g class="node"><path d="M428 96c0-10 60-10 60 0v34c0 10-60 10-60 0Z"/><text x="458" y="122" text-anchor="middle" class="cap">GYM C</text></g>
+                <path class="wire dash" d="M284 120v42" marker-end="url(#arw)"/>
+                <g class="node"><rect x="202" y="164" width="164" height="38" rx="3"/><text x="218" y="188" class="lbl">Control schema</text></g>
+                <g class="node"><rect x="10" y="140" width="112" height="44" rx="3"/><text x="24" y="167" class="lbl">Front desk</text></g>
+                <path class="wire" d="M202 100h-40v62h-40" marker-end="url(#arw)"/>
+                <g class="note"><path d="M500 110h26"/><text x="500" y="152">No query anywhere</text><text x="500" y="166">names a tenant.</text></g>
+              </svg>
+            </div>
+          </figure>
+          <dl class="decisions">
+            <div><dt>Decision</dt><dd>A database per gym. Tenancy is a single resolver call at the edge, so no query in the codebase ever names a tenant, and a missing filter cannot leak one gym into another.</dd></div>
+            <div><dt>Decision</dt><dd>The app connects as a scoped database user whose blast radius is proven by a setup command on every run. It cannot read the other products that share the server.</dd></div>
+            <div><dt>Detail</dt><dd>The public demo reseeds itself every night at 03:00 Dhaka time, with members in known states, so every sales conversation starts from the same story.</dd></div>
+          </dl>
+          <p class="stack mono">Go · Gin · MySQL per tenant · Next 15 · RFID · Cloudflare Tunnel</p>
+        </div>
+      </article>
+
+      <article class="case" aria-labelledby="c3-h">
+        <div class="case-head">
+          <p class="case-no mono">Sheet 1.3</p>
+          <h3 id="c3-h"><span lang="bn">তিরিশ</span> / Tirish</h3>
+          <p class="case-kind">Credit book for poultry dealers</p>
+          <p class="status built mono"><span class="dot"></span>Built · e2e green</p>
+        </div>
+        <div class="case-body">
+          <p class="case-sum">Dealers finance farmers with feed and chicks on credit, then settle when the flock is sold. The ledger knows the feed curve, so it can say “3,000 birds cannot have eaten 256 bags by day 23” before the loss happens.</p>
+          <figure class="fig">
+            <div class="fig-plate">
+              <svg class="dg" viewBox="0 0 620 210" role="img" aria-label="One web app ships as a PWA and inside a Kotlin Android shell; writes go to an offline outbox and on to the Go API and RDS; every state is derived from the delivery date.">
+                <g class="node"><rect x="10" y="30" width="150" height="150" rx="3"/><text x="26" y="56" class="cap">ONE WEB APP</text><rect x="26" y="70" width="118" height="36" rx="2" class="inset"/><text x="38" y="93" class="lbl sub">PWA</text><rect x="26" y="116" width="118" height="46" rx="2" class="inset"/><text x="38" y="137" class="lbl sub">Kotlin WebView</text><text x="38" y="152" class="cap">ANDROID APK</text></g>
+                <path class="wire" d="M160 105h50" marker-end="url(#arw)"/>
+                <g class="node"><rect x="212" y="70" width="112" height="70" rx="3"/><text x="226" y="96" class="cap">OUTBOX</text><text x="226" y="122" class="lbl sub">queued writes</text></g>
+                <path class="wire" d="M324 105h56" marker-end="url(#arw)"/>
+                <g class="node"><rect x="382" y="60" width="122" height="90" rx="3"/><text x="396" y="86" class="cap">API</text><text x="396" y="110" class="lbl">Go · gin · sqlx</text><text x="396" y="130" class="lbl sub">migrations</text></g>
+                <path class="wire" d="M504 105h32" marker-end="url(#arw)"/>
+                <g class="node"><path d="M538 80c0-10 72-10 72 0v50c0 10-72 10-72 0Z"/><text x="574" y="112" text-anchor="middle" class="lbl">RDS</text></g>
+                <path class="wire redline" d="M382 128c-40 0-40 60-100 60h-120" marker-end="url(#arw)"/>
+                <text x="232" y="204" class="cap red">REFUSED WRITE · SHOWN, NOT DROPPED</text>
+                <g class="note"><path d="M504 70l14-26"/><text x="300" y="26">No status column. State is derived</text><text x="300" y="40">from the delivery date.</text></g>
+              </svg>
+            </div>
+          </figure>
+          <dl class="decisions">
+            <div><dt>Decision</dt><dd>No status fields. Every state a flock can be in is derived from its delivery date, so the ledger cannot drift into saying two things at once.</dd></div>
+            <div><dt>Learned</dt><dd>The first offline outbox filed server rejections where nothing read them and told the dealer everything was fine. Now a refused write fails loudly, on screen, until someone deals with it.</dd></div>
+            <div><dt>Decision</dt><dd>Android without a second codebase: a Kotlin WebView shell around the same web app, served from a secure origin so the service worker works, with window insets passed in as CSS variables.</dd></div>
+          </dl>
+          <p class="stack mono">Go · gin · sqlx · golang-migrate · Kotlin · RDS · 14 end-to-end suites · 12 client tests</p>
+        </div>
+      </article>
+
+      <div class="register" role="table" aria-label="More systems">
+        <div class="reg-row reg-head" role="row">
+          <span role="columnheader">System</span><span role="columnheader">What it does, and the hard part</span><span role="columnheader">Status</span>
+        </div>
+        <div class="reg-row" role="row">
+          <div class="reg-name" role="cell"><b>MediHisab</b><span>Pharmacy accounting</span></div>
+          <p role="cell">Stock, sales and credit for pharmacy counters, in Bengali. A Flutter app against a Go API running under systemd, with push notifications.</p>
+          <div class="reg-meta" role="cell"><span class="status live mono"><span class="dot"></span>API live</span><span class="status hold mono"><span class="dot"></span>Play closed test</span><span class="stack mono">Flutter · Go · MySQL</span></div>
+        </div>
+        <div class="reg-row" role="row">
+          <div class="reg-name" role="cell"><b><span lang="bn">নিরোগ</span> / Nirog</b><span>Hospital management</span></div>
+          <p role="cell">Multi-tenant system for 20–150 bed private hospitals. Tenancy by Postgres row-level security under a role that cannot bypass it. The test run crawls <b>962 screens across 12 staff roles</b> in a real browser.</p>
+          <div class="reg-meta" role="cell"><span class="status demo mono" data-ping="https://nirog.147.93.168.43.sslip.io/"><span class="dot"></span>Demo live</span><a class="case-link mono" href="https://nirog.147.93.168.43.sslip.io/" rel="noopener">Open <span aria-hidden="true">↗</span></a><span class="stack mono">Go · pgx · Postgres RLS · React</span></div>
+        </div>
+        <div class="reg-row" role="row">
+          <div class="reg-name" role="cell"><b>Doorstep</b><span>Laundry pickup &amp; back office</span></div>
+          <p role="cell">Customer app for booking pickups, plus a counter and owner back office: weighing, slot capacity, bag-tag scanning and over-quote tracking. Integration tests run against real MySQL.</p>
+          <div class="reg-meta" role="cell"><span class="status demo mono" data-ping="https://doorstep.147.93.168.43.sslip.io/"><span class="dot"></span>Demo live</span><a class="case-link mono" href="https://doorstep.147.93.168.43.sslip.io/" rel="noopener">Open <span aria-hidden="true">↗</span></a><span class="stack mono">Go · MySQL · PWA</span></div>
+        </div>
+        <div class="reg-row" role="row">
+          <div class="reg-name" role="cell"><b>Lobb</b><span>Offline file transfer</span></div>
+          <p role="cell">Phone to phone with no internet. A raw-TCP engine in Kotlin with 4&nbsp;MB CRC-checked chunks, two streams and resume, over a Wi-Fi Direct group joined by QR. <b>178&nbsp;MB/s on loopback</b>, every byte verified, including after a forced link drop.</p>
+          <div class="reg-meta" role="cell"><span class="status built mono"><span class="dot"></span>Engine verified</span><span class="stack mono">Kotlin · Flutter · Wi-Fi Direct</span></div>
+        </div>
+        <div class="reg-row" role="row">
+          <div class="reg-name" role="cell"><b>Pressmark</b><span>PDF toolkit</span></div>
+          <p role="cell">Thirty-three PDF tools — merge, split, compress, sign, convert — that run entirely on the device. Nothing is uploaded, and it installs as an app.</p>
+          <div class="reg-meta" role="cell"><span class="status built mono"><span class="dot"></span>Built</span><span class="stack mono">TypeScript · PWA</span></div>
+        </div>
+        <div class="reg-row" role="row">
+          <div class="reg-name" role="cell"><b><span lang="bn">চাকা</span> / Chaka</b><span>Garage rent book</span></div>
+          <p role="cell">The daily rent book for easy-bike and rickshaw garages: who drove which vehicle, what was paid, what is owed. A Go server and a Flutter app built for the garage floor.</p>
+          <div class="reg-meta" role="cell"><span class="status built mono"><span class="dot"></span>Built</span><span class="stack mono">Go · Flutter</span></div>
+        </div>
+        <div class="reg-row" role="row">
+          <div class="reg-name" role="cell"><b>Quilt Blocks</b><span>Puzzle game</span></div>
+          <p role="cell">An 8×8 block puzzle drawn as a kantha quilt. Consent-gated ads, capped so they never interrupt the first run. Published under The Elite Force.</p>
+          <div class="reg-meta" role="cell"><span class="status hold mono"><span class="dot"></span>Play closed test</span><a class="case-link mono" href="arcade/quilt-blocks/privacy.html">Privacy policy</a><span class="stack mono">Flutter · AdMob</span></div>
+        </div>
+      </div>
+
+      <p class="more mono">Older work — Java services, Kafka, gRPC, Keycloak — is on <a href="https://github.com/Amimul1234" rel="noopener">GitHub</a>. Client code stays private.</p>
+    </section>
+
+    <section class="sec" id="rules" aria-labelledby="rules-h">
+      <header class="sec-head">
+        <span class="sec-num mono">02</span>
+        <h2 id="rules-h">Rules I build by</h2>
+        <p class="sec-note">Not a skills list. Each one is something that broke in production, and the rule it left behind.</p>
+      </header>
+      <ol class="rules">
+        <li><span class="mono">R-01</span><h3>A refused write fails loudly.</h3><p>Offline-first means the outbox has to tell the truth. If the server says no, the person holding the phone sees it — not a log file.</p></li>
+        <li><span class="mono">R-02</span><h3>Tenancy lives in one place.</h3><p>A database or a row-level policy per customer, resolved once at the edge. Isolation you can prove with a command, not a code review.</p></li>
+        <li><span class="mono">R-03</span><h3>One binary, one deploy.</h3><p>The frontend ships inside the backend. Fewer moving parts means fewer 2 a.m. mismatches between what was built and what is running.</p></li>
+        <li><span class="mono">R-04</span><h3>Money paths get operations, not just code.</h3><p>Production bKash, OTP over SMS gateways, secrets that must survive redeploys. The failure is usually in the runbook, so I write the runbook.</p></li>
+        <li><span class="mono">R-05</span><h3>Tests pin the real thing.</h3><p>End-to-end over real HTTP against a real database, and crawls of every screen for every role. Mocks are for the parts I don’t own.</p></li>
+        <li><span class="mono">R-06</span><h3>State is derived, not stored twice.</h3><p>If a status can be computed from a date, it is. Then there is no second field to forget to update.</p></li>
+      </ol>
+    </section>
+
+    <section class="sec" id="hire" aria-labelledby="hire-h">
+      <header class="sec-head">
+        <span class="sec-num mono">03</span>
+        <h2 id="hire-h">How to hire me</h2>
+        <p class="sec-note">Fixed prices and fixed scope. No discovery-call funnel. Every engagement ends with something deployed and a written handover — the same handover documents I keep for my own systems.</p>
+      </header>
+      <div class="offers">
+        <article class="offer">
+          <p class="offer-tag mono">Three days</p>
+          <h3>System audit</h3>
+          <p class="price mono">$500</p>
+          <ul>
+            <li>I read the codebase and the deploy path</li>
+            <li>A written report: what will break, in order of severity</li>
+            <li>The top three fixes applied, not just described</li>
+            <li>Paid on delivery</li>
+          </ul>
+        </article>
+        <article class="offer lead">
+          <p class="offer-tag mono">Two weeks · most common</p>
+          <h3>Build sprint</h3>
+          <p class="price mono">$3,600</p>
+          <ul>
+            <li>One working system, shipped to your production</li>
+            <li>Internal tool, customer portal or an integration</li>
+            <li>Go or Flutter, on your infrastructure or mine</li>
+            <li>Tests, deploy script and handover doc included</li>
+            <li>Half on start, half on deploy</li>
+          </ul>
+        </article>
+        <article class="offer">
+          <p class="offer-tag mono">Monthly</p>
+          <h3>Retained engineer</h3>
+          <p class="price mono">$4,500<span>/mo</span></p>
+          <ul>
+            <li>About 100 hours on your backlog, in your standups</li>
+            <li>Overlap with all EU hours and US mornings</li>
+            <li>On call for the systems I build</li>
+            <li>One month minimum, cancel any time after</li>
+          </ul>
+        </article>
+      </div>
+      <dl class="terms">
+        <div><dt>The code</dt><dd>Is yours from the first commit, in your repository.</dd></div>
+        <div><dt>Payment</dt><dd>Payoneer or bank wire, in USD.</dd></div>
+        <div><dt>Working hours</dt><dd id="overlap">11:00–23:00 in Bangladesh (UTC+6).</dd></div>
+        <div><dt>The rate</dt><dd>$45 an hour underneath every price. No bundle discount to argue about.</dd></div>
+      </dl>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <div>
+        <h2 id="contact-h">Send me the problem, not a job spec.</h2>
+        <p>Describe what breaks or what you need built. I reply with a fixed price and a date — or I tell you it is not worth paying me for.</p>
+      </div>
+      <div class="addr">
+        <a class="addr-mail mono" href="mailto:amimulahsan7@gmail.com">amimulahsan7@gmail.com</a>
+        <div class="addr-row">
+          <button class="btn btn-ink sm" type="button" id="copy" data-copy="amimulahsan7@gmail.com">Copy address</button>
+          <a class="btn btn-line sm" href="https://github.com/Amimul1234" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <dl>
+      <div><dt>Drawn by</dt><dd>A. Ehsan</dd></div>
+      <div><dt>Location</dt><dd>Bogura, Bangladesh</dd></div>
+      <div><dt>Apps published as</dt><dd>The Elite Force</dd></div>
+      <div><dt>Rev.</dt><dd>28 Sep 2026</dd></div>
+      <div><dt>Sheet</dt><dd>1 of 1 · works offline</dd></div>
+    </dl>
+  </footer>
+</div>
+</body>
+</html>
