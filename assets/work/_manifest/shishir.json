@@ -1,0 +1,18 @@
+{
+ "slug": "shishir",
+ "name": "Shishir",
+ "name_bn": "শিশির",
+ "what": "A Bangla-first online skincare store for Bangladesh where shoppers pick a routine, order with cash on delivery, and get a photo of the actual box with batch and expiry before paying.",
+ "hard_part": "Built around proof instead of reviews: no ratings or fake stock counts, and the catalogue is generated from the supplier list by a build script rather than edited by hand. Bangla is the default with a Bangla calendar and six seasons on the home page, delivery zones for all 64 districts, and orders go to a small self-hosted order service with its own status pipeline.",
+ "stack": ["JavaScript", "HTML", "CSS", "Python", "Caddy"],
+ "status": "Live store",
+ "live_url": "https://shishirbd.shop",
+ "demo_note": null,
+ "facts": ["24 products listed on the live shop", "Delivery zones for all 64 districts: ৳70 / ৳90 / ৳115", "6-question skin quiz that builds a routine", "Bangla by default with an English toggle"],
+ "images": [
+  {"file": "shishir-1.webp", "kind": "phone", "caption": "Home: see the box before you pay, seasonal skincare"},
+  {"file": "shishir-2.webp", "kind": "phone", "caption": "Shop grid with filters, brands and taka prices"},
+  {"file": "shishir-3.webp", "kind": "phone", "caption": "Product page with size, unit price and benefit"}
+ ],
+ "industry": "retail"
+}

@@ -1,0 +1,39 @@
+{
+ "slug": "nexa",
+ "name": "easyprintBD (NEXA Print)",
+ "name_bn": null,
+ "what": "Pay-per-page self-service printing: a customer scans the QR sticker on a printer, uploads a file, pays with bKash and collects the pages, with no account needed.",
+ "hard_part": "MySQL is also the job queue (SELECT … FOR UPDATE SKIP LOCKED), so a job claim happens in the same transaction as its payment record. A printer that drops out mid-job goes to a reconciling state and the page counter decides what printed, so a jam at page 9 of 24 refunds only the unprinted pages.",
+ "stack": [
+  "Go",
+  "MySQL",
+  "AWS S3",
+  "Vue 3",
+  "PWA",
+  "Flutter",
+  "bKash",
+  "CUPS"
+ ],
+ "status": "Live · production bKash",
+ "live_url": "https://print.dcampusbd.com/p/",
+ "demo_note": "the print flow opens by scanning a printer's QR sticker; /p/ alone only explains that",
+ "facts": [
+  "Files go straight to S3 by presigned upload; the server counts pages itself",
+  "Live job progress over server-sent events",
+  "Unprinted jobs expire after 30 minutes with a full refund",
+  "Linux print agent pulls work over HTTPS and prints through CUPS"
+ ],
+ "images": [
+  {
+   "file": "nexa-1.webp",
+   "kind": "phone",
+   "caption": "Scan-to-print: file uploaded, page count and price, pay"
+  },
+  {
+   "file": "nexa-2.webp",
+   "kind": "phone",
+   "caption": "Live job status while the pages print"
+  }
+ ],
+ "industry": "fintech"
+}

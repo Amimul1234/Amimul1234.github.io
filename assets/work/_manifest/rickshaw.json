@@ -1,0 +1,17 @@
+{
+ "slug": "rickshaw",
+ "name": "Rickshaw Painter",
+ "name_bn": null,
+ "what": "A colour-shooter puzzle game where paint tins ride a rail around a Bangladeshi rickshaw-art panel and the player paints the picture square by square.",
+ "hard_part": "Levels are generated and proven solvable by code rather than hand-designed: a JavaScript engine with generator, solver and difficulty probe was ported bit-exact to Dart, and tests check engine parity and that every one of the first 60 levels is solvable with exact paint.",
+ "stack": ["Flutter", "Dart", "JavaScript (prototype)", "Google AdMob"],
+ "status": "Built, not published",
+ "live_url": null,
+ "demo_note": null,
+ "facts": ["9 hand-drawn panels, then endless generated rickshaw motifs", "Boards grow from 8×7 to 17×17, colours from 2 to 6", "Finished panels share as a 1080×1080 framed image", "No interstitials before panel 8"],
+ "images": [
+  {"file": "rickshaw-1.webp", "kind": "phone", "caption": "Painting the Bagh panel with tins on the rail"},
+  {"file": "rickshaw-2.webp", "kind": "phone", "caption": "Finished panel card framed as a rickshaw back-plate"}
+ ],
+ "industry": "games"
+}

@@ -1,0 +1,16 @@
+{
+ "slug": "kanchi", "name": "Kanchi", "name_bn": "কাঁচি",
+ "what": "Barbershops, beauty parlours and makeup artists in Bangladesh buy their tools and supplies from a single seller that stocks, checks and delivers everything itself.",
+ "hard_part": "Built as a clickable two-surface prototype (buyer app and warehouse ops panel) sharing live state through localStorage and BroadcastChannel, so a reorder, pack, courier hand-off and warranty claim can be walked end to end across two tabs before any backend exists.",
+ "stack": ["HTML", "CSS", "JavaScript", "Caddy"],
+ "status": "Live demo (prototype, no backend)",
+ "live_url": "https://kanchi.147.93.168.43.sslip.io/",
+ "demo_note": "open the buyer app and the warehouse panel from the start page; data stays in your browser",
+ "facts": ["143 browser checks (93 buyer app, 50 ops) passing locally and against the live site", "27 Daraz prices researched for the market study", "15 design-critique findings, all fixed", "Bulk tier pricing, two-tap reorder, cash on delivery or bKash"],
+ "images": [
+  {"file": "kanchi-1.webp", "kind": "phone", "caption": "Home with two-tap reorder and today's delivery"},
+  {"file": "kanchi-2.webp", "kind": "phone", "caption": "Clipper page with bulk price tiers and genuine-stock check"},
+  {"file": "kanchi-3.webp", "kind": "desktop", "caption": "Warehouse ops board: new, packed, with courier, delivered"}
+ ],
+ "industry": "retail"
+}

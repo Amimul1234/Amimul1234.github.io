@@ -1,4 +1,4 @@
-const CACHE = "ae-2026-09-28-1";
+const CACHE = "ae-2026-10-10-1";
 const CORE = [
   "./",
   "index.html",
@@ -15,7 +15,7 @@ const CORE = [
   "assets/fonts/ibm-plex-sans-condensed-500-latin.woff2",
   "assets/fonts/ibm-plex-sans-condensed-600-latin.woff2",
   "assets/fonts/ibm-plex-sans-condensed-700-latin.woff2",
-  "assets/fonts/noto-sans-bengali-600-subset.woff2",
+  "assets/fonts/noto-sans-bengali-var.woff2",
 ];
 
 self.addEventListener("install", (e) => {

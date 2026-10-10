@@ -1,0 +1,18 @@
+{
+ "slug": "quiltblocks",
+ "name": "Quilt Blocks",
+ "name_bn": null,
+ "what": "A calm, ad-supported Android block puzzle where players fit dyed-cloth patches onto an 8×8 board drawn like a hand-stitched kantha quilt.",
+ "hard_part": "Built on a shared Flutter game kit that handles AdMob consent (UMP), capped interstitials (never on launch, at least 90 s apart), opt-in rewarded ads and haptics, so each new game ships with the same ad rules.",
+ "stack": ["Flutter", "Dart", "Android", "Google AdMob"],
+ "status": "Play closed test",
+ "live_url": null,
+ "demo_note": null,
+ "facts": ["8×8 board, three pieces at a time, rows and columns clear together", "No timer, no energy, no lives", "Works fully offline and resumes mid-game", "Listed in 177 countries on the closed track"],
+ "images": [
+  {"file": "quiltblocks-1.webp", "kind": "phone", "caption": "A clear unstitches lines and chains a ×4 streak"},
+  {"file": "quiltblocks-2.webp", "kind": "phone", "caption": "Mid-game quilt board with three patches to place"},
+  {"file": "quiltblocks-3.webp", "kind": "phone", "caption": "New best score card at the end of a round"}
+ ],
+ "industry": "games"
+}

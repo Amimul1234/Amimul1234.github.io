@@ -1,0 +1,16 @@
+{
+ "slug": "medihisab", "name": "MediHisab", "name_bn": "মেডিহিসাব",
+ "what": "A Bangla pharmacy app for Bangladeshi shop owners: sales, stock by batch, expiry warnings and the customer credit book (বাকি) on an Android phone.",
+ "hard_part": "Expiry is tracked per stock batch: the server refuses a sale from an expired batch and warns 30 days ahead. Dues and payments are idempotent by operation id, and business days, invoice dates and ledger dates follow Dhaka time while the server stores UTC.",
+ "stack": ["Flutter", "Riverpod", "Java 21", "Spring Boot", "MySQL", "Flyway", "Firebase"],
+ "status": "Play closed test · API live · no paying shops yet",
+ "live_url": null,
+ "demo_note": null,
+ "facts": ["Catalogue search over real Bangladeshi medicines with company, generic, pack size and MRP", "Server refuses sales from expired batches"],
+ "images": [
+  {"file": "medihisab-1.webp", "kind": "phone", "caption": "Home: today's sales, low stock and expiry warning"},
+  {"file": "medihisab-2.webp", "kind": "phone", "caption": "Stock filtered to medicines expiring soon, by batch"},
+  {"file": "medihisab-3.webp", "kind": "phone", "caption": "Credit book: what each customer owes"}
+ ],
+ "industry": "health"
+}

@@ -1,0 +1,16 @@
+{
+ "slug": "upasthit", "name": "Upasthit", "name_bn": "উপস্থিত",
+ "what": "Bangladeshi small businesses use it so employees check in with one tap from inside the office area, while the owner sees everyone on a web board.",
+ "hard_part": "Location is read only at the moment of the punch, never all day, and each check-in carries evidence (inside the fence, accuracy, real location, selfie, server time). The demo join code builds a sandbox company whose fence re-centres on the reviewer's phone so a Play reviewer is never refused as outside.",
+ "stack": ["Go", "MySQL", "Flutter", "Caddy"],
+ "status": "Live · Play closed test in review",
+ "live_url": "https://upasthit.dcampusbd.com",
+ "demo_note": "Android app with demo join code 246810 creates a sandbox company",
+ "facts": ["147/147 production API checks passed on 9 Oct 2026", "No background location in 1.0.0: foreground location, camera and notifications only", "Daily database and selfie backups kept 14 days", "Sandbox demo companies auto-deleted after 7 days"],
+ "images": [
+  {"file": "upasthit-1.webp", "kind": "phone", "caption": "Today screen after a selfie check-in inside the office fence"},
+  {"file": "upasthit-2.webp", "kind": "phone", "caption": "Check-in evidence: fence, accuracy, real location, selfie, server time"},
+  {"file": "upasthit-3.webp", "kind": "phone", "caption": "Outside the fence: 800 metres away, request instead"}
+ ],
+ "industry": "services"
+}

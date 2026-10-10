@@ -1,0 +1,18 @@
+{
+ "slug": "swad",
+ "name": "Swader Map",
+ "name_bn": "স্বাদের ম্যাপ",
+ "what": "A viral Bangla web toy where people tick the famous food of each of Bangladesh's 64 districts they have eaten and share their own X/64 map card.",
+ "hard_part": "Each district's food was cross-checked across five source families, with low-confidence districts flagged for correction. Ads run from a separate origin inside a sandboxed iframe so third-party scripts never touch the main page, and nothing a visitor ticks or types leaves the browser.",
+ "stack": ["JavaScript", "HTML", "CSS", "SVG map (GeoJSON)", "Caddy"],
+ "status": "Live",
+ "live_url": "https://swad.147.93.168.43.sslip.io",
+ "demo_note": "Open and tap foods; no sign-in",
+ "facts": ["64 districts, 8 divisions", "Shareable map card image generated in the browser", "Map data: BBS / OCHA via geoBoundaries", "Format credit: Sabbir Hossien Robin's bd-maps"],
+ "images": [
+  {"file": "swad-1.webp", "kind": "phone", "caption": "Personal map card: 27 of 64 districts eaten"},
+  {"file": "swad-2.webp", "kind": "phone", "caption": "Landing: how many districts' famous foods have you eaten"},
+  {"file": "swad-3.webp", "kind": "phone", "caption": "Food checklist grouped by division with ticked dishes"}
+ ],
+ "industry": "consumer"
+}

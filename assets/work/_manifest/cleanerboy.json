@@ -1,0 +1,38 @@
+{
+ "slug": "cleanerboy",
+ "name": "Cleaner Boy",
+ "name_bn": null,
+ "what": "A Dhaka laundry's own pickup app: customers book from their phone, the shop weighs the bag, the customer approves the real price, and only then is it washed; the shop runs everything from a back office.",
+ "hard_part": "The approval gate lives in the order aggregate, so nothing can enter washing until the customer approves the measured price, even from the back office. Money and weight are integers (poisha and grams), and a bag tag is bound to one customer under a row lock so two scans in the same second cannot both win.",
+ "stack": [
+  "Go",
+  "Gin",
+  "MySQL",
+  "Next.js",
+  "React",
+  "TypeScript",
+  "PWA"
+ ],
+ "status": "Live · real shop",
+ "live_url": "https://cleanerboy.online",
+ "demo_note": null,
+ "facts": [
+  "100 endpoint checks run against the deployed server",
+  "Bangla and English customer app",
+  "QR bag tags printed from the back office",
+  "Pickup calendar kept 14 days ahead automatically"
+ ],
+ "images": [
+  {
+   "file": "cleanerboy-1.webp",
+   "kind": "phone",
+   "caption": "Customer home: leave the bag at the door"
+  },
+  {
+   "file": "cleanerboy-2.webp",
+   "kind": "phone",
+   "caption": "Booking: choose a service, priced per kg or piece"
+  }
+ ],
+ "industry": "services"
+}

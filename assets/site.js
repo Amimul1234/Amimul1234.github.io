@@ -67,8 +67,9 @@
     setTimeout(() => (copyBtn.textContent = "Copy address"), 2200);
   });
 
-  $$("[data-ping]").forEach((el) => {
-    if (!navigator.onLine || !window.fetch) return;
+  const pingOne = (el) => {
+    if (!navigator.onLine || !window.fetch || el.dataset.pinged) return;
+    el.dataset.pinged = "1";
     const ctl = new AbortController();
     const timer = setTimeout(() => ctl.abort(), 7000);
     const t0 = performance.now();
@@ -83,7 +84,151 @@
       })
       .catch(() => {})
       .finally(() => clearTimeout(timer));
+  };
+  if ("IntersectionObserver" in window) {
+    const pio = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { pingOne(en.target); pio.unobserve(en.target); } });
+    }, { rootMargin: "200px 0px" });
+    $$("[data-ping]").forEach((el) => pio.observe(el));
+  } else {
+    $$("[data-ping]").forEach(pingOne);
+  }
+
+  const work = (() => { try { return JSON.parse($("#work-data").textContent); } catch (e) { return []; } })();
+  const bySlug = Object.fromEntries(work.map((w) => [w.slug, w]));
+  const escH = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+
+  const det = $("#det");
+  let lastOpener = null;
+  const frameHTML = (im, eager) => '<div class="frame ' + (im.k === "phone" ? "phone" : "desk") + '"><img src="assets/work/' + escH(im.f) + '" alt="' + escH(im.c) + '"' + (eager ? "" : ' loading="lazy"') + "></div>";
+  const showShot = (w, i) => {
+    const im = w.images[i];
+    $("#det-main").innerHTML = im ? frameHTML(im, true) : '<p class="mono item-kind">Screens on request</p>';
+    $("#det-cap").textContent = im ? im.c : "";
+    $$("#det-thumbs button").forEach((b, k) => b.setAttribute("aria-current", String(k === i)));
+  };
+  const openDet = (slug, opener) => {
+    const w = bySlug[slug];
+    if (!w || !det) return;
+    lastOpener = opener || null;
+    $("#det-kind").textContent = w.kind;
+    $("#det-h").innerHTML = escH(w.name) + (w.bn ? ' <span lang="bn">' + escH(w.bn) + "</span>" : "");
+    $("#det-status").innerHTML = '<span class="status ' + w.tone + ' mono"><span class="dot"></span>' + escH(w.status) + "</span>";
+    $("#det-what").textContent = w.what;
+    $("#det-hard").textContent = w.hard || "";
+    $("#det-facts").innerHTML = w.facts.map((f) => "<li>" + escH(f) + "</li>").join("");
+    $("#det-facts-h").hidden = !w.facts.length;
+    $("#det-stack").textContent = w.stack.join(" · ");
+    $("#det-acts").innerHTML = (w.url ? '<a class="btn btn-ink sm" href="' + escH(w.url) + '" target="_blank" rel="noopener">' + escH(w.cta) + ' <span aria-hidden="true">↗</span></a>' : "") +
+      '<a class="btn btn-line sm" href="#contact" data-close>Build me one like this</a>' +
+      (w.note ? '<p class="mono item-kind" style="flex-basis:100%">' + escH(w.note) + "</p>" : "");
+    $("#det-thumbs").innerHTML = w.images.length > 1 ? w.images.map((im, k) => '<button type="button" data-shot="' + k + '" aria-label="Screen ' + (k + 1) + ": " + escH(im.c) + '"><img src="assets/work/' + escH(im.f) + '" alt="" loading="lazy"></button>').join("") : "";
+    det.dataset.slug = slug;
+    showShot(w, 0);
+    det.showModal();
+    $("#det-x").focus();
+  };
+  const canExit = () => window.CSS && CSS.supports("overlay", "auto");
+  const closeDet = async () => {
+    if (!det.open) return;
+    if (!reduced && !canExit()) {
+      det.setAttribute("data-closing", "");
+      const an = det.getAnimations({ subtree: true });
+      if (an.length) await Promise.race([Promise.allSettled(an.map((a) => a.finished)), new Promise((r) => setTimeout(r, 400))]);
+      det.removeAttribute("data-closing");
+    }
+    det.close();
+  };
+  if (det) {
+    det.addEventListener("close", () => { if (lastOpener && document.contains(lastOpener)) lastOpener.focus({ preventScroll: true }); });
+    det.addEventListener("cancel", (e) => { e.preventDefault(); closeDet(); });
+    $("#det-x").addEventListener("click", closeDet);
+    det.addEventListener("click", (e) => {
+      const shot = e.target.closest("[data-shot]");
+      if (shot) { showShot(bySlug[det.dataset.slug], +shot.dataset.shot); return; }
+      if (e.target.closest("[data-close]")) { closeDet(); return; }
+      if (e.target === det && !("closedBy" in HTMLDialogElement.prototype)) {
+        const r = det.getBoundingClientRect();
+        if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeDet();
+      }
+    });
+  }
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-open]");
+    if (!b || b.closest("dialog")) return;
+    e.preventDefault();
+    openDet(b.dataset.open, b);
   });
+
+  const grid = $("#cat-grid");
+  if (grid) {
+    const items = $$(".item", grid);
+    const chips = $$("[data-filter]");
+    const liveBtn = $("[data-live]");
+    const countEl = $("#cat-count");
+    let group = "all", liveOnly = false;
+    const apply = () => {
+      let shown = 0, open = 0;
+      items.forEach((it) => {
+        const ok = (group === "all" || it.dataset.group === group) && (!liveOnly || it.hasAttribute("data-openable"));
+        it.hidden = !ok;
+        if (ok) { shown++; if (it.hasAttribute("data-openable")) open++; it.classList.add("in"); }
+      });
+      if (countEl) countEl.textContent = shown + (shown === 1 ? " system" : " systems") + " · " + open + " you can open right now";
+    };
+    const run = () => (!reduced && document.startViewTransition ? document.startViewTransition(apply) : apply());
+    chips.forEach((c) => c.addEventListener("click", () => {
+      group = c.dataset.filter;
+      chips.forEach((x) => x.setAttribute("aria-pressed", String(x === c)));
+      run();
+    }));
+    if (liveBtn) liveBtn.addEventListener("click", () => {
+      liveOnly = !liveOnly;
+      liveBtn.setAttribute("aria-pressed", String(liveOnly));
+      run();
+    });
+  }
+
+  const ex = $("#exhibit");
+  if (ex) {
+    const sets = $$(".ex-set", ex);
+    const dots = $$("[data-go]", ex);
+    const nameEl = $("#ex-name");
+    const openBtn = $("#ex-open");
+    const pauseBtn = $("#ex-pause");
+    let cur = 0, timer = 0, paused = reduced, hover = false;
+    const show = (i) => {
+      cur = (i + sets.length) % sets.length;
+      const s = sets[cur];
+      $$("img[loading]", s).forEach((im) => im.removeAttribute("loading"));
+      const nx = sets[(cur + 1) % sets.length];
+      if (nx) $$("img[loading]", nx).forEach((im) => im.removeAttribute("loading"));
+      sets.forEach((x, k) => x.classList.toggle("on", k === cur));
+      dots.forEach((d, k) => d.setAttribute("aria-current", String(k === cur)));
+      nameEl.innerHTML = escH(s.dataset.name) + (s.dataset.bn ? ' <span lang="bn">' + escH(s.dataset.bn) + "</span>" : "") + "<small>" + escH(s.dataset.kind) + "</small>";
+      openBtn.dataset.open = s.dataset.slug;
+    };
+    const arm = () => {
+      clearInterval(timer);
+      if (!paused && !hover && !document.hidden) timer = setInterval(() => show(cur + 1), 5200);
+    };
+    const setPaused = (p) => {
+      paused = p;
+      pauseBtn.setAttribute("aria-pressed", String(p));
+      pauseBtn.setAttribute("aria-label", p ? "Play the slideshow" : "Pause the slideshow");
+      pauseBtn.innerHTML = p ? '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>' : '<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.4" height="12" rx="1"/><rect x="9.6" y="2" width="3.4" height="12" rx="1"/></svg>';
+      arm();
+    };
+    dots.forEach((d) => d.addEventListener("click", () => { show(+d.dataset.go); arm(); }));
+    pauseBtn.addEventListener("click", () => setPaused(!paused));
+    ex.addEventListener("pointerenter", () => { hover = true; arm(); });
+    ex.addEventListener("pointerleave", () => { hover = false; arm(); });
+    ex.addEventListener("focusin", () => { hover = true; arm(); });
+    ex.addEventListener("focusout", () => { hover = false; arm(); });
+    document.addEventListener("visibilitychange", arm);
+    $(".ex-stage", ex).addEventListener("click", () => openDet(sets[cur].dataset.slug, openBtn));
+    setPaused(paused);
+  }
 
   const svg = $(".till-svg");
   const slipsG = $("#till-slips");
@@ -231,7 +376,7 @@
   if (!navigator.onLine) onNet();
 
   if (!reduced && "IntersectionObserver" in window) {
-    const targets = $$(".case, .reg-row:not(.reg-head), .rules li, .offer, .terms div");
+    const targets = $$(".case, .item, .steps li, .rules li, .offer, .terms div");
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => {
         if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }

@@ -1,0 +1,18 @@
+{
+ "slug": "pressmark",
+ "name": "Pressmark",
+ "name_bn": null,
+ "what": "An installable web app that gives anyone all 33 iLovePDF-style tools (merge, compress, OCR, convert, sign, redact, compare and more) with every file processed on their own device.",
+ "hard_part": "Everything that normally needs a server runs in the browser: pdf.js and pdf-lib for page work, qpdf compiled to WebAssembly for repair, tesseract for OCR with an invisible text layer, and Office-to-PDF by painting the document in the DOM. A service worker precaches about 8 MB so the tools work offline.",
+ "stack": ["TypeScript", "Preact", "Vite", "pdf.js", "pdf-lib", "WebAssembly (qpdf)", "Tesseract.js", "Workbox PWA"],
+ "status": "Built, not deployed",
+ "live_url": null,
+ "demo_note": null,
+ "facts": ["33 PDF tools, no uploads", "Each tool run against a real fixture file, not a hello-world PDF", "Compress: 5.7 MB to 628 KB on a photo PDF, text untouched", "OCR in 16 languages", "Repair recovers 8 of 8 pages on both damaged fixtures"],
+ "images": [
+  {"file": "pressmark-1.webp", "kind": "desktop", "caption": "Home: drop any file, 33 tools grouped by job"},
+  {"file": "pressmark-2.webp", "kind": "desktop", "caption": "Compare PDF highlighting changed words between two contract versions"},
+  {"file": "pressmark-3.webp", "kind": "desktop", "caption": "Organize PDF: pages from two files in one grid"}
+ ],
+ "industry": "tools"
+}

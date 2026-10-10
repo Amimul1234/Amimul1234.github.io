@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>Amimul Ehsan · Backend &amp; field systems engineer</title>
-<meta name="description" content="Amimul Ehsan builds software that keeps working when the network doesn't: Go APIs, offline-first apps, payment rails and hardware at the door. Contract work at fixed prices, from Bangladesh.">
+<title>Amimul Ehsan · Product engineer, Bangladesh</title>
+<meta name="description" content="Amimul Ehsan researches, designs, builds and deploys whole products alone: restaurant POS, hospital management, RFID gym access, bKash kiosks. Open the live demos. Fixed-price contract work from Bangladesh.">
 <link rel="canonical" href="https://amimul1234.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://amimul1234.github.io/">
-<meta property="og:title" content="Amimul Ehsan · Backend & field systems engineer">
-<meta property="og:description" content="Software that keeps working when the network doesn't. Go, Flutter, offline-first, payment rails. Fixed-price contract work.">
+<meta property="og:title" content="Amimul Ehsan · I hand over running systems, not mockups">
+<meta property="og:description" content="Whole products, built and deployed by one engineer. Most of them open in your browser right now. Go, Flutter, MySQL, Postgres, bKash.">
 <meta property="og:image" content="https://amimul1234.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#EEF0EC" media="(prefers-color-scheme: light)">
@@ -48,8 +48,8 @@
     </a>
     <nav class="nav" aria-label="Sections">
       <a href="#work"><span class="n">01</span>Work</a>
-      <a href="#rules"><span class="n">02</span>Rules</a>
-      <a href="#hire"><span class="n">03</span>Hire</a>
+      <a href="#process"><span class="n">02</span>Process</a>
+      <a href="#hire"><span class="n">04</span>Hire</a>
       <a href="#contact" class="nav-cta">Email me</a>
     </nav>
     <button class="theme" id="theme" type="button" aria-label="Colour theme: system">
@@ -60,84 +60,33 @@
   <main id="top">
     <section class="hero" aria-labelledby="hero-h">
       <div class="hero-copy">
-        <p class="kicker mono">Backend &amp; field systems · Bangladesh · UTC+6</p>
-        <h1 id="hero-h">Software that keeps working when the network&nbsp;doesn’t.</h1>
-        <p class="lede">I design, write and ship whole systems on my own — Go APIs, offline-first apps, payment rails, RFID at the door — for shops, clinics and counters where the connection is a maybe. <strong>Available for contract work, at fixed prices.</strong></p>
+        <p class="kicker mono">Product engineer · Bangladesh · UTC+6</p>
+        <h1 id="hero-h">I hand over running systems, <em>not&nbsp;mockups.</em></h1>
+        <p class="lede">Restaurant tills, hospital wards, gym doors with RFID, print kiosks that take bKash. I research the trade, design it, write every layer — Go APIs, Flutter and web apps, the database, the server — and deploy it myself. <strong><b data-n="systems">24</b> products so far, and <b data-n="live">13</b> of them you can open in your browser right now.</strong></p>
         <div class="cta-row">
-          <a class="btn btn-ink" href="#contact">Send me the problem</a>
-          <a class="btn btn-line" href="#hire">See prices</a>
+          <a class="btn btn-ink" href="#index">Open the work</a>
+          <a class="btn btn-line" href="#contact">Send me the problem</a>
         </div>
+        <p class="proof mono"><span><span class="dot"></span>bKash in production</span><span>Go · Flutter · MySQL · Postgres</span><span>Bangla-first UIs</span><span>Works offline</span></p>
       </div>
-
-      <figure class="fig fig-hero" id="till">
-        <div class="fig-plate">
-          <svg class="till-svg" viewBox="0 0 580 330" role="img" aria-labelledby="till-t">
-            <title id="till-t">A counter till sending sales to a server. When the line is cut, sales wait on the device and send when it returns.</title>
-            <g class="dim">
-              <path d="M34 300h500" marker-start="url(#tick)" marker-end="url(#tick)"/>
-              <text x="284" y="318" text-anchor="middle">one binary · one deploy · one source of truth</text>
-            </g>
-
-            <g class="node" transform="translate(34 46)">
-              <rect width="150" height="206" rx="16"/>
-              <rect class="screen" x="12" y="22" width="126" height="160" rx="4"/>
-              <path d="M62 11h26" class="thin"/>
-              <text x="75" y="198" text-anchor="middle" class="cap">COUNTER T-01</text>
-              <g id="till-slips" transform="translate(20 34)"></g>
-            </g>
-
-            <g class="node" transform="translate(212 188)">
-              <rect width="112" height="64" rx="3"/>
-              <text x="12" y="22" class="cap">OUTBOX</text>
-              <text x="12" y="50" class="big" id="till-q">0</text>
-              <text x="100" y="50" text-anchor="end" class="cap" id="till-q-l">empty</text>
-            </g>
-            <path class="wire" d="M184 220h28"/>
-
-            <path class="link" id="till-link" d="M184 110 C 260 110, 330 110, 408 110"/>
-            <g class="cut" id="till-cut" transform="translate(296 110)">
-              <path d="M-9 -13 L-3 13M3 -13 L9 13"/>
-            </g>
-            <text x="296" y="94" text-anchor="middle" class="cap" id="till-link-l">LINE · UP</text>
-
-            <g class="node" transform="translate(408 58)">
-              <rect width="126" height="104" rx="3"/>
-              <text x="14" y="24" class="cap">API</text>
-              <text x="14" y="50" class="lbl">Go binary</text>
-              <text x="14" y="68" class="lbl sub">web app embedded</text>
-              <text x="14" y="90" class="cap" id="till-ok">SYNCED 12</text>
-            </g>
-
-            <path class="wire" d="M471 162v46" marker-end="url(#arw)"/>
-            <g class="node" transform="translate(422 212)">
-              <path d="M0 10c0-13 98-13 98 0v48c0 13-98 13-98 0Z"/>
-              <path d="M0 10c0 13 98 13 98 0" class="thin"/>
-              <text x="49" y="46" text-anchor="middle" class="lbl">MySQL</text>
-            </g>
-
-            <g class="note">
-              <path d="M436 170l12-8"/>
-              <text x="338" y="176">409s are shown,</text>
-              <text x="338" y="190">never swallowed</text>
-            </g>
-            <circle class="pkt" id="till-pkt" r="5" cx="-20" cy="-20"/>
-          </svg>
+      <figure class="exhibit" id="exhibit">
+        <div class="fig-plate ex-plate">
+          <div class="ex-stage" aria-live="off"><div class="ex-set on" data-i="0" data-name="Mezban" data-bn="মেজবান" data-kind="Restaurant management" data-url="https://demo.147.93.168.43.sslip.io" data-slug="mezban"><div class="frame desk f-desk"><img src="assets/work/mezban-1.webp" alt="Owner reports: takings, VAT, bills and sales by hour" width="1440" height="900" fetchpriority="high"></div><div class="frame phone f-ph1"><img src="assets/work/mezban-3.webp" alt="Waiter taking a table's order on a phone" width="780" height="1688" fetchpriority="high"></div></div><div class="ex-set" data-i="1" data-name="Nirog" data-bn="নিরোগ" data-kind="Hospital management" data-url="https://nirog.147.93.168.43.sslip.io" data-slug="nirog"><div class="frame desk f-desk"><img src="assets/work/nirog-1.webp" alt="Reception's OPD queue with the doctor's live now-serving board" width="1440" height="900" loading="lazy" decoding="async"></div><div class="frame phone f-ph1"><img src="assets/work/nirog-3.webp" alt="Patient's phone shows their serial, who is in, and wait time" width="780" height="1688" loading="lazy" decoding="async"></div></div><div class="ex-set phones" data-i="2" data-name="Upasthit" data-bn="উপস্থিত" data-kind="Geo-fenced attendance" data-url="https://upasthit.dcampusbd.com" data-slug="upasthit"><div class="frame phone f-ph0"><img src="assets/work/upasthit-1.webp" alt="Today screen after a selfie check-in inside the office fence" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone f-ph1"><img src="assets/work/upasthit-2.webp" alt="Check-in evidence: fence, accuracy, real location, selfie, server time" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone f-ph2"><img src="assets/work/upasthit-3.webp" alt="Outside the fence: 800 metres away, request instead" width="780" height="1688" loading="lazy" decoding="async"></div></div><div class="ex-set" data-i="3" data-name="Akhra" data-bn="আখড়া" data-kind="Gym access &amp; billing" data-url="https://akhra.147.93.168.43.sslip.io" data-slug="akhra"><div class="frame desk f-desk"><img src="assets/work/akhra-1.webp" alt="Today: who is inside, takings, dues and who to call" width="1440" height="900" loading="lazy" decoding="async"></div><div class="frame phone f-ph1"><img src="assets/work/akhra-2.webp" alt="Door log: every card tap with time and decision" width="780" height="1688" loading="lazy" decoding="async"></div></div><div class="ex-set phones" data-i="4" data-name="Ghotok" data-bn="ঘটক" data-kind="Tuition agency back office" data-url="https://ghotok.147.93.168.43.sslip.io" data-slug="ghotok"><div class="frame phone f-ph0"><img src="assets/work/ghotok-1.webp" alt="Today screen: money owed, late fees and next actions" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone f-ph1"><img src="assets/work/ghotok-2.webp" alt="Tuition post with applicants ranked by fit" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone f-ph2"><img src="assets/work/ghotok-3.webp" alt="Media-fee ledger: received, refunded, owed and late" width="780" height="1688" loading="lazy" decoding="async"></div></div><div class="ex-set" data-i="5" data-name="Kanchi" data-bn="কাঁচি" data-kind="Salon supply store" data-url="https://kanchi.147.93.168.43.sslip.io/" data-slug="kanchi"><div class="frame desk f-desk"><img src="assets/work/kanchi-3.webp" alt="Warehouse ops board: new, packed, with courier, delivered" width="1440" height="900" loading="lazy" decoding="async"></div><div class="frame phone f-ph1"><img src="assets/work/kanchi-1.webp" alt="Home with two-tap reorder and today's delivery" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone f-ph2"><img src="assets/work/kanchi-2.webp" alt="Clipper page with bulk price tiers and genuine-stock check" width="780" height="1688" loading="lazy" decoding="async"></div></div><div class="ex-set phones" data-i="6" data-name="Cleaner Boy" data-bn="" data-kind="Laundry pickup &amp; back office" data-url="https://cleanerboy.online" data-slug="cleanerboy"><div class="frame phone f-ph0"><img src="assets/work/cleanerboy-1.webp" alt="Customer home: leave the bag at the door" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone f-ph1"><img src="assets/work/cleanerboy-2.webp" alt="Booking: choose a service, priced per kg or piece" width="780" height="1688" loading="lazy" decoding="async"></div></div><div class="ex-set" data-i="7" data-name="Prangon" data-bn="প্রাঙ্গণ" data-kind="School website builder" data-url="https://prangon.dcampusbd.com" data-slug="prangon"><div class="frame desk f-desk"><img src="assets/work/prangon-1.webp" alt="Kindergarten demo site rendered from the Khata template" width="1440" height="900" loading="lazy" decoding="async"></div><div class="frame phone f-ph1"><img src="assets/work/prangon-2.webp" alt="School app home: subscription, site link and DSHE checklist" width="780" height="1688" loading="lazy" decoding="async"></div></div></div>
         </div>
-        <div class="till-ctl">
-          <button class="btn btn-ink sm" id="till-sale" type="button">Ring up a sale</button>
-          <button class="btn btn-line sm" id="till-net" type="button" aria-pressed="false">Cut the line</button>
-          <ol class="till-log mono" id="till-log" aria-live="polite">
-            <li>Sale #0112 sent · 38 ms</li>
-          </ol>
+        <div class="ex-bar">
+          <p class="ex-name" id="ex-name">Mezban <span lang="bn">মেজবান</span><small>Restaurant management</small></p>
+          <div class="ex-dots" role="group" aria-label="Choose a product"><button type="button" data-go="0" aria-label="Mezban" aria-current="true"></button><button type="button" data-go="1" aria-label="Nirog" aria-current="false"></button><button type="button" data-go="2" aria-label="Upasthit" aria-current="false"></button><button type="button" data-go="3" aria-label="Akhra" aria-current="false"></button><button type="button" data-go="4" aria-label="Ghotok" aria-current="false"></button><button type="button" data-go="5" aria-label="Kanchi" aria-current="false"></button><button type="button" data-go="6" aria-label="Cleaner Boy" aria-current="false"></button><button type="button" data-go="7" aria-label="Prangon" aria-current="false"></button></div>
+          <button class="ex-pause" type="button" id="ex-pause" aria-label="Pause the slideshow" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.4" height="12" rx="1"/><rect x="9.6" y="2" width="3.4" height="12" rx="1"/></svg></button>
+          <a class="btn btn-line sm" id="ex-open" href="#index" data-open="mezban">See details</a>
         </div>
-        <figcaption><span class="mono">Fig. 1</span> A till that keeps selling when the line drops. Cut it, ring up a few sales, then restore it. One of them will come back refused, because another counter sold the last box first. That refusal is shown to the cashier, not buried.</figcaption>
+        <figcaption><span class="mono">Fig. 1</span> Real screens, captured from the running products. Every one was designed, built and deployed by one person.</figcaption>
       </figure>
     </section>
 
     <dl class="titleblock" aria-label="At a glance">
+      <div><dt>Products shipped</dt><dd class="mono"><b data-n="systems">24</b> · solo</dd></div>
+      <div><dt>Open right now</dt><dd class="mono"><b data-n="live">13</b> live demos</dd></div>
       <div><dt>Rate</dt><dd class="mono">$45/hr · fixed bids</dd></div>
-      <div><dt>Primary stack</dt><dd class="mono">Go · Flutter · Vue</dd></div>
-      <div><dt>Runs on</dt><dd class="mono">AWS · Postgres</dd></div>
       <div><dt>Payments shipped</dt><dd class="mono">bKash · live</dd></div>
       <div><dt>Trained</dt><dd class="mono">CSE, BUET</dd></div>
       <div><dt>Now in Bogura</dt><dd class="mono" id="clock">UTC+6</dd></div>
@@ -147,15 +96,265 @@
       <header class="sec-head">
         <span class="sec-num mono">01</span>
         <h2 id="work-h">Record of work</h2>
-        <p class="sec-note">Every system here I designed, wrote and released myself: schema, API, apps, deploy. The status next to each is the honest one. “Live” means it is serving people today, and nothing else.</p>
+        <p class="sec-note">Every system here I designed, wrote and released myself: schema, API, apps, deploy. The status next to each is the honest one. “Live” means it is serving people today; “demo” means you can open it and press every button with sample data.</p>
       </header>
+      <div class="cat" id="index">
+        <div class="cat-tools" role="toolbar" aria-label="Filter the index">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">Everything <span class="mono">24</span></button><button class="chip" type="button" data-filter="services" aria-pressed="false">Service businesses <span class="mono">6</span></button><button class="chip" type="button" data-filter="shops" aria-pressed="false">Shops &amp; trade <span class="mono">6</span></button><button class="chip" type="button" data-filter="health" aria-pressed="false">Health <span class="mono">2</span></button><button class="chip" type="button" data-filter="edu" aria-pressed="false">Schools &amp; teams <span class="mono">3</span></button><button class="chip" type="button" data-filter="sales" aria-pressed="false">Sales &amp; AI <span class="mono">2</span></button><button class="chip" type="button" data-filter="apps" aria-pressed="false">Apps &amp; games <span class="mono">5</span></button>
+          <button class="chip live-only" type="button" data-live aria-pressed="false">Open-able now <span class="mono">13</span></button>
+          <p class="cat-count mono" id="cat-count" aria-live="polite">24 systems · 13 you can open right now</p>
+        </div>
+        <div class="cat-grid" id="cat-grid">
+        <article class="item" data-openable data-group="services" data-tone="demo" data-slug="mezban" style="view-transition-name:it-mezban">
+          <div class="item-plate" aria-hidden="false"><div class="frame desk "><img src="assets/work/mezban-1.webp" alt="Owner reports: takings, VAT, bills and sales by hour" width="1440" height="900" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.01</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Restaurant management</span><span class="status demo mono" data-ping="https://demo.147.93.168.43.sslip.io"><span class="dot"></span>Live demo</span></div>
+            <h3><button type="button" data-open="mezban">Mezban</button><span lang="bn">মেজবান</span></h3>
+            <p>Restaurant staff run the whole floor from phones and tablets: waiters take orders, the kitchen screen gets tickets, the cashier bills with VAT and the owner reads the day's numbers.</p>
+            <div class="item-foot"><a class="go" href="https://demo.147.93.168.43.sslip.io" rel="noopener" target="_blank">Open the demo <span aria-hidden="true">↗</span></a><span class="stack mono">Go · MySQL</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="health" data-tone="demo" data-slug="nirog" style="view-transition-name:it-nirog">
+          <div class="item-plate" aria-hidden="false"><div class="frame desk "><img src="assets/work/nirog-1.webp" alt="Reception's OPD queue with the doctor's live now-serving board" width="1440" height="900" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.02</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Hospital management</span><span class="status demo mono" data-ping="https://nirog.147.93.168.43.sslip.io"><span class="dot"></span>Live demo</span></div>
+            <h3><button type="button" data-open="nirog">Nirog</button><span lang="bn">নিরোগ</span></h3>
+            <p>Hospital software for Bangladeshi private hospitals and clinics: reception, doctors, nurses, lab, billing and pharmacy work in one staff workspace, and patients follow their live serial on their phone.</p>
+            <div class="item-foot"><a class="go" href="https://nirog.147.93.168.43.sslip.io" rel="noopener" target="_blank">Open the demo <span aria-hidden="true">↗</span></a><span class="stack mono">Go · PostgreSQL</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="services" data-tone="demo" data-slug="akhra" style="view-transition-name:it-akhra">
+          <div class="item-plate" aria-hidden="false"><div class="frame desk "><img src="assets/work/akhra-1.webp" alt="Today: who is inside, takings, dues and who to call" width="1440" height="900" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.03</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Gym access &amp; billing</span><span class="status demo mono" data-ping="https://akhra.147.93.168.43.sslip.io"><span class="dot"></span>Live demo</span></div>
+            <h3><button type="button" data-open="akhra">Akhra</button><span lang="bn">আখড়া</span></h3>
+            <p>Gym management for Bangladesh: members tap an RFID card at the door, the door decides, and the front desk sees who is inside, who owes money and who is drifting away.</p>
+            <div class="item-foot"><a class="go" href="https://akhra.147.93.168.43.sslip.io" rel="noopener" target="_blank">Open the demo <span aria-hidden="true">↗</span></a><span class="stack mono">Go · Gin</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="services" data-tone="live" data-slug="cleanerboy" style="view-transition-name:it-cleanerboy">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/cleanerboy-1.webp" alt="Customer home: leave the bag at the door" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/cleanerboy-2.webp" alt="Booking: choose a service, priced per kg or piece" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.04</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Laundry pickup &amp; back office</span><span class="status live mono" data-ping="https://cleanerboy.online"><span class="dot"></span>Live</span></div>
+            <h3><button type="button" data-open="cleanerboy">Cleaner Boy</button></h3>
+            <p>A Dhaka laundry's own pickup app: customers book from their phone, the shop weighs the bag, the customer approves the real price, and only then is it washed; the shop runs everything from a back office.</p>
+            <div class="item-foot"><a class="go" href="https://cleanerboy.online" rel="noopener" target="_blank">Visit the shop <span aria-hidden="true">↗</span></a><span class="stack mono">Go · Gin</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="services" data-tone="demo" data-slug="nexa" style="view-transition-name:it-nexa">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/nexa-1.webp" alt="Scan-to-print: file uploaded, page count and price, pay" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/nexa-2.webp" alt="Live job status while the pages print" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.05</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Pay-per-print kiosk</span><span class="status demo mono" data-ping="https://print.dcampusbd.com/p/"><span class="dot"></span>Live</span></div>
+            <h3><button type="button" data-open="nexa">easyprintBD (NEXA Print)</button></h3>
+            <p>Pay-per-page self-service printing: a customer scans the QR sticker on a printer, uploads a file, pays with bKash and collects the pages, with no account needed.</p>
+            <div class="item-foot"><a class="go" href="https://print.dcampusbd.com/p/" rel="noopener" target="_blank">Open the kiosk app <span aria-hidden="true">↗</span></a><span class="stack mono">Go · MySQL</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="edu" data-tone="demo" data-slug="upasthit" style="view-transition-name:it-upasthit">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/upasthit-1.webp" alt="Today screen after a selfie check-in inside the office fence" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/upasthit-2.webp" alt="Check-in evidence: fence, accuracy, real location, selfie, server time" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.06</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Geo-fenced attendance</span><span class="status demo mono" data-ping="https://upasthit.dcampusbd.com"><span class="dot"></span>Live</span></div>
+            <h3><button type="button" data-open="upasthit">Upasthit</button><span lang="bn">উপস্থিত</span></h3>
+            <p>Bangladeshi small businesses use it so employees check in with one tap from inside the office area, while the owner sees everyone on a web board.</p>
+            <div class="item-foot"><a class="go" href="https://upasthit.dcampusbd.com" rel="noopener" target="_blank">Open it <span aria-hidden="true">↗</span></a><span class="stack mono">Go · MySQL</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="edu" data-tone="demo" data-slug="prangon" style="view-transition-name:it-prangon">
+          <div class="item-plate" aria-hidden="false"><div class="frame desk "><img src="assets/work/prangon-1.webp" alt="Kindergarten demo site rendered from the Khata template" width="1440" height="900" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.07</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">School website builder</span><span class="status demo mono" data-ping="https://prangon.dcampusbd.com"><span class="dot"></span>Live</span></div>
+            <h3><button type="button" data-open="prangon">Prangon</button><span lang="bn">প্রাঙ্গণ</span></h3>
+            <p>Bangladeshi schools build and publish their own website from an Android app, in the government (DSHE) format or a photo-led template, then pay yearly or monthly by bKash, Nagad or bank.</p>
+            <div class="item-foot"><a class="go" href="https://prangon.dcampusbd.com" rel="noopener" target="_blank">Open it <span aria-hidden="true">↗</span></a><span class="stack mono">Go · MySQL</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="edu" data-tone="demo" data-slug="ghotok" style="view-transition-name:it-ghotok">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/ghotok-1.webp" alt="Today screen: money owed, late fees and next actions" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/ghotok-2.webp" alt="Tuition post with applicants ranked by fit" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.08</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Tuition agency back office</span><span class="status demo mono" data-ping="https://ghotok.147.93.168.43.sslip.io"><span class="dot"></span>Live demo</span></div>
+            <h3><button type="button" data-open="ghotok">Ghotok</button><span lang="bn">ঘটক</span></h3>
+            <p>Bangladeshi home-tutor agencies (tuition media) use it to run every guardian request, applicant, demo class and media fee from first call to paid.</p>
+            <div class="item-foot"><a class="go" href="https://ghotok.147.93.168.43.sslip.io" rel="noopener" target="_blank">Open the demo <span aria-hidden="true">↗</span></a><span class="stack mono">Go · SQLite</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="shops" data-tone="demo" data-slug="malkhana" style="view-transition-name:it-malkhana">
+          <div class="item-plate" aria-hidden="false"><div class="frame desk "><img src="assets/work/malkhana-1.webp" alt="Owner's day book: today's sales, locked profit and seven-day bars" width="1440" height="900" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.09</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Hardware shop POS</span><span class="status demo mono" data-ping="https://malkhana.147.93.168.43.sslip.io"><span class="dot"></span>Live demo</span></div>
+            <h3><button type="button" data-open="malkhana">Malkhana</button><span lang="bn">মালখানা</span></h3>
+            <p>Hardware and building-material shops sell cement, rod and pipe across shop and godowns, while the owner sees cost, profit and a theft-catching audit that staff cannot.</p>
+            <div class="item-foot"><a class="go" href="https://malkhana.147.93.168.43.sslip.io" rel="noopener" target="_blank">Open the demo <span aria-hidden="true">↗</span></a><span class="stack mono">Go · SQLite</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="shops" data-tone="demo" data-slug="fita" style="view-transition-name:it-fita">
+          <div class="item-plate" aria-hidden="false"><div class="frame desk "><img src="assets/work/fita-1.webp" alt="Owner home: today's sales, dues, late orders and karigor load" width="1440" height="900" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.10</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Tailor shop system</span><span class="status demo mono" data-ping="https://fita.147.93.168.43.sslip.io"><span class="dot"></span>Live demo</span></div>
+            <h3><button type="button" data-open="fita">Fita</button><span lang="bn">ফিতা</span></h3>
+            <p>Tailor shops track orders, measurements, karigor work, payments and dues from the counter, the owner's phone and the workshop.</p>
+            <div class="item-foot"><a class="go" href="https://fita.147.93.168.43.sslip.io" rel="noopener" target="_blank">Open the demo <span aria-hidden="true">↗</span></a><span class="stack mono">Go · SQLite</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="shops" data-tone="demo" data-slug="kanchi" style="view-transition-name:it-kanchi">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/kanchi-1.webp" alt="Home with two-tap reorder and today's delivery" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/kanchi-2.webp" alt="Clipper page with bulk price tiers and genuine-stock check" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.11</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Salon supply store</span><span class="status demo mono" data-ping="https://kanchi.147.93.168.43.sslip.io/"><span class="dot"></span>Live demo</span></div>
+            <h3><button type="button" data-open="kanchi">Kanchi</button><span lang="bn">কাঁচি</span></h3>
+            <p>Barbershops, beauty parlours and makeup artists in Bangladesh buy their tools and supplies from a single seller that stocks, checks and delivers everything itself.</p>
+            <div class="item-foot"><a class="go" href="https://kanchi.147.93.168.43.sslip.io/" rel="noopener" target="_blank">Open the demo <span aria-hidden="true">↗</span></a><span class="stack mono">HTML · CSS</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="health" data-tone="hold" data-slug="medihisab" style="view-transition-name:it-medihisab">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/medihisab-1.webp" alt="Home: today's sales, low stock and expiry warning" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/medihisab-2.webp" alt="Stock filtered to medicines expiring soon, by batch" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.12</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Pharmacy accounting</span><span class="status hold mono"><span class="dot"></span>Play closed test</span></div>
+            <h3><button type="button" data-open="medihisab">MediHisab</button><span lang="bn">মেডিহিসাব</span></h3>
+            <p>A Bangla pharmacy app for Bangladeshi shop owners: sales, stock by batch, expiry warnings and the customer credit book (বাকি) on an Android phone.</p>
+            <div class="item-foot"><span class="stack mono">Flutter · Riverpod · Java 21</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="shops" data-tone="demo" data-slug="shishir" style="view-transition-name:it-shishir">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/shishir-1.webp" alt="Home: see the box before you pay, seasonal skincare" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/shishir-2.webp" alt="Shop grid with filters, brands and taka prices" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.13</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Skincare e-commerce</span><span class="status demo mono" data-ping="https://shishirbd.shop"><span class="dot"></span>Live</span></div>
+            <h3><button type="button" data-open="shishir">Shishir</button><span lang="bn">শিশির</span></h3>
+            <p>A Bangla-first online skincare store for Bangladesh where shoppers pick a routine, order with cash on delivery, and get a photo of the actual box with batch and expiry before paying.</p>
+            <div class="item-foot"><a class="go" href="https://shishirbd.shop" rel="noopener" target="_blank">Visit the store <span aria-hidden="true">↗</span></a><span class="stack mono">JavaScript · HTML</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="sales" data-tone="demo" data-slug="daak" style="view-transition-name:it-daak">
+          <div class="item-plate" aria-hidden="false"><div class="frame desk "><img src="assets/work/daak-1.webp" alt="Public demo: pick a business and take its call" width="1440" height="900" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.14</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">AI sales caller</span><span class="status demo mono" data-ping="https://daak.147.93.168.43.sslip.io/demo"><span class="dot"></span>Live demo</span></div>
+            <h3><button type="button" data-open="daak">Daak</button><span lang="bn">ডাক</span></h3>
+            <p>An AI phone caller that rings Bangladeshi leads for a business and talks with them in natural colloquial Bangla to sell, book demos, confirm orders, remind dues or run surveys, then saves the outcome, transcript, recording and a quality review.</p>
+            <div class="item-foot"><a class="go" href="https://daak.147.93.168.43.sslip.io/demo" rel="noopener" target="_blank">Open the demo <span aria-hidden="true">↗</span></a><span class="stack mono">Python · Gemini Live</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="sales" data-tone="live" data-slug="salesdesk" style="view-transition-name:it-salesdesk">
+          <div class="item-plate" aria-hidden="false"><div class="no-shot"><div>Client system · screens stay private</div></div></div>
+          <span class="item-no mono" aria-hidden="true">2.15</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Tele-sales CRM</span><span class="status live mono"><span class="dot"></span>Live</span></div>
+            <h3><button type="button" data-open="salesdesk">Sales Desk</button></h3>
+            <p>A tele-sales CRM built for a real Bangladeshi smart-board company, replacing a shared Google Sheet: agents work a daily call queue, log call results in one tap, and the manager sees team and ad-campaign performance.</p>
+            <div class="item-foot"><span class="stack mono">Go · MySQL · JavaScript</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="services" data-tone="built" data-slug="safarkhata" style="view-transition-name:it-safarkhata">
+          <div class="item-plate" aria-hidden="false"><div class="frame desk "><img src="assets/work/safarkhata-1.webp" alt="Today: collections, overdue installments and upcoming departures" width="1440" height="900" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.16</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Travel agency system</span><span class="status built mono"><span class="dot"></span>Built, not deployed</span></div>
+            <h3><button type="button" data-open="safarkhata">Safarkhata</button><span lang="bn">সফরখাতা</span></h3>
+            <p>Travel and Umrah agencies manage leads, bookings, installments, passports, visas and supplier dues, and each customer gets a status link for what they paid and owe.</p>
+            <div class="item-foot"><span class="stack mono">Go · MySQL · Vanilla JS</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="shops" data-tone="built" data-slug="halkhata" style="view-transition-name:it-halkhata">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/halkhata-1.webp" alt="Credit book: total owed and who to ask today" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/halkhata-2.webp" alt="Daily accounts: sales, profit, credit and month summary" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.17</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Shop ledger app</span><span class="status built mono" data-ping="https://halkhata.147.93.168.43.sslip.io/"><span class="dot"></span>APK download</span></div>
+            <h3><button type="button" data-open="halkhata">Halkhata</button><span lang="bn">হালখাতা</span></h3>
+            <p>A Bangla Android app for small grocery shop owners to run sales, customer credit (baki), stock and daily accounts entirely on their own phone.</p>
+            <div class="item-foot"><a class="go" href="https://halkhata.147.93.168.43.sslip.io/" rel="noopener" target="_blank">Download page <span aria-hidden="true">↗</span></a><span class="stack mono">Flutter · Dart</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="shops" data-tone="built" data-slug="tirish" style="view-transition-name:it-tirish">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/tirish-1.webp" alt="Dealer home: money out with farmers, batches past sale date" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/tirish-2.webp" alt="Farmer batch sheet with feed, medicine and cash entries" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.18</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Dealer credit book</span><span class="status built mono"><span class="dot"></span>Built, not deployed</span></div>
+            <h3><button type="button" data-open="tirish">Tirish</button><span lang="bn">তিরিশ</span></h3>
+            <p>Poultry feed dealers use it as their credit book, tracking what each farmer owes per batch of birds until the batch is sold.</p>
+            <div class="item-foot"><span class="stack mono">Go · MySQL · JavaScript PWA</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="services" data-tone="built" data-slug="chaka" style="view-transition-name:it-chaka">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/chaka-1.webp" alt="Tonight's rent collection with one-tap amounts per vehicle" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/chaka-2.webp" alt="Driver page: arrears built day by day" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.19</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Garage rent book</span><span class="status built mono"><span class="dot"></span>Built, not deployed</span></div>
+            <h3><button type="button" data-open="chaka">Chaka</button><span lang="bn">চাকা</span></h3>
+            <p>Garages that rent easy-bikes, battery rickshaws and autos to drivers by the day use it to collect the daily rent and see every driver's arrears.</p>
+            <div class="item-foot"><span class="stack mono">Go · SQLite · Flutter</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="apps" data-tone="built" data-slug="lobb" style="view-transition-name:it-lobb">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/lobb-2.webp" alt="Clickable prototype: home with send, receive and history" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/lobb-3.webp" alt="Clickable prototype: receiver shows a one-time QR code" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.20</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Offline file transfer</span><span class="status built mono"><span class="dot"></span>Built</span></div>
+            <h3><button type="button" data-open="lobb">Lobb</button></h3>
+            <p>An Android app that sends photos, videos and files directly from one phone to another over Wi-Fi Direct, with no internet, account or server.</p>
+            <div class="item-foot"><span class="stack mono">Kotlin · Flutter · Dart</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="apps" data-tone="built" data-slug="pressmark" style="view-transition-name:it-pressmark">
+          <div class="item-plate" aria-hidden="false"><div class="frame desk "><img src="assets/work/pressmark-1.webp" alt="Home: drop any file, 33 tools grouped by job" width="1440" height="900" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.21</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">PDF toolkit</span><span class="status built mono"><span class="dot"></span>Built, not deployed</span></div>
+            <h3><button type="button" data-open="pressmark">Pressmark</button></h3>
+            <p>An installable web app that gives anyone all 33 iLovePDF-style tools (merge, compress, OCR, convert, sign, redact, compare and more) with every file processed on their own device.</p>
+            <div class="item-foot"><span class="stack mono">TypeScript · Preact · Vite</span></div>
+          </div>
+        </article>
+        <article class="item" data-openable data-group="apps" data-tone="live" data-slug="swad" style="view-transition-name:it-swad">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/swad-1.webp" alt="Personal map card: 27 of 64 districts eaten" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/swad-2.webp" alt="Landing: how many districts' famous foods have you eaten" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.22</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Viral food map</span><span class="status live mono" data-ping="https://swad.147.93.168.43.sslip.io"><span class="dot"></span>Live</span></div>
+            <h3><button type="button" data-open="swad">Swader Map</button><span lang="bn">স্বাদের ম্যাপ</span></h3>
+            <p>A viral Bangla web toy where people tick the famous food of each of Bangladesh's 64 districts they have eaten and share their own X/64 map card.</p>
+            <div class="item-foot"><a class="go" href="https://swad.147.93.168.43.sslip.io" rel="noopener" target="_blank">Play the map <span aria-hidden="true">↗</span></a><span class="stack mono">JavaScript · HTML</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="apps" data-tone="hold" data-slug="quiltblocks" style="view-transition-name:it-quiltblocks">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/quiltblocks-1.webp" alt="A clear unstitches lines and chains a ×4 streak" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/quiltblocks-2.webp" alt="Mid-game quilt board with three patches to place" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.23</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Puzzle game</span><span class="status hold mono"><span class="dot"></span>Play closed test</span></div>
+            <h3><button type="button" data-open="quiltblocks">Quilt Blocks</button></h3>
+            <p>A calm, ad-supported Android block puzzle where players fit dyed-cloth patches onto an 8×8 board drawn like a hand-stitched kantha quilt.</p>
+            <div class="item-foot"><span class="stack mono">Flutter · Dart · Android</span></div>
+          </div>
+        </article>
+        <article class="item" data-group="apps" data-tone="built" data-slug="rickshaw" style="view-transition-name:it-rickshaw">
+          <div class="item-plate two" aria-hidden="false"><div class="frame phone "><img src="assets/work/rickshaw-1.webp" alt="Painting the Bagh panel with tins on the rail" width="780" height="1688" loading="lazy" decoding="async"></div><div class="frame phone "><img src="assets/work/rickshaw-2.webp" alt="Finished panel card framed as a rickshaw back-plate" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <span class="item-no mono" aria-hidden="true">2.24</span>
+          <div class="item-body">
+            <div class="item-top"><span class="item-kind mono">Arcade game</span><span class="status built mono"><span class="dot"></span>Built, not published</span></div>
+            <h3><button type="button" data-open="rickshaw">Rickshaw Painter</button></h3>
+            <p>A colour-shooter puzzle game where paint tins ride a rail around a Bangladeshi rickshaw-art panel and the player paints the picture square by square.</p>
+            <div class="item-foot"><span class="stack mono">Flutter · Dart · JavaScript (prototype)</span></div>
+          </div>
+        </article>
+        </div>
+      </div>
+      <div class="sub-head"><span class="mono sec-num">01.b</span><h3>Three, drawn in detail</h3></div>
 
       <article class="case" aria-labelledby="c1-h">
         <div class="case-head">
           <p class="case-no mono">Sheet 1.1</p>
           <h3 id="c1-h">NEXA / Easy Print</h3>
           <p class="case-kind">Pay-per-print kiosk</p>
-          <p class="status live mono"><span class="dot"></span>Live · real payments</p>
+          <p class="status demo mono"><span class="dot"></span>Live · production bKash</p>
         </div>
         <div class="case-body">
           <p class="case-sum">A shop printer, a customer with a phone, and no cashier. The customer scans a QR sticker on the machine, uploads a document and pays with bKash. A print agent on the shop PC releases the job.</p>
@@ -258,56 +457,97 @@
         </div>
       </article>
 
-      <div class="register" role="table" aria-label="More systems">
-        <div class="reg-row reg-head" role="row">
-          <span role="columnheader">System</span><span role="columnheader">What it does, and the hard part</span><span role="columnheader">Status</span>
-        </div>
-        <div class="reg-row" role="row">
-          <div class="reg-name" role="cell"><b>MediHisab</b><span>Pharmacy accounting</span></div>
-          <p role="cell">Stock, sales and credit for pharmacy counters, in Bengali. A Flutter app against a Go API running under systemd, with push notifications.</p>
-          <div class="reg-meta" role="cell"><span class="status live mono"><span class="dot"></span>API live</span><span class="status hold mono"><span class="dot"></span>Play closed test</span><span class="stack mono">Flutter · Go · MySQL</span></div>
-        </div>
-        <div class="reg-row" role="row">
-          <div class="reg-name" role="cell"><b><span lang="bn">নিরোগ</span> / Nirog</b><span>Hospital management</span></div>
-          <p role="cell">Multi-tenant system for 20–150 bed private hospitals. Tenancy by Postgres row-level security under a role that cannot bypass it. The test run crawls <b>962 screens across 12 staff roles</b> in a real browser.</p>
-          <div class="reg-meta" role="cell"><span class="status demo mono" data-ping="https://nirog.147.93.168.43.sslip.io/"><span class="dot"></span>Demo live</span><a class="case-link mono" href="https://nirog.147.93.168.43.sslip.io/" rel="noopener">Open <span aria-hidden="true">↗</span></a><span class="stack mono">Go · pgx · Postgres RLS · React</span></div>
-        </div>
-        <div class="reg-row" role="row">
-          <div class="reg-name" role="cell"><b>Doorstep</b><span>Laundry pickup &amp; back office</span></div>
-          <p role="cell">Customer app for booking pickups, plus a counter and owner back office: weighing, slot capacity, bag-tag scanning and over-quote tracking. Integration tests run against real MySQL.</p>
-          <div class="reg-meta" role="cell"><span class="status demo mono" data-ping="https://doorstep.147.93.168.43.sslip.io/"><span class="dot"></span>Demo live</span><a class="case-link mono" href="https://doorstep.147.93.168.43.sslip.io/" rel="noopener">Open <span aria-hidden="true">↗</span></a><span class="stack mono">Go · MySQL · PWA</span></div>
-        </div>
-        <div class="reg-row" role="row">
-          <div class="reg-name" role="cell"><b>Lobb</b><span>Offline file transfer</span></div>
-          <p role="cell">Phone to phone with no internet. A raw-TCP engine in Kotlin with 4&nbsp;MB CRC-checked chunks, two streams and resume, over a Wi-Fi Direct group joined by QR. <b>178&nbsp;MB/s on loopback</b>, every byte verified, including after a forced link drop.</p>
-          <div class="reg-meta" role="cell"><span class="status built mono"><span class="dot"></span>Engine verified</span><span class="stack mono">Kotlin · Flutter · Wi-Fi Direct</span></div>
-        </div>
-        <div class="reg-row" role="row">
-          <div class="reg-name" role="cell"><b>Pressmark</b><span>PDF toolkit</span></div>
-          <p role="cell">Thirty-three PDF tools — merge, split, compress, sign, convert — that run entirely on the device. Nothing is uploaded, and it installs as an app.</p>
-          <div class="reg-meta" role="cell"><span class="status built mono"><span class="dot"></span>Built</span><span class="stack mono">TypeScript · PWA</span></div>
-        </div>
-        <div class="reg-row" role="row">
-          <div class="reg-name" role="cell"><b><span lang="bn">চাকা</span> / Chaka</b><span>Garage rent book</span></div>
-          <p role="cell">The daily rent book for easy-bike and rickshaw garages: who drove which vehicle, what was paid, what is owed. A Go server and a Flutter app built for the garage floor.</p>
-          <div class="reg-meta" role="cell"><span class="status built mono"><span class="dot"></span>Built</span><span class="stack mono">Go · Flutter</span></div>
-        </div>
-        <div class="reg-row" role="row">
-          <div class="reg-name" role="cell"><b>Quilt Blocks</b><span>Puzzle game</span></div>
-          <p role="cell">An 8×8 block puzzle drawn as a kantha quilt. Consent-gated ads, capped so they never interrupt the first run. Published under The Elite Force.</p>
-          <div class="reg-meta" role="cell"><span class="status hold mono"><span class="dot"></span>Play closed test</span><a class="case-link mono" href="arcade/quilt-blocks/privacy.html">Privacy policy</a><span class="stack mono">Flutter · AdMob</span></div>
-        </div>
-      </div>
-
       <p class="more mono">Older work — Java services, Kafka, gRPC, Keycloak — is on <a href="https://github.com/Amimul1234" rel="noopener">GitHub</a>. Client code stays private.</p>
+    </section>
+
+    <section class="sec" id="process" aria-labelledby="process-h">
+      <header class="sec-head">
+        <span class="sec-num mono">02</span>
+        <h2 id="process-h">How a build goes</h2>
+        <p class="sec-note">The eight steps behind the recent builds. You get the documents from each one, not just the code. <b lang="bn">ঘটক</b> went through all eight — research to a deployed Go server and Flutter app — on 9 October 2026, in one day.</p>
+      </header>
+      <ol class="steps">
+        <li><span class="mono">STEP 01</span><h3>Research the trade</h3><p>Who pays, what they use now, what it costs them. For a school site builder that meant reading the education directorate’s orders and turning their <b>11 required items</b> into a checklist.</p></li>
+        <li><span class="mono">STEP 02</span><h3>Write the PRD</h3><p>Goals, non-goals, roles, every screen and its states, and what “done” means. You approve this before a line of code.</p></li>
+        <li><span class="mono">STEP 03</span><h3>Clickable prototype</h3><p>A prototype you can tap through on your own phone, with realistic data, before the backend exists. Cheap to change here, expensive later.</p></li>
+        <li><span class="mono">STEP 04</span><h3>Design critique</h3><p>An independent review of the prototype for usability, accessibility and contrast. The findings are fixed, not filed.</p></li>
+        <li><span class="mono">STEP 05</span><h3>Build every layer</h3><p>Go API, MySQL or Postgres, Flutter or a web app that works offline. Tenancy, roles and audit trails go in from day one.</p></li>
+        <li><span class="mono">STEP 06</span><h3>Test the real thing</h3><p>End-to-end against a real database and a real browser: <b>20 simultaneous payment confirmations, exactly one ledger row</b> on the travel system, <b>968 screens across 13 roles</b> crawled on the hospital system.</p></li>
+        <li><span class="mono">STEP 07</span><h3>Deploy it</h3><p>On your server or mine: TLS, backups, a service that restarts itself, and a demo that reseeds every night so it always tells the same story.</p></li>
+        <li><span class="mono">STEP 08</span><h3>Hand it over</h3><p>A written handover, a runbook, and for several products a narrated video manual in Bangla for the staff who will actually use it.</p></li>
+      </ol>
     </section>
 
     <section class="sec" id="rules" aria-labelledby="rules-h">
       <header class="sec-head">
-        <span class="sec-num mono">02</span>
+        <span class="sec-num mono">03</span>
         <h2 id="rules-h">Rules I build by</h2>
-        <p class="sec-note">Not a skills list. Each one is something that broke in production, and the rule it left behind.</p>
+        <p class="sec-note">Not a skills list. Each one is something that broke in production, and the rule it left behind. Fig. 2 is R-01, working: cut the line and keep selling.</p>
       </header>
+      <div class="rules-wrap">
+      <figure class="fig fig-till" id="till">
+        <div class="fig-plate">
+          <svg class="till-svg" viewBox="0 0 580 330" role="img" aria-labelledby="till-t">
+            <title id="till-t">A counter till sending sales to a server. When the line is cut, sales wait on the device and send when it returns.</title>
+            <g class="dim">
+              <path d="M34 300h500" marker-start="url(#tick)" marker-end="url(#tick)"/>
+              <text x="284" y="318" text-anchor="middle">one binary · one deploy · one source of truth</text>
+            </g>
+
+            <g class="node" transform="translate(34 46)">
+              <rect width="150" height="206" rx="16"/>
+              <rect class="screen" x="12" y="22" width="126" height="160" rx="4"/>
+              <path d="M62 11h26" class="thin"/>
+              <text x="75" y="198" text-anchor="middle" class="cap">COUNTER T-01</text>
+              <g id="till-slips" transform="translate(20 34)"></g>
+            </g>
+
+            <g class="node" transform="translate(212 188)">
+              <rect width="112" height="64" rx="3"/>
+              <text x="12" y="22" class="cap">OUTBOX</text>
+              <text x="12" y="50" class="big" id="till-q">0</text>
+              <text x="100" y="50" text-anchor="end" class="cap" id="till-q-l">empty</text>
+            </g>
+            <path class="wire" d="M184 220h28"/>
+
+            <path class="link" id="till-link" d="M184 110 C 260 110, 330 110, 408 110"/>
+            <g class="cut" id="till-cut" transform="translate(296 110)">
+              <path d="M-9 -13 L-3 13M3 -13 L9 13"/>
+            </g>
+            <text x="296" y="94" text-anchor="middle" class="cap" id="till-link-l">LINE · UP</text>
+
+            <g class="node" transform="translate(408 58)">
+              <rect width="126" height="104" rx="3"/>
+              <text x="14" y="24" class="cap">API</text>
+              <text x="14" y="50" class="lbl">Go binary</text>
+              <text x="14" y="68" class="lbl sub">web app embedded</text>
+              <text x="14" y="90" class="cap" id="till-ok">SYNCED 12</text>
+            </g>
+
+            <path class="wire" d="M471 162v46" marker-end="url(#arw)"/>
+            <g class="node" transform="translate(422 212)">
+              <path d="M0 10c0-13 98-13 98 0v48c0 13-98 13-98 0Z"/>
+              <path d="M0 10c0 13 98 13 98 0" class="thin"/>
+              <text x="49" y="46" text-anchor="middle" class="lbl">MySQL</text>
+            </g>
+
+            <g class="note">
+              <path d="M436 170l12-8"/>
+              <text x="338" y="176">409s are shown,</text>
+              <text x="338" y="190">never swallowed</text>
+            </g>
+            <circle class="pkt" id="till-pkt" r="5" cx="-20" cy="-20"/>
+          </svg>
+        </div>
+        <div class="till-ctl">
+          <button class="btn btn-ink sm" id="till-sale" type="button">Ring up a sale</button>
+          <button class="btn btn-line sm" id="till-net" type="button" aria-pressed="false">Cut the line</button>
+          <ol class="till-log mono" id="till-log" aria-live="polite">
+            <li>Sale #0112 sent · 38 ms</li>
+          </ol>
+        </div>
+        <figcaption><span class="mono">Fig. 2</span> A till that keeps selling when the line drops. Cut it, ring up a few sales, then restore it. One of them will come back refused, because another counter sold the last box first. That refusal is shown to the cashier, not buried.</figcaption>
+      </figure>
       <ol class="rules">
         <li><span class="mono">R-01</span><h3>A refused write fails loudly.</h3><p>Offline-first means the outbox has to tell the truth. If the server says no, the person holding the phone sees it — not a log file.</p></li>
         <li><span class="mono">R-02</span><h3>Tenancy lives in one place.</h3><p>A database or a row-level policy per customer, resolved once at the edge. Isolation you can prove with a command, not a code review.</p></li>
@@ -316,11 +556,12 @@
         <li><span class="mono">R-05</span><h3>Tests pin the real thing.</h3><p>End-to-end over real HTTP against a real database, and crawls of every screen for every role. Mocks are for the parts I don’t own.</p></li>
         <li><span class="mono">R-06</span><h3>State is derived, not stored twice.</h3><p>If a status can be computed from a date, it is. Then there is no second field to forget to update.</p></li>
       </ol>
+      </div>
     </section>
 
     <section class="sec" id="hire" aria-labelledby="hire-h">
       <header class="sec-head">
-        <span class="sec-num mono">03</span>
+        <span class="sec-num mono">04</span>
         <h2 id="hire-h">How to hire me</h2>
         <p class="sec-note">Fixed prices and fixed scope. No discovery-call funnel. Every engagement ends with something deployed and a written handover — the same handover documents I keep for my own systems.</p>
       </header>
@@ -388,10 +629,34 @@
       <div><dt>Drawn by</dt><dd>A. Ehsan</dd></div>
       <div><dt>Location</dt><dd>Bogura, Bangladesh</dd></div>
       <div><dt>Apps published as</dt><dd>The Elite Force</dd></div>
-      <div><dt>Rev.</dt><dd>28 Sep 2026</dd></div>
+      <div><dt>Rev.</dt><dd>10 Oct 2026</dd></div>
       <div><dt>Sheet</dt><dd>1 of 1 · works offline</dd></div>
     </dl>
   </footer>
 </div>
+<dialog class="det" id="det" closedby="any" aria-labelledby="det-h">
+  <button class="det-x" type="button" id="det-x" aria-label="Close"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button>
+  <div class="det-in">
+    <div class="det-gal">
+      <div class="det-main" id="det-main"></div>
+      <p class="det-cap" id="det-cap"></p>
+      <div class="det-thumbs" id="det-thumbs"></div>
+    </div>
+    <div class="det-txt">
+      <p class="mono item-kind" id="det-kind"></p>
+      <h2 id="det-h"></h2>
+      <p id="det-status"></p>
+      <p class="lead" id="det-what"></p>
+      <h4>The hard part</h4>
+      <p id="det-hard"></p>
+      <h4 id="det-facts-h">Numbers</h4>
+      <ul id="det-facts"></ul>
+      <h4>Built with</h4>
+      <p class="stack mono" id="det-stack"></p>
+      <div class="det-acts" id="det-acts"></div>
+    </div>
+  </div>
+</dialog>
+<script type="application/json" id="work-data">[{"slug":"mezban","name":"Mezban","bn":"মেজবান","kind":"Restaurant management","what":"Restaurant staff run the whole floor from phones and tablets: waiters take orders, the kitchen screen gets tickets, the cashier bills with VAT and the owner reads the day's numbers.","hard":"Orders keep working offline: every change is queued on the device with its own operation id and replayed exactly once when the connection returns, while live orders sync between devices over server-sent events. Payments, discounts and voids are deliberately online-only and need a manager PIN approval.","facts":["Bangla interface with 1,144 translated strings","179 client tests + 124 server-mode tests","Demo seeded with 14 days of history through the real billing engine","VAT 15% and service charge with a Mushak 6.3 style tax invoice"],"stack":["Go","MySQL","Vanilla JS PWA","IndexedDB","Server-sent events","Service worker"],"status":"Live demo · production server ready","tone":"demo","url":"https://demo.147.93.168.43.sslip.io","note":"one-tap demo roles (waiter, kitchen, cashier, owner); sample restaurant rebuilt nightly","cta":"Open the demo","images":[{"f":"mezban-1.webp","k":"desktop","c":"Owner reports: takings, VAT, bills and sales by hour"},{"f":"mezban-2.webp","k":"desktop","c":"Stock screen with reorder warnings for low ingredients"},{"f":"mezban-3.webp","k":"phone","c":"Waiter taking a table's order on a phone"}]},{"slug":"nirog","name":"Nirog","bn":"নিরোগ","kind":"Hospital management","what":"Hospital software for Bangladeshi private hospitals and clinics: reception, doctors, nurses, lab, billing and pharmacy work in one staff workspace, and patients follow their live serial on their phone.","hard":"Multi-tenant on Postgres row-level security: the server connects as a role that cannot bypass RLS and sets the hospital id per transaction, so another hospital's patient returns 404 and a forged cross-tenant insert is refused by the database. Money is integer paisa end to end, and bills are never deleted, only voided with a name and a reason.","facts":["968 screens crawled across 13 roles","Three surfaces in one Go binary: patient app, staff workspace, platform console","Staff app in Bangla and English","Allergy check on prescribing and selling, with an audited override"],"stack":["Go","PostgreSQL","Row-level security","TypeScript","Vite","PWA"],"status":"Live demo","tone":"demo","url":"https://nirog.147.93.168.43.sslip.io","note":"one-tap demo roles on /staff/ (reception, doctor, nurse, lab, billing, pharmacy, owner); fictional hospital, reset nightly","cta":"Open the demo","images":[{"f":"nirog-1.webp","k":"desktop","c":"Reception's OPD queue with the doctor's live now-serving board"},{"f":"nirog-2.webp","k":"desktop","c":"Cash close: the day's takings by method, staff and receipt"},{"f":"nirog-3.webp","k":"phone","c":"Patient's phone shows their serial, who is in, and wait time"}]},{"slug":"akhra","name":"Akhra","bn":"আখড়া","kind":"Gym access & billing","what":"Gym management for Bangladesh: members tap an RFID card at the door, the door decides, and the front desk sees who is inside, who owes money and who is drifting away.","hard":"The door rule lives in the domain, not a handler: an expired membership does not open the door but leaving is always allowed, money owed only warns the desk, and a reader's double-fire inside five seconds replays the first decision. Each gym gets its own MySQL database, provisioned from a control plane.","facts":["Database per gym, enrolled from an operator console","Table-driven tests for every door rule","Bangla-first interface with Bangla digits","Works with a ~৳1,500 EM4100 USB card reader"],"stack":["Go","Gin","MySQL","Next.js","React","TypeScript","RFID"],"status":"Live demo","tone":"demo","url":"https://akhra.147.93.168.43.sslip.io","note":"sign-in is prefilled for the demo gym; one tap to enter, sample data reseeded nightly","cta":"Open the demo","images":[{"f":"akhra-1.webp","k":"desktop","c":"Today: who is inside, takings, dues and who to call"},{"f":"akhra-2.webp","k":"phone","c":"Door log: every card tap with time and decision"},{"f":"akhra-3.webp","k":"desktop","c":"Retention: members who stopped coming, with renewal money at risk"}]},{"slug":"cleanerboy","name":"Cleaner Boy","bn":"","kind":"Laundry pickup & back office","what":"A Dhaka laundry's own pickup app: customers book from their phone, the shop weighs the bag, the customer approves the real price, and only then is it washed; the shop runs everything from a back office.","hard":"The approval gate lives in the order aggregate, so nothing can enter washing until the customer approves the measured price, even from the back office. Money and weight are integers (poisha and grams), and a bag tag is bound to one customer under a row lock so two scans in the same second cannot both win.","facts":["100 endpoint checks run against the deployed server","Bangla and English customer app","QR bag tags printed from the back office","Pickup calendar kept 14 days ahead automatically"],"stack":["Go","Gin","MySQL","Next.js","React","TypeScript","PWA"],"status":"Live · real shop","tone":"live","url":"https://cleanerboy.online","note":"","cta":"Visit the shop","images":[{"f":"cleanerboy-1.webp","k":"phone","c":"Customer home: leave the bag at the door"},{"f":"cleanerboy-2.webp","k":"phone","c":"Booking: choose a service, priced per kg or piece"}]},{"slug":"nexa","name":"easyprintBD (NEXA Print)","bn":"","kind":"Pay-per-print kiosk","what":"Pay-per-page self-service printing: a customer scans the QR sticker on a printer, uploads a file, pays with bKash and collects the pages, with no account needed.","hard":"MySQL is also the job queue (SELECT … FOR UPDATE SKIP LOCKED), so a job claim happens in the same transaction as its payment record. A printer that drops out mid-job goes to a reconciling state and the page counter decides what printed, so a jam at page 9 of 24 refunds only the unprinted pages.","facts":["Files go straight to S3 by presigned upload; the server counts pages itself","Live job progress over server-sent events","Unprinted jobs expire after 30 minutes with a full refund","Linux print agent pulls work over HTTPS and prints through CUPS"],"stack":["Go","MySQL","AWS S3","Vue 3","PWA","Flutter","bKash","CUPS"],"status":"Live · production bKash","tone":"demo","url":"https://print.dcampusbd.com/p/","note":"the print flow opens by scanning a printer's QR sticker; /p/ alone only explains that","cta":"Open the kiosk app","images":[{"f":"nexa-1.webp","k":"phone","c":"Scan-to-print: file uploaded, page count and price, pay"},{"f":"nexa-2.webp","k":"phone","c":"Live job status while the pages print"}]},{"slug":"upasthit","name":"Upasthit","bn":"উপস্থিত","kind":"Geo-fenced attendance","what":"Bangladeshi small businesses use it so employees check in with one tap from inside the office area, while the owner sees everyone on a web board.","hard":"Location is read only at the moment of the punch, never all day, and each check-in carries evidence (inside the fence, accuracy, real location, selfie, server time). The demo join code builds a sandbox company whose fence re-centres on the reviewer's phone so a Play reviewer is never refused as outside.","facts":["147/147 production API checks passed on 9 Oct 2026","No background location in 1.0.0: foreground location, camera and notifications only","Daily database and selfie backups kept 14 days","Sandbox demo companies auto-deleted after 7 days"],"stack":["Go","MySQL","Flutter","Caddy"],"status":"Live · Play closed test in review","tone":"demo","url":"https://upasthit.dcampusbd.com","note":"Android app with demo join code 246810 creates a sandbox company","cta":"Open it","images":[{"f":"upasthit-1.webp","k":"phone","c":"Today screen after a selfie check-in inside the office fence"},{"f":"upasthit-2.webp","k":"phone","c":"Check-in evidence: fence, accuracy, real location, selfie, server time"},{"f":"upasthit-3.webp","k":"phone","c":"Outside the fence: 800 metres away, request instead"}]},{"slug":"prangon","name":"Prangon","bn":"প্রাঙ্গণ","kind":"School website builder","what":"Bangladeshi schools build and publish their own website from an Android app, in the government (DSHE) format or a photo-led template, then pay yearly or monthly by bKash, Nagad or bank.","hard":"Every school gets a live subdomain under one wildcard certificate renewed through Route 53 DNS-01, while custom domains use on-demand TLS gated by an ask endpoint that only approves published, verified domains. Domain verification queries the authoritative nameservers directly to avoid stale DNS.","facts":["4 templates, including the government Promito format with the 10 DSHE menus","56 end-to-end API and site checks plus 86 admin-panel checks","11-item DSHE checklist, each item deep-linked to its editor","Custom domain verified end to end with a Let's Encrypt certificate in about 7 s"],"stack":["Go","MySQL","Flutter","Caddy","Firebase Crashlytics"],"status":"Live · Play closed test","tone":"demo","url":"https://prangon.dcampusbd.com","note":"four demo school sites, e.g. kolkakoli-kg.prangon.dcampusbd.com; demo app logins reset nightly","cta":"Open it","images":[{"f":"prangon-1.webp","k":"desktop","c":"Kindergarten demo site rendered from the Khata template"},{"f":"prangon-2.webp","k":"phone","c":"School app home: subscription, site link and DSHE checklist"},{"f":"prangon-3.webp","k":"desktop","c":"High school demo site in the government Promito format"}]},{"slug":"ghotok","name":"Ghotok","bn":"ঘটক","kind":"Tuition agency back office","what":"Bangladeshi home-tutor agencies (tuition media) use it to run every guardian request, applicant, demo class and media fee from first call to paid.","hard":"The media-fee ledger is the product: fee and refund rules are agency settings frozen onto each match at confirm, and one shared fixture file of ledger cases must pass in both the Go server tests and the Flutter app tests. The app is local-first with an outbox, so offline settlements show as 'not sent yet' and flush on reconnect.","facts":["14-state tuition lifecycle mapped from published agency terms","50 Flutter tests plus go test and go vet passing","Owner app runs as Android APK and as a Flutter web build","Duplicate bKash TrxIDs caught before a payment is saved"],"stack":["Go","SQLite","Flutter","Docker","Caddy"],"status":"Live demo","tone":"demo","url":"https://ghotok.147.93.168.43.sslip.io","note":"one-tap owner demo on the home page opens the app in the browser; demo data reseeds nightly","cta":"Open the demo","images":[{"f":"ghotok-1.webp","k":"phone","c":"Today screen: money owed, late fees and next actions"},{"f":"ghotok-2.webp","k":"phone","c":"Tuition post with applicants ranked by fit"},{"f":"ghotok-3.webp","k":"phone","c":"Media-fee ledger: received, refunded, owed and late"}]},{"slug":"malkhana","name":"Malkhana","bn":"মালখানা","kind":"Hardware shop POS","what":"Hardware and building-material shops sell cement, rod and pipe across shop and godowns, while the owner sees cost, profit and a theft-catching audit that staff cannot.","hard":"The cost lock is enforced on the server: per-role fields are stripped from every sync, operation and backup response, and a leak test logs in as each staff role and fails on any cost, profit or margin key. Cost is a weighted average landed cost snapshotted on every bill line, so profit is exact per line.","facts":["4 roles, each in a private 24-hour sandbox shop","21 Go tests including a field-leak scan across every API response","Audit flags below-cost sales, voids, discounts, missing memo numbers and transfer shortages","Bangla and English interface"],"stack":["Go","SQLite","Vanilla JS PWA","IndexedDB","Service worker"],"status":"Live demo","tone":"demo","url":"https://malkhana.147.93.168.43.sslip.io","note":"one-tap demo roles (owner, manager, counter, godown) with a role switcher; #/points tour","cta":"Open the demo","images":[{"f":"malkhana-1.webp","k":"desktop","c":"Owner's day book: today's sales, locked profit and seven-day bars"},{"f":"malkhana-2.webp","k":"phone","c":"Lock grid deciding which role sees cost and profit"},{"f":"malkhana-3.webp","k":"desktop","c":"Audit by staff with below-cost sales flagged"}]},{"slug":"fita","name":"Fita","bn":"ফিতা","kind":"Tailor shop system","what":"Tailor shops track orders, measurements, karigor work, payments and dues from the counter, the owner's phone and the workshop.","hard":"Local-first sync: the whole shop lives in IndexedDB so a tap paints in about 30 ms, writes show at once as an optimistic overlay and wait in an offline queue, and the server filters every record per role so a karigor never receives prices, payments or customers' phone numbers.","facts":["Private demo sandbox seeded in about 150 ms per visitor","3 roles with server-side field filtering","Prints 80 mm / 58 mm receipts, A5 memo and a price-free karigor slip","Automatic Bangla SMS for order taken, ready and reminders"],"stack":["Go","SQLite","Vanilla JS PWA","IndexedDB","Service worker"],"status":"Live demo · sign-up open","tone":"demo","url":"https://fita.147.93.168.43.sslip.io","note":"one-tap demo roles (owner, counter, karigor); each visitor gets a private sandbox shop","cta":"Open the demo","images":[{"f":"fita-1.webp","k":"desktop","c":"Owner home: today's sales, dues, late orders and karigor load"},{"f":"fita-2.webp","k":"phone","c":"Order detail with tape-measure progress from intake to delivery"},{"f":"fita-3.webp","k":"phone","c":"Active order list with urgent, late and ready flags"}]},{"slug":"kanchi","name":"Kanchi","bn":"কাঁচি","kind":"Salon supply store","what":"Barbershops, beauty parlours and makeup artists in Bangladesh buy their tools and supplies from a single seller that stocks, checks and delivers everything itself.","hard":"Built as a clickable two-surface prototype (buyer app and warehouse ops panel) sharing live state through localStorage and BroadcastChannel, so a reorder, pack, courier hand-off and warranty claim can be walked end to end across two tabs before any backend exists.","facts":["143 browser checks (93 buyer app, 50 ops) passing locally and against the live site","27 Daraz prices researched for the market study","15 design-critique findings, all fixed","Bulk tier pricing, two-tap reorder, cash on delivery or bKash"],"stack":["HTML","CSS","JavaScript","Caddy"],"status":"Live demo · prototype","tone":"demo","url":"https://kanchi.147.93.168.43.sslip.io/","note":"open the buyer app and the warehouse panel from the start page; data stays in your browser","cta":"Open the demo","images":[{"f":"kanchi-1.webp","k":"phone","c":"Home with two-tap reorder and today's delivery"},{"f":"kanchi-2.webp","k":"phone","c":"Clipper page with bulk price tiers and genuine-stock check"},{"f":"kanchi-3.webp","k":"desktop","c":"Warehouse ops board: new, packed, with courier, delivered"}]},{"slug":"medihisab","name":"MediHisab","bn":"মেডিহিসাব","kind":"Pharmacy accounting","what":"A Bangla pharmacy app for Bangladeshi shop owners: sales, stock by batch, expiry warnings and the customer credit book (বাকি) on an Android phone.","hard":"Expiry is tracked per stock batch: the server refuses a sale from an expired batch and warns 30 days ahead. Dues and payments are idempotent by operation id, and business days, invoice dates and ledger dates follow Dhaka time while the server stores UTC.","facts":["Catalogue search over real Bangladeshi medicines with company, generic, pack size and MRP","Server refuses sales from expired batches"],"stack":["Flutter","Riverpod","Java 21","Spring Boot","MySQL","Flyway","Firebase"],"status":"Play closed test · API live · no paying shops yet","tone":"hold","url":"","note":"","cta":"Open it","images":[{"f":"medihisab-1.webp","k":"phone","c":"Home: today's sales, low stock and expiry warning"},{"f":"medihisab-2.webp","k":"phone","c":"Stock filtered to medicines expiring soon, by batch"},{"f":"medihisab-3.webp","k":"phone","c":"Credit book: what each customer owes"}]},{"slug":"shishir","name":"Shishir","bn":"শিশির","kind":"Skincare e-commerce","what":"A Bangla-first online skincare store for Bangladesh where shoppers pick a routine, order with cash on delivery, and get a photo of the actual box with batch and expiry before paying.","hard":"Built around proof instead of reviews: no ratings or fake stock counts, and the catalogue is generated from the supplier list by a build script rather than edited by hand. Bangla is the default with a Bangla calendar and six seasons on the home page, delivery zones for all 64 districts, and orders go to a small self-hosted order service with its own status pipeline.","facts":["24 products listed on the live shop","Delivery zones for all 64 districts: ৳70 / ৳90 / ৳115","6-question skin quiz that builds a routine","Bangla by default with an English toggle"],"stack":["JavaScript","HTML","CSS","Python","Caddy"],"status":"Live · open store","tone":"demo","url":"https://shishirbd.shop","note":"","cta":"Visit the store","images":[{"f":"shishir-1.webp","k":"phone","c":"Home: see the box before you pay, seasonal skincare"},{"f":"shishir-2.webp","k":"phone","c":"Shop grid with filters, brands and taka prices"},{"f":"shishir-3.webp","k":"phone","c":"Product page with size, unit price and benefit"}]},{"slug":"daak","name":"Daak","bn":"ডাক","kind":"AI sales caller","what":"An AI phone caller that rings Bangladeshi leads for a business and talks with them in natural colloquial Bangla to sell, book demos, confirm orders, remind dues or run surveys, then saves the outcome, transcript, recording and a quality review.","hard":"Real-time turn-taking on top of Gemini Live: Silero VAD plus the Smart Turn v3.2 end-of-turn model, a barge-in guard, fillers and a watchdog cut the reply delay from about 1.8–2.3 s to a median of about 1.1–1.3 s, with barge-in stopping the agent in about 0.12 s. It learns a business from its website or documents and must pass simulated-customer preflight before going live.","facts":["Always says it is a digital assistant and that the call is recorded, a fixed rule of the product","Barge-in stop in about 0.12 s","First sound heard about 0.45 s after the customer stops","Five goal templates: sell demo, appointment, order confirmation, payment reminder, survey","Tested over real encrypted SIP calls from Bangladesh to the server"],"stack":["Python","Gemini Live","Asterisk","Silero VAD","Smart Turn","Docker"],"status":"Live demo · test mode","tone":"demo","url":"https://daak.147.93.168.43.sslip.io/demo","note":"Pick a business and take a live call from the agent in the browser (asks for a name and WhatsApp number first)","cta":"Open the demo","images":[{"f":"daak-1.webp","k":"desktop","c":"Public demo: pick a business and take its call"},{"f":"daak-2.webp","k":"desktop","c":"Voice choice, own-website option and things to try"}]},{"slug":"salesdesk","name":"Sales Desk","bn":"","kind":"Tele-sales CRM","what":"A tele-sales CRM built for a real Bangladeshi smart-board company, replacing a shared Google Sheet: agents work a daily call queue, log call results in one tap, and the manager sees team and ad-campaign performance.","hard":"Migrated a live client spreadsheet of 10,141 leads into Go + MySQL, splitting each free-text comment cell into ordered follow-ups and verifying every row against an independent re-parse with zero mismatches. Leads are never deleted by design, and an in-portal Excel import with a dependency-free .xlsx reader previews, dedupes by phone and imports all-or-nothing.","facts":["10,141 leads and 15,820 follow-up comments migrated from the client's sheet","117 browser checks plus API tests","Read-only production walk 26/26","Keyboard-first: 1–8 logs a call result, J/K moves through the queue"],"stack":["Go","MySQL","JavaScript","PWA (service worker)","Caddy"],"status":"Live · in use by a client","tone":"live","url":"","note":"","cta":"Open it","images":[]},{"slug":"safarkhata","name":"Safarkhata","bn":"সফরখাতা","kind":"Travel agency system","what":"Travel and Umrah agencies manage leads, bookings, installments, passports, visas and supplier dues, and each customer gets a status link for what they paid and owe.","hard":"Money paths are race-safe and idempotent: a live suite fires 20 simultaneous confirmations of one payment and gets exactly one ledger row, and 15 parallel bookings for 3 seats yield exactly 3. Business rules (installments, commission clawback, refund tiers, passport validity, parsing bKash/Nagad SMS) sit in a pure, table-tested package.","facts":["75 Go tests + 12 live end-to-end HTTP tests, 0 data races","Customer status page masks passports and never shows cost or profit","Separate permissions for owner, sales agents, accountant and ops"],"stack":["Go","MySQL","Vanilla JS"],"status":"Built, not deployed","tone":"built","url":"","note":"","cta":"Open it","images":[{"f":"safarkhata-1.webp","k":"desktop","c":"Today: collections, overdue installments and upcoming departures"},{"f":"safarkhata-2.webp","k":"desktop","c":"Visa board tracking each traveller's stage and days stuck"},{"f":"safarkhata-3.webp","k":"phone","c":"Booking on a phone with paid, due and next installment"}]},{"slug":"halkhata","name":"Halkhata","bn":"হালখাতা","kind":"Shop ledger app","what":"A Bangla Android app for small grocery shop owners to run sales, customer credit (baki), stock and daily accounts entirely on their own phone.","hard":"No server at all: the whole ledger lives in SQLite on the phone, with every screen derived from one ledger module covered by golden tests. Data safety comes from two layers instead of a cloud: Android Auto Backup of the database plus a one-tap JSON backup shared to Drive or WhatsApp that restores on a new phone.","facts":["Works fully offline, no account, no server","47 Flutter tests in the phone-only build","Customer reminder carries the last 8 ledger lines over WhatsApp","Release APK verified with uninstall, reinstall and restore from backup on an emulator"],"stack":["Flutter","Dart","SQLite","Android","Firebase Analytics","Crashlytics"],"status":"APK download · not on Play yet","tone":"built","url":"https://halkhata.147.93.168.43.sslip.io/","note":"Download the APK from the page; no account or password, first open asks for the shop name","cta":"Download page","images":[{"f":"halkhata-1.webp","k":"phone","c":"Credit book: total owed and who to ask today"},{"f":"halkhata-2.webp","k":"phone","c":"Daily accounts: sales, profit, credit and month summary"},{"f":"halkhata-3.webp","k":"phone","c":"WhatsApp reminder with the customer's itemised credit statement"}]},{"slug":"tirish","name":"Tirish","bn":"তিরিশ","kind":"Dealer credit book","what":"Poultry feed dealers use it as their credit book, tracking what each farmer owes per batch of birds until the batch is sold.","hard":"A database per dealer with the connection taken from the request context, so no repository query names a dealer and another shop's records return 404, not 403. The feed curve exists in Go and in the offline phone client, and a test reads the JavaScript constants to fail the build if they drift.","facts":["All money stored as poisha integers, including on the wire","Zero external requests: fonts bundled, no npm dependencies","End-to-end API suite of 14 suites and 29 subtests plus 12 phone-client tests","Android app is a WebView shell around the same web app, with an offline outbox"],"stack":["Go","MySQL","JavaScript PWA","Kotlin WebView"],"status":"Built, not deployed","tone":"built","url":"","note":"","cta":"Open it","images":[{"f":"tirish-1.webp","k":"phone","c":"Dealer home: money out with farmers, batches past sale date"},{"f":"tirish-2.webp","k":"phone","c":"Farmer batch sheet with feed, medicine and cash entries"}]},{"slug":"chaka","name":"Chaka","bn":"চাকা","kind":"Garage rent book","what":"Garages that rent easy-bikes, battery rickshaws and autos to drivers by the day use it to collect the daily rent and see every driver's arrears.","hard":"One rule drives everything: a vehicle handed out owes every day until someone writes why it didn't, so arrears are computed, never stored. The ledger exists in JavaScript, Go and Dart, and all three are tested against one golden file generated from a 45-day demo garage.","facts":["One SQLite file per garage, so a query cannot cross garages","Every write is an op with a phone-chosen UUID, applied idempotently on sync","19 Flutter tests, 7 against the real Go server","Manager limits enforced by the server, shown on the phone"],"stack":["Go","SQLite","Flutter"],"status":"Built, not deployed","tone":"built","url":"","note":"","cta":"Open it","images":[{"f":"chaka-1.webp","k":"phone","c":"Tonight's rent collection with one-tap amounts per vehicle"},{"f":"chaka-2.webp","k":"phone","c":"Driver page: arrears built day by day"},{"f":"chaka-3.webp","k":"phone","c":"Monthly accounts: collected, off days, expenses, profit"}]},{"slug":"lobb","name":"Lobb","bn":"","kind":"Offline file transfer","what":"An Android app that sends photos, videos and files directly from one phone to another over Wi-Fi Direct, with no internet, account or server.","hard":"The transfer engine is raw TCP written in Kotlin so bytes never cross into Dart: a JSON manifest up front, then 4 MB chunks pipelined with no per-file round trips and a CRC32 check per chunk, so a dropped link resumes from the last good chunk instead of restarting.","facts":["178 MB/s in an on-device loopback self-test (300 MB + 200 files, every byte checked)","166 MB/s with a forced link drop, resumed by itself","1.64 GB at 171 MB/s between two emulators","About 21 MB per-device release APK"],"stack":["Kotlin","Flutter","Dart","Android","Wi-Fi Direct","TCP"],"status":"Built · verified on emulators","tone":"built","url":"","note":"","cta":"Open it","images":[{"f":"lobb-2.webp","k":"phone","c":"Clickable prototype: home with send, receive and history"},{"f":"lobb-3.webp","k":"phone","c":"Clickable prototype: receiver shows a one-time QR code"}]},{"slug":"pressmark","name":"Pressmark","bn":"","kind":"PDF toolkit","what":"An installable web app that gives anyone all 33 iLovePDF-style tools (merge, compress, OCR, convert, sign, redact, compare and more) with every file processed on their own device.","hard":"Everything that normally needs a server runs in the browser: pdf.js and pdf-lib for page work, qpdf compiled to WebAssembly for repair, tesseract for OCR with an invisible text layer, and Office-to-PDF by painting the document in the DOM. A service worker precaches about 8 MB so the tools work offline.","facts":["33 PDF tools, no uploads","Each tool run against a real fixture file, not a hello-world PDF","Compress: 5.7 MB to 628 KB on a photo PDF, text untouched","OCR in 16 languages","Repair recovers 8 of 8 pages on both damaged fixtures"],"stack":["TypeScript","Preact","Vite","pdf.js","pdf-lib","WebAssembly (qpdf)","Tesseract.js","Workbox PWA"],"status":"Built, not deployed","tone":"built","url":"","note":"","cta":"Open it","images":[{"f":"pressmark-1.webp","k":"desktop","c":"Home: drop any file, 33 tools grouped by job"},{"f":"pressmark-2.webp","k":"desktop","c":"Compare PDF highlighting changed words between two contract versions"},{"f":"pressmark-3.webp","k":"desktop","c":"Organize PDF: pages from two files in one grid"}]},{"slug":"swad","name":"Swader Map","bn":"স্বাদের ম্যাপ","kind":"Viral food map","what":"A viral Bangla web toy where people tick the famous food of each of Bangladesh's 64 districts they have eaten and share their own X/64 map card.","hard":"Each district's food was cross-checked across five source families, with low-confidence districts flagged for correction. Ads run from a separate origin inside a sandboxed iframe so third-party scripts never touch the main page, and nothing a visitor ticks or types leaves the browser.","facts":["64 districts, 8 divisions","Shareable map card image generated in the browser","Map data: BBS / OCHA via geoBoundaries","Format credit: Sabbir Hossien Robin's bd-maps"],"stack":["JavaScript","HTML","CSS","SVG map (GeoJSON)","Caddy"],"status":"Live","tone":"live","url":"https://swad.147.93.168.43.sslip.io","note":"Open and tap foods; no sign-in","cta":"Play the map","images":[{"f":"swad-1.webp","k":"phone","c":"Personal map card: 27 of 64 districts eaten"},{"f":"swad-2.webp","k":"phone","c":"Landing: how many districts' famous foods have you eaten"},{"f":"swad-3.webp","k":"phone","c":"Food checklist grouped by division with ticked dishes"}]},{"slug":"quiltblocks","name":"Quilt Blocks","bn":"","kind":"Puzzle game","what":"A calm, ad-supported Android block puzzle where players fit dyed-cloth patches onto an 8×8 board drawn like a hand-stitched kantha quilt.","hard":"Built on a shared Flutter game kit that handles AdMob consent (UMP), capped interstitials (never on launch, at least 90 s apart), opt-in rewarded ads and haptics, so each new game ships with the same ad rules.","facts":["8×8 board, three pieces at a time, rows and columns clear together","No timer, no energy, no lives","Works fully offline and resumes mid-game","Listed in 177 countries on the closed track"],"stack":["Flutter","Dart","Android","Google AdMob"],"status":"Play closed test","tone":"hold","url":"","note":"","cta":"Open it","images":[{"f":"quiltblocks-1.webp","k":"phone","c":"A clear unstitches lines and chains a ×4 streak"},{"f":"quiltblocks-2.webp","k":"phone","c":"Mid-game quilt board with three patches to place"},{"f":"quiltblocks-3.webp","k":"phone","c":"New best score card at the end of a round"}]},{"slug":"rickshaw","name":"Rickshaw Painter","bn":"","kind":"Arcade game","what":"A colour-shooter puzzle game where paint tins ride a rail around a Bangladeshi rickshaw-art panel and the player paints the picture square by square.","hard":"Levels are generated and proven solvable by code rather than hand-designed: a JavaScript engine with generator, solver and difficulty probe was ported bit-exact to Dart, and tests check engine parity and that every one of the first 60 levels is solvable with exact paint.","facts":["9 hand-drawn panels, then endless generated rickshaw motifs","Boards grow from 8×7 to 17×17, colours from 2 to 6","Finished panels share as a 1080×1080 framed image","No interstitials before panel 8"],"stack":["Flutter","Dart","JavaScript (prototype)","Google AdMob"],"status":"Built, not published","tone":"built","url":"","note":"","cta":"Open it","images":[{"f":"rickshaw-1.webp","k":"phone","c":"Painting the Bagh panel with tins on the rail"},{"f":"rickshaw-2.webp","k":"phone","c":"Finished panel card framed as a rickshaw back-plate"}]}]</script>
 </body>
 </html>
