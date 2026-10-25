@@ -164,7 +164,6 @@
   "facts": [
    "Speaks the machines' existing firmware protocol, so nothing in the field had to change",
    "bKash payment, then the machine turns the spring in about 2 seconds",
-   "Prepaid RFID card balances",
    "Packaged to run on the client's own server and domain",
    "First real sale on 12 October 2026"
   ],
@@ -261,8 +260,8 @@
   "promise": "Fast billing at the counter, and a cash drawer that matches at night.",
   "who": "Super shops and grocery stores with one or more counters.",
   "status": {
-   "tone": "demo",
-   "label": "Live demo"
+   "tone": "proto",
+   "label": "Prototype · pilot shops wanted"
   },
   "brand": "#4A3AA8",
   "logo": "halkhata.webp",
@@ -309,14 +308,14 @@
    "Offers like buy one get one priced automatically on the bill",
    "Manager PIN for voids, with every void logged",
    "Shift close counts notes against what the system expects",
-   "The same app also has a small-shop mode that works fully offline"
+   "The small-shop mode is a separate Android app that already works fully offline"
   ],
   "offer": "Looking for pilot shops; setup and the first week handled in person. Price depends on the number of counters.",
   "stack": [
-   "Flutter",
-   "Go",
-   "SQLite",
-   "Android"
+   "JavaScript",
+   "HTML",
+   "CSS",
+   "Flutter (small-shop app)"
   ],
   "kw": "সুপার শপ মুদি দোকান পিওএস grocery pos"
  },
@@ -1334,11 +1333,7 @@
   "images": [
    {
     "f": "jobab-1.webp",
-    "c": "Demo: write as a customer and watch the inbox"
-   },
-   {
-    "f": "jobab-2.webp",
-    "c": "Home page"
+    "c": "A customer's question answered with the real price and the product card"
    }
   ],
   "facts": [
@@ -1403,7 +1398,7 @@
   "bn": "সিজবস",
   "kind": "Small jobs app",
   "industry": "sales",
-  "promise": "People earn by doing small real jobs: setting up shops on our software and testing apps.",
+  "promise": "People earn points by doing small, verified jobs, such as setting up shops on our software.",
   "who": "Students and workers looking for side income, and businesses that post small jobs.",
   "status": {
    "tone": "demo",
@@ -1426,7 +1421,7 @@
    "Points for each verified job, convertible to taka above a minimum",
    "Trust levels that rise with verified work",
    "Single level only: no pyramid of referrals",
-   "Android app approved on Play, plus the website"
+   "Android app on Play, plus the website"
   ],
   "stack": [
    "Go",
@@ -1470,7 +1465,7 @@
    },
    {
     "f": "thala-4.webp",
-    "c": "Restaurant tablet accepting the order"
+    "c": "Rider app with a new delivery to accept"
    }
   ],
   "facts": [
