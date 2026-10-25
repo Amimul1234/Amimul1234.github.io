@@ -1,0 +1,1853 @@
+[
+ {
+  "slug": "cleanerboy",
+  "name": "Cleaner Boy",
+  "bn": "ক্লিনার বয়",
+  "kind": "Laundry pickup and back office",
+  "industry": "services",
+  "promise": "Customers approve the real weighed price before a laundry washes anything.",
+  "who": "A Dhaka laundry and its customers. A second laundry brand now runs on the same system.",
+  "status": {
+   "tone": "use",
+   "label": "In use"
+  },
+  "brand": "#1F6F6A",
+  "logo": "cleanerboy.webp",
+  "live": {
+   "url": "https://cleanerboy.online",
+   "label": "Visit the shop"
+  },
+  "images": [
+   {
+    "f": "cleanerboy-1.webp",
+    "c": "Customer home: leave the bag at the door"
+   },
+   {
+    "f": "cleanerboy-2.webp",
+    "c": "Booking: choose a service, priced per kg or piece"
+   }
+  ],
+  "facts": [
+   "Customer books a pickup from the phone, the shop weighs the bag, the customer approves the price",
+   "QR bag tags printed from the back office",
+   "Shop staff app for the full order lifecycle",
+   "One codebase serves several laundries, each with its own database",
+   "100 endpoint checks run against the deployed server"
+  ],
+  "stack": [
+   "Go",
+   "Gin",
+   "MySQL",
+   "Next.js",
+   "Flutter",
+   "PWA"
+  ]
+ },
+ {
+  "slug": "safarkhata",
+  "name": "Safarkhata",
+  "bn": "সফরখাতা",
+  "kind": "Travel and Umrah agency system",
+  "industry": "services",
+  "promise": "Every passport, installment and receipt in a travel agency has a record, not a memory.",
+  "who": "Travel, ticketing and Hajj/Umrah agencies with a few staff and agents.",
+  "status": {
+   "tone": "use",
+   "label": "In use"
+  },
+  "brand": "#0F5A3D",
+  "logo": "safarkhata.webp",
+  "live": {
+   "url": "https://safarkhata.shishirbd.shop",
+   "label": "Try it live"
+  },
+  "guide": "https://safarkhata.shishirbd.shop/guide",
+  "images": [
+   {
+    "f": "safarkhata-a1.webp",
+    "c": "Which passport is where: office, embassy or visa centre"
+   },
+   {
+    "f": "safarkhata-a2.webp",
+    "c": "Every passport handover with date and receipt"
+   },
+   {
+    "f": "safarkhata-a3.webp",
+    "c": "Installment schedule with what is due and late"
+   },
+   {
+    "f": "safarkhata-a4.webp",
+    "c": "Dues reminder in one tap"
+   },
+   {
+    "f": "safarkhata-a5.webp",
+    "c": "Numbered receipt for every payment"
+   },
+   {
+    "f": "safarkhata-a6.webp",
+    "c": "Customer ledger: who paid what, who still owes"
+   },
+   {
+    "f": "safarkhata-a7.webp",
+    "c": "Printed invoice with total, paid and due"
+   },
+   {
+    "f": "safarkhata-1.webp",
+    "c": "Today: collections, overdue installments and upcoming departures"
+   },
+   {
+    "f": "safarkhata-2.webp",
+    "c": "Visa board tracking each traveller's stage and days stuck"
+   }
+  ],
+  "facts": [
+   "Bookings, installments, customer ledger, agent commission and expenses",
+   "Passport custody: who holds each passport, with a receipt at every handover",
+   "Invoice and receipt printing, manpower files, quotes and manifests",
+   "Separate permissions for owner, sales agents, accountant and ops",
+   "The first agency has run on it since 22 October 2026"
+  ],
+  "offer": "৳2,900 a month per agency, any number of staff; 14 days free after setup.",
+  "stack": [
+   "Go",
+   "MySQL",
+   "Vanilla JS"
+  ]
+ },
+ {
+  "slug": "salesdesk",
+  "name": "Sales Desk",
+  "bn": "সেলস ডেস্ক",
+  "kind": "Tele-sales CRM",
+  "industry": "sales",
+  "promise": "A phone-sales team works one call queue instead of a shared spreadsheet that overwrites itself.",
+  "who": "A phone-sales office with several agents and a manager.",
+  "status": {
+   "tone": "use",
+   "label": "Running for a client"
+  },
+  "brand": "#2F3B4C",
+  "private": "Client system. Screens and name stay private.",
+  "images": [],
+  "facts": [
+   "9,634 leads moved over from the client's sheet",
+   "Agents log a call result in one tap; the manager sees team performance",
+   "Nothing can be deleted: records close, reopen and merge",
+   "Instant search across every lead and comment",
+   "Keyboard-first for agents on a desk"
+  ],
+  "stack": [
+   "Go",
+   "MySQL",
+   "JavaScript",
+   "PWA"
+  ]
+ },
+ {
+  "slug": "vending",
+  "name": "Vending machine server",
+  "bn": "ভেন্ডিং সার্ভার",
+  "kind": "Vending machine platform",
+  "industry": "services",
+  "promise": "A vending company runs its machines and bKash sales on its own server.",
+  "who": "A vending machine operator replacing a third-party platform.",
+  "status": {
+   "tone": "use",
+   "label": "Running for a client"
+  },
+  "brand": "#5B4BB7",
+  "private": "Client system. Screens and name stay private.",
+  "images": [],
+  "facts": [
+   "Speaks the machines' existing firmware protocol, so nothing in the field had to change",
+   "bKash payment, then the machine turns the spring in about 2 seconds",
+   "Prepaid RFID card balances",
+   "Packaged to run on the client's own server and domain",
+   "First real sale on 12 October 2026"
+  ],
+  "stack": [
+   "Go",
+   "MQTT",
+   "bKash",
+   "Docker",
+   "ESP32"
+  ]
+ },
+ {
+  "slug": "medihisab",
+  "name": "MediHisab",
+  "bn": "মেডিহিসাব",
+  "kind": "Pharmacy accounting app",
+  "industry": "health",
+  "promise": "A pharmacy sees which medicine expires when and who owes what, on one phone.",
+  "who": "Pharmacy owners in Bangladesh.",
+  "status": {
+   "tone": "demo",
+   "label": "Live · Play closed test"
+  },
+  "brand": "#14386B",
+  "logo": "medihisab.webp",
+  "live": {
+   "url": "https://medihisab.duckdns.org",
+   "label": "Try it live"
+  },
+  "loginNote": "Install the app and open a shop with your own number; the first 30 days are free.",
+  "links": [
+   {
+    "label": "Download the Android app",
+    "url": "https://medihisab.duckdns.org/download"
+   }
+  ],
+  "images": [
+   {
+    "f": "medihisab-a1.webp",
+    "c": "Expiry list a month ahead"
+   },
+   {
+    "f": "medihisab-a2.webp",
+    "c": "Which medicines expire when, in one list"
+   },
+   {
+    "f": "medihisab-a3.webp",
+    "c": "Stock count for every medicine"
+   },
+   {
+    "f": "medihisab-a4.webp",
+    "c": "Reorder list before it runs out"
+   },
+   {
+    "f": "medihisab-a5.webp",
+    "c": "Type a name and the medicine comes up"
+   },
+   {
+    "f": "medihisab-a6.webp",
+    "c": "Credit sale written in one tap"
+   },
+   {
+    "f": "medihisab-a7.webp",
+    "c": "Who owes how much, at a glance"
+   },
+   {
+    "f": "medihisab-a8.webp",
+    "c": "Each customer's credit history"
+   }
+  ],
+  "facts": [
+   "25,124 Bangladeshi medicines already loaded, with company, generic and price",
+   "Stock by batch with expiry warnings; the server refuses sales from expired batches",
+   "Customer credit book (বাকির খাতা) and daily sales",
+   "Supplier memos with 10+1 bonus units, dues per company and returns of expired stock"
+  ],
+  "offer": "৳499 a month after a free trial; pay by bKash.",
+  "stack": [
+   "Flutter",
+   "Java 21",
+   "Spring Boot",
+   "MySQL",
+   "Firebase"
+  ]
+ },
+ {
+  "slug": "halkhata",
+  "name": "Halkhata Super Shop",
+  "bn": "হালখাতা সুপার শপ",
+  "kind": "Supermarket POS",
+  "industry": "retail",
+  "promise": "Fast billing at the counter, and a cash drawer that matches at night.",
+  "who": "Super shops and grocery stores with one or more counters.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#4A3AA8",
+  "logo": "halkhata.webp",
+  "live": {
+   "url": "https://halkhata.shishirbd.shop/supershop/",
+   "label": "Try it live"
+  },
+  "guide": "https://halkhata.shishirbd.shop",
+  "images": [
+   {
+    "f": "halkhata-a1.webp",
+    "c": "Free-item offers priced on the bill"
+   },
+   {
+    "f": "halkhata-a2.webp",
+    "c": "Customer sees the savings on the counter screen"
+   },
+   {
+    "f": "halkhata-a3.webp",
+    "c": "Change and bKash handled on the bill"
+   },
+   {
+    "f": "halkhata-a4.webp",
+    "c": "Receipt with VAT, discount and change"
+   },
+   {
+    "f": "halkhata-a5.webp",
+    "c": "Manager PIN to remove an item from a bill"
+   },
+   {
+    "f": "halkhata-a6.webp",
+    "c": "Shift close: notes counted against the system"
+   },
+   {
+    "f": "halkhata-a7.webp",
+    "c": "Cash short? It shows at once"
+   },
+   {
+    "f": "halkhata-a8.webp",
+    "c": "Owner sees every void from home"
+   }
+  ],
+  "facts": [
+   "Offers like buy one get one priced automatically on the bill",
+   "Manager PIN for voids, with every void logged",
+   "Shift close counts notes against what the system expects",
+   "The same app also has a small-shop mode that works fully offline"
+  ],
+  "offer": "Looking for pilot shops; setup and the first week handled in person. Price depends on the number of counters.",
+  "stack": [
+   "Flutter",
+   "Go",
+   "SQLite",
+   "Android"
+  ]
+ },
+ {
+  "slug": "fita",
+  "name": "Fita",
+  "bn": "ফিতা",
+  "kind": "Tailor shop system",
+  "industry": "retail",
+  "promise": "No more lost measurement books or forgotten Eid delivery dates.",
+  "who": "Tailor shops: the counter, the owner's phone and the workshop.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo · sign-up open"
+  },
+  "brand": "#1E2F6B",
+  "logo": "fita.webp",
+  "live": {
+   "url": "https://fita.147.93.168.43.sslip.io",
+   "label": "Try it live"
+  },
+  "loginNote": "One-tap demo roles: owner, counter, karigor. Each visitor gets a private sandbox shop.",
+  "guide": "https://fita.147.93.168.43.sslip.io/watch/demo/",
+  "images": [
+   {
+    "f": "fita-a1.webp",
+    "c": "Cutting, sewing, ready: every order at a glance"
+   },
+   {
+    "f": "fita-a2.webp",
+    "c": "Workload for the next 14 days before taking an order"
+   },
+   {
+    "f": "fita-a3.webp",
+    "c": "Measurements saved per customer"
+   },
+   {
+    "f": "fita-a4.webp",
+    "c": "Ready message over WhatsApp"
+   },
+   {
+    "f": "fita-a5.webp",
+    "c": "Karigor sees their own work and pay"
+   },
+   {
+    "f": "fita-a6.webp",
+    "c": "Dues reminder in one tap"
+   },
+   {
+    "f": "fita-a7.webp",
+    "c": "Late orders flagged first"
+   },
+   {
+    "f": "fita-1.webp",
+    "c": "Owner home: today's sales, dues, late orders and karigor load"
+   }
+  ],
+  "facts": [
+   "Customers, measurements, orders with delivery dates, karigor work and dues",
+   "Works offline on the counter",
+   "Prints 80 mm and 58 mm receipts, an A5 memo and a price-free karigor slip",
+   "Bangla SMS when an order is taken and when it is ready"
+  ],
+  "offer": "Sign-up is open and you can run it yourself; price on request.",
+  "stack": [
+   "Go",
+   "SQLite",
+   "PWA",
+   "IndexedDB"
+  ]
+ },
+ {
+  "slug": "prangon",
+  "name": "Prangon",
+  "bn": "প্রাঙ্গণ",
+  "kind": "School website builder",
+  "industry": "edu",
+  "promise": "A school publishes its own website, in the government format, from a phone.",
+  "who": "Head teachers and school committees.",
+  "status": {
+   "tone": "demo",
+   "label": "Live"
+  },
+  "brand": "#1E5B4B",
+  "logo": "prangon.webp",
+  "live": {
+   "url": "https://prangon.dcampusbd.com",
+   "label": "Try it live"
+  },
+  "login": "01700000001 / prangon-demo",
+  "loginNote": "Demo school login for the app.",
+  "links": [
+   {
+    "label": "Sample school website",
+    "url": "https://shapla-high.prangon.dcampusbd.com"
+   }
+  ],
+  "images": [
+   {
+    "f": "prangon-2.webp",
+    "c": "School app home: subscription, site link and DSHE checklist"
+   },
+   {
+    "f": "prangon-1.webp",
+    "c": "Kindergarten demo site rendered from the Khata template"
+   },
+   {
+    "f": "prangon-3.webp",
+    "c": "High school demo site in the government Promito format"
+   }
+  ],
+  "facts": [
+   "The DSHE required-items checklist, each item linked to its editor",
+   "4 templates, including the government format with the 10 DSHE menus",
+   "Custom domain verified end to end with an HTTPS certificate in about 7 seconds",
+   "Pay yearly or monthly by bKash, Nagad or bank"
+  ],
+  "offer": "90 days free after the first publish, then ৳400 a month or ৳3,600 a year.",
+  "stack": [
+   "Go",
+   "MySQL",
+   "Flutter",
+   "Caddy"
+  ]
+ },
+ {
+  "slug": "akhra",
+  "name": "Akhra",
+  "bn": "আখড়া",
+  "kind": "Gym access and billing",
+  "industry": "services",
+  "promise": "The door knows who has paid, and the desk knows who is drifting away.",
+  "who": "Gym owners and front desks.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#3A3D42",
+  "logo": "akhra.svg",
+  "live": {
+   "url": "https://akhra.147.93.168.43.sslip.io",
+   "label": "Try it live"
+  },
+  "login": "01700000001 / akhra1234",
+  "loginNote": "Already filled in on the sign-in form. Sample data resets nightly.",
+  "images": [
+   {
+    "f": "akhra-1.webp",
+    "c": "Today: who is inside, takings, dues and who to call"
+   },
+   {
+    "f": "akhra-2.webp",
+    "c": "Door log: every card tap with time and decision"
+   },
+   {
+    "f": "akhra-3.webp",
+    "c": "Retention: members who stopped coming, with renewal money at risk"
+   }
+  ],
+  "facts": [
+   "Members tap an RFID card at the door and the door decides",
+   "Fee dues shown at the desk; members who stopped coming listed with money at risk",
+   "Works with a ~৳1,500 USB card reader",
+   "Bangla-first interface with Bangla digits"
+  ],
+  "offer": "First month free, then ৳3,000 a month.",
+  "stack": [
+   "Go",
+   "MySQL",
+   "Next.js",
+   "TypeScript",
+   "RFID"
+  ]
+ },
+ {
+  "slug": "alna",
+  "name": "Alna",
+  "bn": "আলনা",
+  "kind": "Clothing showroom POS",
+  "industry": "retail",
+  "promise": "Know which size and colour is left, and catch cash that goes missing.",
+  "who": "Clothing showrooms with a counter PC or tablet and a barcode scanner.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#2B3A8C",
+  "logo": "alna.webp",
+  "live": {
+   "url": "https://cloth.shishirbd.shop",
+   "label": "Try it live"
+  },
+  "login": "PIN 1234 · 2222 · 3333",
+  "loginNote": "Enter as owner, manager or cashier in one tap. These are the approval PINs.",
+  "guide": "https://cloth.shishirbd.shop/manual/",
+  "images": [
+   {
+    "f": "alna-a1.webp",
+    "c": "Pieces left by size and colour"
+   },
+   {
+    "f": "alna-a2.webp",
+    "c": "Find an old bill by memo number or phone"
+   },
+   {
+    "f": "alna-a3.webp",
+    "c": "Exchange with a reason in one tap"
+   },
+   {
+    "f": "alna-a4.webp",
+    "c": "Credit note when the size is not in stock"
+   },
+   {
+    "f": "alna-a5.webp",
+    "c": "Cash and bKash on one memo"
+   },
+   {
+    "f": "alna-a6.webp",
+    "c": "Voided memos logged with the reason"
+   },
+   {
+    "f": "alna-a7.webp",
+    "c": "Cash short goes into the audit"
+   },
+   {
+    "f": "alna-a8.webp",
+    "c": "Stock running out, size by size"
+   }
+  ],
+  "facts": [
+   "Size × colour stock matrix and barcode labels",
+   "Exchange credit notes and split payment",
+   "Staff-theft audit; cashiers never see cost",
+   "Bangla user guide with screenshots and a 12-step self-check"
+  ],
+  "offer": "Price on request.",
+  "stack": [
+   "Go",
+   "SQLite",
+   "PWA",
+   "IndexedDB"
+  ]
+ },
+ {
+  "slug": "hatbodol",
+  "name": "Hatbodol",
+  "bn": "হাতবদল",
+  "kind": "Courier company system",
+  "industry": "services",
+  "promise": "Every parcel and every cash-on-delivery taka always has one holder.",
+  "who": "Small courier companies: merchants, hub, riders and the owner.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#123F7A",
+  "logo": "hatbodol.webp",
+  "live": {
+   "url": "https://courier.shishirbd.shop/demo?as=merchant&tour=1",
+   "label": "Try it live"
+  },
+  "login": "01711000001 / demo1234",
+  "loginNote": "Or enter any role in one tap; a guided tour starts on its own.",
+  "guide": "https://courier.shishirbd.shop/manual",
+  "images": [
+   {
+    "f": "hatbodol-a1.webp",
+    "c": "Where the parcel is, on the phone"
+   },
+   {
+    "f": "hatbodol-a2.webp",
+    "c": "Who holds the parcel, from pickup to delivery"
+   },
+   {
+    "f": "hatbodol-a3.webp",
+    "c": "Can't deliver needs a logged call"
+   },
+   {
+    "f": "hatbodol-a4.webp",
+    "c": "Parcels held too long turn red"
+   },
+   {
+    "f": "hatbodol-a5.webp",
+    "c": "COD cash counted before it is settled"
+   },
+   {
+    "f": "hatbodol-a6.webp",
+    "c": "Short cash caught at the counter"
+   },
+   {
+    "f": "hatbodol-a7.webp",
+    "c": "Merchant sees where their money is"
+   },
+   {
+    "f": "hatbodol-a8.webp",
+    "c": "No payout without a TrxID"
+   }
+  ],
+  "facts": [
+   "A scan at every handover, so each parcel has one holder",
+   "A rider's \"delivered\" is a claim until the hub counts the cash",
+   "\"Couldn't deliver\" needs a logged call first",
+   "Web panels plus a Flutter rider app; one rules engine shared by server and browser"
+  ],
+  "offer": "Looking for a pilot courier company.",
+  "stack": [
+   "Node.js",
+   "SQLite",
+   "Flutter",
+   "Docker"
+  ]
+ },
+ {
+  "slug": "chimni",
+  "name": "Chimni",
+  "bn": "চিমনি",
+  "kind": "Brick kiln ledger",
+  "industry": "trade",
+  "promise": "A kiln owner sees every truck, every buyer's due and every advance from the phone.",
+  "who": "Brick kiln owners and managers.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo · Play closed test"
+  },
+  "brand": "#C8410C",
+  "logo": "chimni.webp",
+  "live": {
+   "url": "https://chimni.147.93.168.43.sslip.io",
+   "label": "Try it live"
+  },
+  "login": "01711402215 · code 123456",
+  "loginNote": "Demo kiln owner, inside the Android app.",
+  "guide": "https://chimni.147.93.168.43.sslip.io/manual/",
+  "images": [
+   {
+    "f": "chimni-a1.webp",
+    "c": "Which grade of brick, how many thousand"
+   },
+   {
+    "f": "chimni-a2.webp",
+    "c": "Every truck's challan and dues"
+   },
+   {
+    "f": "chimni-a3.webp",
+    "c": "Who owes, and for how many days"
+   },
+   {
+    "f": "chimni-a4.webp",
+    "c": "Owner approves a challan change"
+   },
+   {
+    "f": "chimni-a5.webp",
+    "c": "Kiln cash, on the phone"
+   },
+   {
+    "f": "chimni-a6.webp",
+    "c": "Advances over the limit need the owner"
+   },
+   {
+    "f": "chimni-a7.webp",
+    "c": "Works without internet"
+   }
+  ],
+  "facts": [
+   "Trucks, buyers and partners' withdrawals in one ledger",
+   "Phone-first Bangla app that works offline",
+   "Owner approval for changes after the day is closed",
+   "Full Bangla manual with real screenshots"
+  ],
+  "stack": [
+   "Go",
+   "Flutter",
+   "SQLite"
+  ]
+ },
+ {
+  "slug": "maath",
+  "name": "Maath",
+  "bn": "মাঠ",
+  "kind": "Field-sales (SR) tracker",
+  "industry": "trade",
+  "promise": "Every SR closes the day with stock and cash matched, and each shop gets an SMS receipt.",
+  "who": "Distributors and companies with sales representatives on the road.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#00694A",
+  "logo": "maath.webp",
+  "live": {
+   "url": "https://maath.shishirbd.shop",
+   "label": "Try it live"
+  },
+  "login": "01711000001 · code 123456",
+  "loginNote": "Demo owner. SR phones are 01811000001 to 01811000006 with the same code.",
+  "images": [
+   {
+    "f": "maath-1.webp",
+    "c": "SR starts the day with the stock to load"
+   },
+   {
+    "f": "maath-2.webp",
+    "c": "Cash, bKash or credit at each shop"
+   },
+   {
+    "f": "maath-3.webp",
+    "c": "Sale done: the shop gets an SMS receipt"
+   },
+   {
+    "f": "maath-4.webp",
+    "c": "Day closed with stock and cash matched"
+   },
+   {
+    "f": "maath-5.webp",
+    "c": "Office view of every SR's day"
+   }
+  ],
+  "facts": [
+   "Day-end stock and cash reconciliation for every SR",
+   "SMS receipt to the shop as a witness",
+   "Flutter app for SRs, web office for the company",
+   "One server for many companies; sales mode and routes are settings"
+  ],
+  "offer": "Price not set yet.",
+  "stack": [
+   "Go",
+   "SQLite",
+   "Flutter",
+   "PWA"
+  ]
+ },
+ {
+  "slug": "mezban",
+  "name": "Mezban",
+  "bn": "মেজবান",
+  "kind": "Restaurant management",
+  "industry": "services",
+  "promise": "Waiters, kitchen and cashier work from one order, and the owner reads the day's numbers.",
+  "who": "Restaurants with waiters, a kitchen and a cash counter.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#0E5A52",
+  "logo": "mezban.webp",
+  "live": {
+   "url": "https://demo.147.93.168.43.sslip.io",
+   "label": "Try it live"
+  },
+  "loginNote": "One-tap demo roles: waiter, kitchen, cashier, owner. The sample restaurant rebuilds nightly.",
+  "images": [
+   {
+    "f": "mezban-3.webp",
+    "c": "Waiter taking a table's order on a phone"
+   },
+   {
+    "f": "mezban-1.webp",
+    "c": "Owner reports: takings, VAT, bills and sales by hour"
+   },
+   {
+    "f": "mezban-2.webp",
+    "c": "Stock screen with reorder warnings for low ingredients"
+   }
+  ],
+  "facts": [
+   "Kitchen screen gets tickets the moment a waiter sends them",
+   "VAT 15% and service charge with a Mushak 6.3 style invoice",
+   "Bangla interface with 1,144 translated strings",
+   "Demo seeded with 14 days of history through the real billing engine"
+  ],
+  "stack": [
+   "Go",
+   "MySQL",
+   "PWA",
+   "Server-sent events"
+  ]
+ },
+ {
+  "slug": "tuitiondesk",
+  "name": "Tuition Desk",
+  "bn": "টিউশন ডেস্ক",
+  "kind": "Tuition media back office",
+  "industry": "edu",
+  "promise": "A tuition media knows which tutor owes which fee, and when.",
+  "who": "Home-tutor agencies (tuition media).",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#1F2F66",
+  "logo": "tuitiondesk.webp",
+  "live": {
+   "url": "https://tuitionmedia.shishirbd.shop/app/?demo=owner",
+   "label": "Try it live"
+  },
+  "loginNote": "Opens straight into the owner demo, no code needed.",
+  "guide": "https://tuitionmedia.shishirbd.shop",
+  "images": [
+   {
+    "f": "tuitiondesk-a1.webp",
+    "c": "Every media fee in one place"
+   },
+   {
+    "f": "tuitiondesk-a2.webp",
+    "c": "When each fee is due, written down"
+   },
+   {
+    "f": "tuitiondesk-a3.webp",
+    "c": "Confirmation letter to tutor and guardian"
+   },
+   {
+    "f": "tuitiondesk-a4.webp",
+    "c": "A receipt for every payment"
+   },
+   {
+    "f": "tuitiondesk-a5.webp",
+    "c": "Duplicate bKash TrxID caught"
+   },
+   {
+    "f": "tuitiondesk-a6.webp",
+    "c": "Refunds worked out when a tuition ends"
+   },
+   {
+    "f": "tuitiondesk-a7.webp",
+    "c": "Owner's list of who owes what"
+   }
+  ],
+  "facts": [
+   "Every guardian request, applicant, demo class and media fee from first call to paid",
+   "Duplicate bKash TrxIDs caught before a payment is saved",
+   "Owner app as an Android APK and in the browser"
+  ],
+  "stack": [
+   "Go",
+   "SQLite",
+   "Flutter",
+   "Docker"
+  ]
+ },
+ {
+  "slug": "upasthit",
+  "name": "Upasthit",
+  "bn": "উপস্থিত",
+  "kind": "Geo-fenced attendance",
+  "industry": "trade",
+  "promise": "Staff check in with one tap from inside the office area, and the owner sees everyone.",
+  "who": "Small businesses and offices.",
+  "status": {
+   "tone": "demo",
+   "label": "Live · Play closed test"
+  },
+  "brand": "#2343B8",
+  "logo": "upasthit.svg",
+  "live": {
+   "url": "https://upasthit.dcampusbd.com",
+   "label": "Try it live"
+  },
+  "login": "Join code 246810",
+  "loginNote": "In the Android app; it opens your own demo office.",
+  "images": [
+   {
+    "f": "upasthit-1.webp",
+    "c": "Today screen after a selfie check-in inside the office fence"
+   },
+   {
+    "f": "upasthit-2.webp",
+    "c": "Check-in evidence: fence, accuracy, real location, selfie, server time"
+   },
+   {
+    "f": "upasthit-3.webp",
+    "c": "Outside the fence: 800 metres away, request instead"
+   }
+  ],
+  "facts": [
+   "Layered check-in: automatic, confirm, selfie, or a request",
+   "Owner sees everyone on a web board",
+   "147 of 147 production API checks passed",
+   "Daily database and selfie backups kept 14 days"
+  ],
+  "stack": [
+   "Go",
+   "MySQL",
+   "Flutter",
+   "Caddy"
+  ]
+ },
+ {
+  "slug": "malkhana",
+  "name": "Malkhana",
+  "bn": "মালখানা",
+  "kind": "Hardware shop POS",
+  "industry": "retail",
+  "promise": "Staff sell cement and rod; only the owner sees cost, profit and the theft audit.",
+  "who": "Hardware and building-material shops with godowns.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#1B232C",
+  "logo": "malkhana.webp",
+  "live": {
+   "url": "https://malkhana.147.93.168.43.sslip.io",
+   "label": "Try it live"
+  },
+  "loginNote": "One-tap demo roles: owner, manager, counter, godown. Each gets a private 24-hour shop.",
+  "guide": "https://malkhana.147.93.168.43.sslip.io/watch/",
+  "images": [
+   {
+    "f": "malkhana-1.webp",
+    "c": "Owner's day book: today's sales, locked profit and seven-day bars"
+   },
+   {
+    "f": "malkhana-2.webp",
+    "c": "Lock grid deciding which role sees cost and profit"
+   },
+   {
+    "f": "malkhana-3.webp",
+    "c": "Audit by staff with below-cost sales flagged"
+   }
+  ],
+  "facts": [
+   "Cost and profit are stripped on the server for every role except the owner",
+   "Audit flags below-cost sales, voids, discounts and transfer shortages",
+   "Stock across the shop and several godowns",
+   "Bangla and English interface"
+  ],
+  "stack": [
+   "Go",
+   "SQLite",
+   "PWA",
+   "IndexedDB"
+  ]
+ },
+ {
+  "slug": "nirog",
+  "name": "Nirog",
+  "bn": "নিরোগ",
+  "kind": "Hospital management",
+  "industry": "health",
+  "promise": "Reception, doctors, lab, billing and pharmacy work from one record, and patients follow their serial on the phone.",
+  "who": "Private hospitals and clinics.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#0A6B58",
+  "logo": "nirog.webp",
+  "live": {
+   "url": "https://nirog.147.93.168.43.sslip.io/staff/",
+   "label": "Try it live"
+  },
+  "login": "shimultala-demo · nirog-demo-2026 · 01710000002",
+  "loginNote": "Hospital code, password and phone of the fictional demo hospital. It resets nightly.",
+  "guide": "https://nirog.147.93.168.43.sslip.io/manual/",
+  "images": [
+   {
+    "f": "nirog-1.webp",
+    "c": "Reception's OPD queue with the doctor's live now-serving board"
+   },
+   {
+    "f": "nirog-2.webp",
+    "c": "Cash close: the day's takings by method, staff and receipt"
+   },
+   {
+    "f": "nirog-3.webp",
+    "c": "Patient's phone shows their serial, who is in, and wait time"
+   }
+  ],
+  "facts": [
+   "Reception, doctor, nurse, lab, billing, pharmacy and owner roles",
+   "Allergy check on prescribing and selling, with an audited override",
+   "Patient app, staff workspace and platform console in one Go binary",
+   "Staff app in Bangla and English"
+  ],
+  "offer": "A founding offer for the first 5 clinics.",
+  "stack": [
+   "Go",
+   "PostgreSQL",
+   "Row-level security",
+   "TypeScript",
+   "PWA"
+  ]
+ },
+ {
+  "slug": "thaba",
+  "name": "Thaba",
+  "bn": "থাবা",
+  "kind": "Pet shop online store",
+  "industry": "retail",
+  "promise": "A pet shop reminds each customer before the cat food runs out.",
+  "who": "Pet shops and pet food sellers on Facebook.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#C8962B",
+  "logo": "thaba.svg",
+  "live": {
+   "url": "https://thaba.shishirbd.shop/demo",
+   "label": "Try it live"
+  },
+  "loginNote": "The shop owner's panel opens in one tap, no login.",
+  "links": [
+   {
+    "label": "Shop owner's panel",
+    "url": "https://thaba.shishirbd.shop/demo/admin"
+   }
+  ],
+  "images": [
+   {
+    "f": "thaba-1.webp",
+    "c": "Store remembers each pet and what it eats"
+   },
+   {
+    "f": "thaba-2.webp",
+    "c": "Refill clock: how many days a pack lasts"
+   },
+   {
+    "f": "thaba-3.webp",
+    "c": "Best sellers with real product photos"
+   },
+   {
+    "f": "thaba-4.webp",
+    "c": "Batch and expiry shown on every pack"
+   },
+   {
+    "f": "thaba-5.webp",
+    "c": "Owner's today list with ready reminders"
+   },
+   {
+    "f": "thaba-6.webp",
+    "c": "Deworming and vaccine dates per pet"
+   }
+  ],
+  "facts": [
+   "A refill clock per customer, worked out from pack size and pet weight",
+   "Owner's today list with ready Bangla WhatsApp and SMS reminders",
+   "Batch and expiry shown on every pack",
+   "Cash-on-delivery friendly repeat orders"
+  ],
+  "offer": "Free up to 30 products. Shop plan ৳499 a month; the first 20 shops get the first month free and their products uploaded for them.",
+  "stack": [
+   "Go",
+   "SQLite",
+   "Vanilla JS"
+  ]
+ },
+ {
+  "slug": "daksho",
+  "name": "Daksho",
+  "bn": "দক্ষ",
+  "kind": "Training centre system",
+  "industry": "edu",
+  "promise": "Every installment is collected before the certificate goes out.",
+  "who": "Computer and skills training centres.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#1D4ED8",
+  "logo": "daksho.webp",
+  "live": {
+   "url": "https://daksho.shishirbd.shop",
+   "label": "Try it live"
+  },
+  "guide": "https://daksho.shishirbd.shop/manual/",
+  "images": [
+   {
+    "f": "daksho-a1.webp",
+    "c": "Half the fee today, the rest after class 22"
+   },
+   {
+    "f": "daksho-a2.webp",
+    "c": "TrxID receipts that cannot be deleted"
+   },
+   {
+    "f": "daksho-a3.webp",
+    "c": "Old dues aged at a glance"
+   },
+   {
+    "f": "daksho-a4.webp",
+    "c": "Reminder SMS within 70 characters"
+   },
+   {
+    "f": "daksho-a5.webp",
+    "c": "No certificate while dues remain"
+   },
+   {
+    "f": "daksho-a6.webp",
+    "c": "Certificates verified by QR"
+   },
+   {
+    "f": "daksho-a7.webp",
+    "c": "Lab seat map for each batch"
+   }
+  ],
+  "facts": [
+   "Admission with photo and documents, and a lab seat map",
+   "Installment plans tied to classes, such as half after class 22",
+   "bKash and Nagad TrxID receipts that cannot be deleted",
+   "QR attendance from the ID card with guardian SMS",
+   "Certificate blocked while dues remain, verified by QR"
+  ],
+  "offer": "Price on request.",
+  "stack": [
+   "Go",
+   "SQLite",
+   "JavaScript"
+  ]
+ },
+ {
+  "slug": "garighor",
+  "name": "Garighor",
+  "bn": "গাড়িঘর",
+  "kind": "Car showroom marketplace and ERP",
+  "industry": "retail",
+  "promise": "Buyers see verified showroom cars with the price written; every call becomes a lead.",
+  "who": "Reconditioned car showrooms and importers.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#E09A1C",
+  "logo": "garighor.svg",
+  "live": {
+   "url": "https://garighor.shishirbd.shop",
+   "label": "Try it live"
+  },
+  "links": [
+   {
+    "label": "Showroom back office demo",
+    "url": "https://garighor.shishirbd.shop/office/?demo=owner"
+   }
+  ],
+  "images": [
+   {
+    "f": "garighor-1.webp",
+    "c": "Public site: cars with price and papers in the open"
+   },
+   {
+    "f": "garighor-2.webp",
+    "c": "Showroom office: calls to make and import money"
+   },
+   {
+    "f": "garighor-3.webp",
+    "c": "Desktop home page"
+   }
+  ],
+  "facts": [
+   "Photo-first public site modelled on the big car marketplaces",
+   "Every WhatsApp or call tap lands as a lead in the showroom's inbox",
+   "Import view from Japan to port to showroom, with LC and money tracking",
+   "Chassis share link for a buyer"
+  ],
+  "stack": [
+   "Go",
+   "MySQL",
+   "JavaScript",
+   "Docker"
+  ]
+ },
+ {
+  "slug": "lokkhobhed",
+  "name": "Lokkhobhed",
+  "bn": "লক্ষ্যভেদ",
+  "kind": "Job exam preparation",
+  "industry": "edu",
+  "promise": "Daily timed MCQ exams for government job candidates, with a merit list.",
+  "who": "BCS, bank and primary job exam candidates.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo"
+  },
+  "brand": "#0D6B50",
+  "logo": "lokkhobhed.webp",
+  "live": {
+   "url": "https://lokkhobhed.147.93.168.43.sslip.io",
+   "label": "Try it live"
+  },
+  "loginNote": "Demo mode: the sign-in code is shown on screen.",
+  "images": [
+   {
+    "f": "lokkhobhed-1.webp",
+    "c": "Home with today's live exam and free exams"
+   }
+  ],
+  "facts": [
+   "859 original questions",
+   "Public site, student app and admin panel in one Go binary",
+   "Live exams with a countdown and merit list"
+  ],
+  "stack": [
+   "Go",
+   "SQLite",
+   "JavaScript"
+  ]
+ },
+ {
+  "slug": "orna",
+  "name": "Orna",
+  "bn": "ওড়না",
+  "kind": "Fashion reseller store",
+  "industry": "retail",
+  "promise": "A Facebook page that sells Pakistani dresses gets its own store with honest landed prices.",
+  "who": "Facebook pages that resell Pakistani designer wear.",
+  "status": {
+   "tone": "proto",
+   "label": "Demo store"
+  },
+  "brand": "#7A4E3A",
+  "live": {
+   "url": "https://orna.shishirbd.shop",
+   "label": "Try it live"
+  },
+  "loginNote": "A sample store: orders do not reach anyone and no money is taken.",
+  "images": [
+   {
+    "f": "orna-1.webp",
+    "c": "Store home with the shipment from Lahore"
+   }
+  ],
+  "facts": [
+   "Store plus an admin panel for stock, orders and shipments",
+   "Prices worked out from the Pakistani price with duty",
+   "28 automated tests",
+   "A real backend with bKash is the next step"
+  ],
+  "stack": [
+   "JavaScript",
+   "HTML",
+   "CSS",
+   "IndexedDB"
+  ]
+ },
+ {
+  "slug": "kanchi",
+  "name": "Kanchi",
+  "bn": "কাঁচি",
+  "kind": "Salon supply store",
+  "industry": "retail",
+  "promise": "Salons buy genuine tools from one seller that stocks, checks and delivers itself.",
+  "who": "Barbershops, beauty parlours and makeup artists.",
+  "status": {
+   "tone": "proto",
+   "label": "Prototype"
+  },
+  "brand": "#9C2F4A",
+  "live": {
+   "url": "https://kanchi.147.93.168.43.sslip.io/",
+   "label": "Try it live"
+  },
+  "loginNote": "Open the buyer app and the warehouse panel from the start page. Data stays in your browser.",
+  "images": [
+   {
+    "f": "kanchi-1.webp",
+    "c": "Home with two-tap reorder and today's delivery"
+   },
+   {
+    "f": "kanchi-2.webp",
+    "c": "Clipper page with bulk price tiers and genuine-stock check"
+   },
+   {
+    "f": "kanchi-3.webp",
+    "c": "Warehouse ops board: new, packed, with courier, delivered"
+   }
+  ],
+  "facts": [
+   "Bulk tier pricing and two-tap reorder",
+   "Cash on delivery or bKash",
+   "143 browser checks pass against the live site"
+  ],
+  "stack": [
+   "HTML",
+   "CSS",
+   "JavaScript"
+  ]
+ },
+ {
+  "slug": "jobab",
+  "name": "Jobab",
+  "bn": "জবাব",
+  "kind": "Page inbox sales assistant",
+  "industry": "sales",
+  "promise": "A Facebook shop's inbox answers at 3 a.m. with real prices and takes the order.",
+  "who": "Facebook and Instagram shops.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo · test mode"
+  },
+  "brand": "#262B6B",
+  "logo": "jobab.webp",
+  "live": {
+   "url": "https://jobab.147.93.168.43.sslip.io/demo",
+   "label": "Try it live"
+  },
+  "loginNote": "Write as a customer on the left, watch the shop's inbox on the right.",
+  "images": [
+   {
+    "f": "jobab-1.webp",
+    "c": "Demo: write as a customer and watch the inbox"
+   },
+   {
+    "f": "jobab-2.webp",
+    "c": "Home page"
+   }
+  ],
+  "facts": [
+   "Prices and product cards come from the shop's own catalogue, never made up",
+   "Hands the chat to a person when it needs one",
+   "Always says it is an assistant",
+   "Pay per reply, no monthly fee"
+  ],
+  "stack": [
+   "Go",
+   "MySQL",
+   "JavaScript",
+   "Playwright"
+  ]
+ },
+ {
+  "slug": "daak",
+  "name": "Daak",
+  "bn": "ডাক",
+  "kind": "Phone sales caller",
+  "industry": "sales",
+  "promise": "Calls a business's leads and talks in everyday Bangla, always saying it is a digital assistant.",
+  "who": "Businesses with lists of leads to call, remind or survey.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo · test mode"
+  },
+  "brand": "#1E6B52",
+  "live": {
+   "url": "https://daak.147.93.168.43.sslip.io/demo",
+   "label": "Try it live"
+  },
+  "loginNote": "Pick a business and take its call in the browser. Calls pause when the voice service is out of credit.",
+  "images": [
+   {
+    "f": "daak-1.webp",
+    "c": "Public demo: pick a business and take its call"
+   },
+   {
+    "f": "daak-2.webp",
+    "c": "Voice choice, own-website option and things to try"
+   }
+  ],
+  "facts": [
+   "Opens every call by saying it is a digital assistant and the call is recorded",
+   "Stops talking about 0.12 s after the customer starts",
+   "Five goals: sell a demo, book, confirm an order, remind a due, survey",
+   "Tested over real encrypted SIP calls from Bangladesh"
+  ],
+  "stack": [
+   "Python",
+   "Asterisk",
+   "SIP",
+   "Docker"
+  ]
+ },
+ {
+  "slug": "cjobs",
+  "name": "CJobs",
+  "bn": "সিজবস",
+  "kind": "Small jobs app",
+  "industry": "sales",
+  "promise": "People earn by doing small real jobs: setting up shops on our software and testing apps.",
+  "who": "Students and workers looking for side income, and businesses that post small jobs.",
+  "status": {
+   "tone": "demo",
+   "label": "Live · open sign-up"
+  },
+  "brand": "#E0201F",
+  "logo": "cjobs.webp",
+  "live": {
+   "url": "https://cjobs.shishirbd.shop/app/",
+   "label": "Try it live"
+  },
+  "loginNote": "Sign up with your own number.",
+  "images": [
+   {
+    "f": "cjobs-1.webp",
+    "c": "Sign in on the website"
+   }
+  ],
+  "facts": [
+   "Points for each verified job, convertible to taka above a minimum",
+   "Trust levels that rise with verified work",
+   "Single level only: no pyramid of referrals",
+   "Android app approved on Play, plus the website"
+  ],
+  "stack": [
+   "Go",
+   "MySQL",
+   "Flutter",
+   "PWA"
+  ]
+ },
+ {
+  "slug": "thala",
+  "name": "Thala",
+  "bn": "থালা",
+  "kind": "Food delivery",
+  "industry": "services",
+  "promise": "Food at the shop's own price, every fee shown before checkout, and a credit when it is late.",
+  "who": "Restaurants, riders and hungry customers.",
+  "status": {
+   "tone": "proto",
+   "label": "Prototype"
+  },
+  "brand": "#0B6E3F",
+  "logo": "thala.svg",
+  "live": {
+   "url": "https://thala.shishirbd.shop/?tour=1",
+   "label": "Try the prototype"
+  },
+  "loginNote": "A guided tour follows one order from customer to restaurant to rider.",
+  "images": [
+   {
+    "f": "thala-1.webp",
+    "c": "Restaurant list with delivery time and price"
+   },
+   {
+    "f": "thala-2.webp",
+    "c": "Menu with the shop's own prices"
+   },
+   {
+    "f": "thala-3.webp",
+    "c": "Live tracking with the promised time"
+   },
+   {
+    "f": "thala-4.webp",
+    "c": "Restaurant tablet accepting the order"
+   }
+  ],
+  "facts": [
+   "Four surfaces: customer app, restaurant tablet, rider app and ops console",
+   "All fees shown before checkout; automatic credit for late delivery",
+   "One-tap refunds back to the original payment method",
+   "20-step guided demo across every role"
+  ],
+  "stack": [
+   "JavaScript",
+   "HTML",
+   "CSS"
+  ]
+ },
+ {
+  "slug": "nexa",
+  "name": "easyprintBD",
+  "bn": "ইজিপ্রিন্ট",
+  "kind": "Pay-per-print kiosk",
+  "industry": "services",
+  "promise": "Scan the sticker on a printer, upload, pay with bKash and collect the pages. No account.",
+  "who": "Shops that want a self-service printer; students who need a few pages.",
+  "status": {
+   "tone": "proto",
+   "label": "Deployed · no printer online"
+  },
+  "brand": "#1F5FD6",
+  "logo": "nexa.webp",
+  "links": [
+   {
+    "label": "Kiosk page",
+    "url": "https://print.dcampusbd.com/p/"
+   }
+  ],
+  "note": "The print flow opens by scanning a printer's QR sticker, and no printer is online right now.",
+  "images": [
+   {
+    "f": "nexa-1.webp",
+    "c": "Scan-to-print: file uploaded, page count and price, pay"
+   },
+   {
+    "f": "nexa-2.webp",
+    "c": "Live job status while the pages print"
+   }
+  ],
+  "facts": [
+   "Files go straight to storage; the server counts pages itself",
+   "Live job progress over server-sent events",
+   "Unprinted jobs expire after 30 minutes with a full refund",
+   "Linux print agent pulls work over HTTPS and prints through CUPS"
+  ],
+  "stack": [
+   "Go",
+   "MySQL",
+   "AWS S3",
+   "Vue 3",
+   "bKash",
+   "CUPS"
+  ]
+ },
+ {
+  "slug": "swad",
+  "name": "Swader Map",
+  "bn": "স্বাদের ম্যাপ",
+  "kind": "Viral food map",
+  "industry": "apps",
+  "promise": "Tick the famous food of each of Bangladesh's 64 districts you have eaten and share your map.",
+  "who": "Everyone who has argued about which district's food is best.",
+  "status": {
+   "tone": "demo",
+   "label": "Live"
+  },
+  "brand": "#C4213F",
+  "logo": "swad.svg",
+  "live": {
+   "url": "https://amimul1234.github.io/swad/",
+   "label": "Try it live"
+  },
+  "loginNote": "Open and tap foods; no sign-in.",
+  "images": [
+   {
+    "f": "swad-2.webp",
+    "c": "Landing: how many districts' famous foods have you eaten"
+   },
+   {
+    "f": "swad-1.webp",
+    "c": "Personal map card: 27 of 64 districts eaten"
+   },
+   {
+    "f": "swad-3.webp",
+    "c": "Food checklist grouped by division with ticked dishes"
+   }
+  ],
+  "facts": [
+   "64 districts, 8 divisions",
+   "Shareable map card image made in the browser",
+   "Map data: BBS / OCHA via geoBoundaries",
+   "Format credit: Sabbir Hossien Robin's bd-maps"
+  ],
+  "stack": [
+   "JavaScript",
+   "SVG",
+   "GeoJSON"
+  ]
+ },
+ {
+  "slug": "shishir",
+  "name": "Shishir",
+  "bn": "শিশির",
+  "kind": "Skincare store",
+  "industry": "retail",
+  "promise": "Genuine skincare with cash on delivery, and a photo of the actual box before you pay.",
+  "who": "Skincare shoppers across Bangladesh.",
+  "status": {
+   "tone": "demo",
+   "label": "Live store"
+  },
+  "brand": "#3E5A3A",
+  "logo": "shishir.webp",
+  "live": {
+   "url": "https://shishirbd.shop",
+   "label": "Visit the store"
+  },
+  "images": [
+   {
+    "f": "shishir-1.webp",
+    "c": "Home: see the box before you pay"
+   },
+   {
+    "f": "shishir-2.webp",
+    "c": "Shop grid with filters, brands and taka prices"
+   },
+   {
+    "f": "shishir-3.webp",
+    "c": "Product page with size, unit price and benefit"
+   }
+  ],
+  "facts": [
+   "Delivery zones for all 64 districts",
+   "Skin quiz that builds a routine",
+   "Bangla by default with an English toggle",
+   "Order with only a phone number"
+  ],
+  "stack": [
+   "JavaScript",
+   "Python",
+   "Caddy"
+  ]
+ },
+ {
+  "slug": "tuitionkhata",
+  "name": "Tuition Khata",
+  "bn": "টিউশন খাতা",
+  "kind": "Tutor's fee and attendance app",
+  "industry": "edu",
+  "promise": "A home tutor sees who has paid this month and reminds the rest in one tap.",
+  "who": "Private tutors and small coaching batches.",
+  "status": {
+   "tone": "review",
+   "label": "In Play review"
+  },
+  "brand": "#0E5C3B",
+  "logo": "tuitionkhata.webp",
+  "note": "The Play closed test is in review; the opt-in link works once Google approves it.",
+  "images": [
+   {
+    "f": "tuitionkhata-1.webp",
+    "c": "Home: total dues and who is late"
+   },
+   {
+    "f": "tuitionkhata-2.webp",
+    "c": "Who owes, month by month"
+   },
+   {
+    "f": "tuitionkhata-3.webp",
+    "c": "Attendance for a batch in one screen"
+   },
+   {
+    "f": "tuitionkhata-4.webp",
+    "c": "Collect a fee with the number pad"
+   },
+   {
+    "f": "tuitionkhata-5.webp",
+    "c": "Receipt sent to the guardian by SMS"
+   },
+   {
+    "f": "tuitionkhata-6.webp",
+    "c": "Batch with each student's paid months"
+   }
+  ],
+  "facts": [
+   "Batches, students, attendance and monthly fees",
+   "Bulk reminders and receipts by SMS",
+   "Partial payments carried to the next month"
+  ],
+  "offer": "৳400 a month, ৳2,160 for 6 months or ৳3,840 for a year.",
+  "stack": [
+   "Flutter",
+   "Go",
+   "MySQL",
+   "Android"
+  ]
+ },
+ {
+  "slug": "quiltblocks",
+  "name": "Quilt Blocks",
+  "bn": "কুইল্ট ব্লকস",
+  "kind": "Puzzle game",
+  "industry": "apps",
+  "promise": "A calm block puzzle on a board drawn like a hand-stitched kantha quilt.",
+  "who": "Anyone who wants a puzzle with no timer and no lives.",
+  "status": {
+   "tone": "review",
+   "label": "Play closed test"
+  },
+  "brand": "#151C37",
+  "logo": "quiltblocks.webp",
+  "links": [
+   {
+    "label": "Join the Play test",
+    "url": "https://play.google.com/apps/testing/com.amimul.quiltblocks"
+   }
+  ],
+  "note": "Open on Play to testers. Ask by email to be added.",
+  "images": [
+   {
+    "f": "quiltblocks-2.webp",
+    "c": "Mid-game quilt board with three patches to place"
+   },
+   {
+    "f": "quiltblocks-1.webp",
+    "c": "A clear unstitches lines and chains a ×4 streak"
+   },
+   {
+    "f": "quiltblocks-3.webp",
+    "c": "New best score card at the end of a round"
+   }
+  ],
+  "facts": [
+   "8×8 board, three pieces at a time",
+   "No timer, no energy, no lives",
+   "Works fully offline and resumes mid-game",
+   "Listed in 177 countries on the closed track"
+  ],
+  "stack": [
+   "Flutter",
+   "Dart",
+   "Android",
+   "AdMob"
+  ]
+ },
+ {
+  "slug": "pressmark",
+  "name": "Pressmark",
+  "bn": "প্রেসমার্ক",
+  "kind": "PDF toolkit",
+  "industry": "apps",
+  "promise": "33 PDF tools that work on your own device, so nothing is uploaded.",
+  "who": "Anyone who merges, compresses, signs or converts PDFs.",
+  "status": {
+   "tone": "proto",
+   "label": "Built, not deployed"
+  },
+  "brand": "#1D463C",
+  "logo": "pressmark.svg",
+  "note": "Built and tested, not published yet.",
+  "images": [
+   {
+    "f": "pressmark-1.webp",
+    "c": "Home: drop any file, 33 tools grouped by job"
+   },
+   {
+    "f": "pressmark-2.webp",
+    "c": "Compare PDF highlighting changed words between two contract versions"
+   },
+   {
+    "f": "pressmark-3.webp",
+    "c": "Organize PDF: pages from two files in one grid"
+   }
+  ],
+  "facts": [
+   "Merge, compress, OCR, convert, sign, redact, compare and more",
+   "Compress: 5.7 MB to 628 KB on a photo PDF, text untouched",
+   "OCR in 16 languages",
+   "Installs as an app and works offline"
+  ],
+  "stack": [
+   "TypeScript",
+   "Preact",
+   "pdf.js",
+   "WebAssembly",
+   "PWA"
+  ]
+ },
+ {
+  "slug": "tirish",
+  "name": "Tirish",
+  "bn": "তিরিশ",
+  "kind": "Poultry dealer credit book",
+  "industry": "trade",
+  "promise": "A feed dealer knows what each farmer owes per batch of birds until the batch is sold.",
+  "who": "Poultry feed dealers.",
+  "status": {
+   "tone": "proto",
+   "label": "Built, not deployed"
+  },
+  "brand": "#17427E",
+  "logo": "tirish.svg",
+  "note": "Built and tested; waiting for a first dealer.",
+  "images": [
+   {
+    "f": "tirish-1.webp",
+    "c": "Dealer home: money out with farmers, batches past sale date"
+   },
+   {
+    "f": "tirish-2.webp",
+    "c": "Farmer batch sheet with feed, medicine and cash entries"
+   }
+  ],
+  "facts": [
+   "All money stored as whole poisha, including on the wire",
+   "Android app with an offline outbox",
+   "No outside requests: fonts bundled, no dependencies"
+  ],
+  "stack": [
+   "Go",
+   "MySQL",
+   "PWA",
+   "Kotlin"
+  ]
+ },
+ {
+  "slug": "chaka",
+  "name": "Chaka",
+  "bn": "চাকা",
+  "kind": "Garage daily rent book",
+  "industry": "trade",
+  "promise": "A garage collects every easy-bike's daily rent and sees each driver's arrears.",
+  "who": "Garages that rent easy-bikes, battery rickshaws and autos by the day.",
+  "status": {
+   "tone": "proto",
+   "label": "Built, not deployed"
+  },
+  "brand": "#3C4248",
+  "logo": "chaka.svg",
+  "note": "Built and tested; waiting for a walk-through on a real phone.",
+  "images": [
+   {
+    "f": "chaka-1.webp",
+    "c": "Tonight's rent collection with one-tap amounts per vehicle"
+   },
+   {
+    "f": "chaka-2.webp",
+    "c": "Driver page: arrears built day by day"
+   },
+   {
+    "f": "chaka-3.webp",
+    "c": "Monthly accounts: collected, off days, expenses, profit"
+   }
+  ],
+  "facts": [
+   "One data file per garage, so data never crosses garages",
+   "Works offline and syncs each entry exactly once",
+   "Manager limits enforced by the server"
+  ],
+  "stack": [
+   "Go",
+   "SQLite",
+   "Flutter"
+  ]
+ },
+ {
+  "slug": "rickshaw",
+  "name": "Rickshaw Painter",
+  "bn": "রিকশা পেইন্টার",
+  "kind": "Arcade game",
+  "industry": "apps",
+  "promise": "Paint tins ride a rail around a rickshaw-art panel and you paint it square by square.",
+  "who": "Casual players.",
+  "status": {
+   "tone": "proto",
+   "label": "Built, not published"
+  },
+  "brand": "#D9482B",
+  "note": "Built, not published yet.",
+  "images": [
+   {
+    "f": "rickshaw-1.webp",
+    "c": "Painting the Bagh panel with tins on the rail"
+   },
+   {
+    "f": "rickshaw-2.webp",
+    "c": "Finished panel card framed as a rickshaw back-plate"
+   }
+  ],
+  "facts": [
+   "9 hand-drawn panels, then endless generated rickshaw motifs",
+   "Boards grow from 8×7 to 17×17",
+   "Finished panels share as a framed image"
+  ],
+  "stack": [
+   "Flutter",
+   "Dart",
+   "AdMob"
+  ]
+ }
+]

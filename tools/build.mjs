@@ -1,139 +1,199 @@
-import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
-import { join, dirname } from "node:path";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const order = JSON.parse(readFileSync(join(root, "tools/order.json"), "utf8"));
-const mdir = join(root, "assets/work/_manifest");
-const all = Object.fromEntries(
-  readdirSync(mdir).filter((f) => f.endsWith(".json")).map((f) => {
-    const m = JSON.parse(readFileSync(join(mdir, f), "utf8"));
-    return [m.slug, m];
-  })
-);
+const read = (p) => readFileSync(join(root, p), "utf8");
+const products = JSON.parse(read("assets/products.json"));
+const cfg = JSON.parse(read("tools/order.json"));
+const template = read("tools/page.html");
 
-const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-const bn = (s) => (s ? `<span lang="bn">${esc(s)}</span>` : "");
-const imgOk = (f) => existsSync(join(root, "assets/work", f));
+const bySlug = new Map(products.map((p) => [p.slug, p]));
+const order = cfg.order.filter((s) => bySlug.has(s));
+for (const p of products) if (!order.includes(p.slug)) order.push(p.slug);
+const list = order.map((s) => bySlug.get(s));
 
-const items = order.items.map((o) => {
-  const m = { ...all[o.slug], ...o };
-  if (!all[o.slug]) console.warn("missing manifest", o.slug);
-  m.images = (m.images || []).filter((i) => imgOk(i.file));
-  return m;
-});
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
-const groups = order.groups;
-const tone = (s) => {
-  const t = (s || "").toLowerCase();
-  if (t.includes("real") || t.includes("live ·") || t === "live") return "live";
-  if (t.includes("demo") || t.includes("live")) return "demo";
-  if (t.includes("closed") || t.includes("review") || t.includes("test")) return "hold";
-  return "built";
-};
-
-const frame = (img, cls = "", lazy = true, w) => {
-  const dims = img.kind === "phone" ? 'width="780" height="1688"' : 'width="1440" height="900"';
-  return `<div class="frame ${img.kind === "phone" ? "phone" : "desk"} ${cls}"><img src="assets/work/${esc(img.file)}" alt="${esc(img.caption)}" ${dims} ${lazy ? 'loading="lazy" decoding="async"' : 'fetchpriority="high"'}></div>`;
-};
-
-const plate = (m) => {
-  const phones = m.images.filter((i) => i.kind === "phone");
-  const desks = m.images.filter((i) => i.kind !== "phone");
-  let inner;
-  let cls = "";
-  if (!m.images.length) {
-    inner = `<div class="no-shot"><div>${m.name_bn ? `<b>${esc(m.name_bn)}</b>` : ""}${esc(m.noshot || "Screens on request")}</div></div>`;
-  } else if (m.images[0].kind !== "phone") {
-    inner = frame(desks[0]);
-  } else if (phones.length > 1) {
-    cls = " two";
-    inner = frame(phones[0]) + frame(phones[1]);
-  } else {
-    inner = frame(phones[0]);
+function webpSize(file) {
+  const b = readFileSync(join(root, "assets/work", file));
+  const tag = b.toString("ascii", 12, 16);
+  if (tag === "VP8X") return { w: 1 + b.readUIntLE(24, 3), h: 1 + b.readUIntLE(27, 3) };
+  if (tag === "VP8L") {
+    const bits = b.readUInt32LE(21);
+    return { w: (bits & 0x3fff) + 1, h: ((bits >> 14) & 0x3fff) + 1 };
   }
-  return `<div class="item-plate${cls}" aria-hidden="false">${inner}</div>`;
-};
+  return { w: b.readUInt16LE(26) & 0x3fff, h: b.readUInt16LE(28) & 0x3fff };
+}
 
-let n = 0;
-const cards = items.map((m) => {
-  n++;
-  const no = "2." + String(n).padStart(2, "0");
-  const t = m.tone || tone(m.status);
-  const ping = m.live_url ? ` data-ping="${esc(m.live_url)}"` : "";
-  const open = m.live_url && m.openable !== false ? " data-openable" : "";
-  const link = m.live_url ? `<a class="go" href="${esc(m.live_url)}" rel="noopener" target="_blank">${esc(m.cta || "Open it")} <span aria-hidden="true">↗</span></a>` : `<span class="stack mono">${esc((m.stack || []).slice(0, 3).join(" · "))}</span>`;
-  return `
-        <article class="item"${open} data-group="${esc(m.group)}" data-tone="${t}" data-slug="${esc(m.slug)}" style="view-transition-name:it-${esc(m.slug)}">
-          ${plate(m).replace('<div class="item-plate', `<div class="item-plate`)}
-          <span class="item-no mono" aria-hidden="true">${no}</span>
-          <div class="item-body">
-            <div class="item-top"><span class="item-kind mono">${esc(m.kind)}</span><span class="status ${t} mono"${ping}><span class="dot"></span>${esc(m.status_short || m.status.split(" · ")[0])}</span></div>
-            <h3><button type="button" data-open="${esc(m.slug)}">${esc(m.name)}</button>${bn(m.name_bn)}</h3>
-            <p>${esc(m.what)}</p>
-            <div class="item-foot">${link}${m.live_url ? `<span class="stack mono">${esc((m.stack || []).slice(0, 2).join(" · "))}</span>` : ""}</div>
-          </div>
-        </article>`;
-}).join("");
+function shape(img) {
+  const { w, h } = img;
+  const r = w / h;
+  if (Math.abs(r - 0.8) < 0.02) return "card";
+  if (r < 0.75) return "phone";
+  return "desk";
+}
 
-const counts = Object.fromEntries(groups.map((g) => [g.id, items.filter((m) => g.id === "all" || m.group === g.id).length]));
-const liveCount = items.filter((m) => m.live_url && m.openable !== false).length;
-const chips = groups.map((g, i) => `<button class="chip" type="button" data-filter="${g.id}" aria-pressed="${i === 0}">${esc(g.label)} <span class="mono">${counts[g.id]}</span></button>`).join("");
-
-const section = `<div class="cat" id="index">
-        <div class="cat-tools" role="toolbar" aria-label="Filter the index">
-          ${chips}
-          <button class="chip live-only" type="button" data-live aria-pressed="false">Open-able now <span class="mono">${liveCount}</span></button>
-          <p class="cat-count mono" id="cat-count" aria-live="polite">${items.length} systems · ${liveCount} you can open right now</p>
-        </div>
-        <div class="cat-grid" id="cat-grid">${cards}
-        </div>
-      </div>`;
-
-const data = items.map((m) => ({
-  slug: m.slug, name: m.name, bn: m.name_bn || "", kind: m.kind, what: m.what, hard: m.hard_part, facts: m.facts || [],
-  stack: m.stack || [], status: m.status, tone: m.tone || tone(m.status), url: m.live_url || "", note: m.demo_note || "", cta: m.cta || "Open it",
-  images: m.images.map((i) => ({ f: i.file, k: i.kind, c: i.caption })),
-}));
-
-const ex = order.exhibit.map((s) => items.find((m) => m.slug === s)).filter((m) => m && m.images.length);
-const exSets = ex.map((m, i) => {
-  const ph = m.images.filter((x) => x.kind === "phone");
-  const dk = m.images.filter((x) => x.kind !== "phone");
-  let inner;
-  let mode = "";
-  if (dk.length && ph.length) {
-    inner = frame(dk[0], "f-desk", i > 0) + frame(ph[0], "f-ph1", i > 0) + (ph[1] ? frame(ph[1], "f-ph2", i > 0) : "");
-  } else if (dk.length) {
-    inner = frame(dk[0], "f-desk", i > 0) + (dk[1] ? frame({ ...dk[1] }, "f-ph1 f-desk2", i > 0) : "");
-  } else {
-    mode = " phones";
-    inner = ph.slice(0, 3).map((p, k) => frame(p, "f-ph" + k, i > 0)).join("");
+for (const p of list) {
+  for (const im of p.images) {
+    if (!existsSync(join(root, "assets/work", im.f))) throw new Error("missing image " + im.f + " for " + p.slug);
+    Object.assign(im, webpSize(im.f));
+    im.shape = shape(im);
   }
-  return `<div class="ex-set${mode}${i === 0 ? " on" : ""}" data-i="${i}" data-name="${esc(m.name)}" data-bn="${esc(m.name_bn || "")}" data-kind="${esc(m.kind)}" data-url="${esc(m.live_url || "")}" data-slug="${esc(m.slug)}">${inner}</div>`;
-}).join("");
-const first = ex[0];
-const exhibit = `<figure class="exhibit" id="exhibit">
-        <div class="fig-plate ex-plate">
-          <div class="ex-stage" aria-live="off">${exSets}</div>
-        </div>
-        <div class="ex-bar">
-          <p class="ex-name" id="ex-name">${esc(first.name)} ${bn(first.name_bn)}<small>${esc(first.kind)}</small></p>
-          <div class="ex-dots" role="group" aria-label="Choose a product">${ex.map((m, i) => `<button type="button" data-go="${i}" aria-label="${esc(m.name)}" aria-current="${i === 0}"></button>`).join("")}</div>
-          <button class="ex-pause" type="button" id="ex-pause" aria-label="Pause the slideshow" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.4" height="12" rx="1"/><rect x="9.6" y="2" width="3.4" height="12" rx="1"/></svg></button>
-          <a class="btn btn-line sm" id="ex-open" href="#index" data-open="${esc(first.slug)}">See details</a>
-        </div>
-        <figcaption><span class="mono">Fig. 1</span> Real screens, captured from the running products. Every one was designed, built and deployed by one person.</figcaption>
-      </figure>`;
+  if (p.logo && !existsSync(join(root, "assets/logos", p.logo))) throw new Error("missing logo " + p.logo);
+}
 
-let html = readFileSync(join(root, "index.html"), "utf8");
-const swap = (re, rep, label) => {
-  if (!re.test(html)) throw new Error("anchor not found: " + label);
-  html = html.replace(re, () => rep);
+const tones = { use: "In use", demo: "Live", proto: "Prototype", review: "In review" };
+const openable = (p) => Boolean(p.live && p.live.url);
+const counts = {
+  built: list.length,
+  live: list.filter(openable).length,
+  use: list.filter((p) => p.status.tone === "use").length,
 };
-swap(/<div class="cat" id="index">[\s\S]*?(?=\s*<div class="sub-head")/, section, "index");
-swap(/<figure class="exhibit" id="exhibit">[\s\S]*?<\/figure>/, exhibit, "exhibit");
-swap(/<script type="application\/json" id="work-data">[\s\S]*?<\/script>/, `<script type="application/json" id="work-data">${JSON.stringify(data).replace(/</g, "\\u003c")}</script>`, "data");
-html = html.replace(/(<b data-n="systems">)[^<]*(<\/b>)/g, `$1${items.length}$2`).replace(/(<b data-n="live">)[^<]*(<\/b>)/g, `$1${liveCount}$2`);
+
+const arrow = '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const copyIc = '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.5 3.5v-.5a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>';
+const lockIc = '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>';
+const closeIc = '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+
+const ext = (url, label, cls) => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}${arrow}</a>`;
+
+function logo(p, size = 40) {
+  if (!p.logo) return `<span class="logo logo-none" aria-hidden="true"></span>`;
+  return `<img class="logo" src="assets/logos/${esc(p.logo)}" width="${size}" height="${size}" alt="" loading="lazy" decoding="async">`;
+}
+
+function img(im, p, opts = {}) {
+  const pri = opts.priority ? ' fetchpriority="high"' : ' loading="lazy"';
+  const alt = `${p.name}: ${im.c}`;
+  return `<img src="assets/work/${esc(im.f)}" width="${im.w}" height="${im.h}" alt="${esc(alt)}"${pri} decoding="async">`;
+}
+
+function cover(p) {
+  if (!p.images.length) {
+    return `<div class="cover cover-private"><div class="priv">${lockIc}<p>${esc(p.private || "Screens stay private.")}</p></div></div>`;
+  }
+  const im = p.images[0];
+  return `<div class="cover cover-${im.shape}">${img(im, p)}</div>`;
+}
+
+function statusPill(p) {
+  return `<span class="status s-${p.status.tone}">${esc(p.status.label)}</span>`;
+}
+
+function loginChip(p) {
+  if (!p.login) return "";
+  return `<button class="chip copy" type="button" data-copy="${esc(p.login)}" aria-label="Copy demo login ${esc(p.login)}">${copyIc}<span class="chip-k">Demo login</span><code>${esc(p.login)}</code></button>`;
+}
+
+function names(p, tag, id) {
+  return `<${tag} class="names"${id ? ` id="${id}"` : ""}><span class="bn" lang="bn">${esc(p.bn)}</span><span class="en">${esc(p.name)}</span></${tag}>`;
+}
+
+function card(p, i) {
+  const q = [p.name, p.bn, p.kind, p.industry, p.promise, ...(p.stack || [])].join(" ").toLowerCase();
+  const primary = openable(p)
+    ? ext(p.live.url, p.live.url.includes("play.google.com") ? p.live.label : "Try it live", "btn btn-primary")
+    : p.private
+      ? `<span class="btn btn-quiet">${lockIc}Private client system</span>`
+      : p.links && p.links[0]
+        ? ext(p.links[0].url, p.links[0].label, "btn btn-secondary")
+        : `<span class="btn btn-quiet">No public link yet</span>`;
+  const guide = p.guide ? ext(p.guide, "Guide", "tlink") : "";
+  return `<article class="card${i >= 6 ? " defer" : ""}" id="p-${p.slug}" data-ind="${p.industry}" data-live="${openable(p) ? 1 : 0}" data-q="${esc(q)}" style="--b:${p.brand}">
+${cover(p)}
+<div class="body">
+<div class="head">${logo(p)}<div>${names(p, "h3")}<p class="kind">${esc(p.kind)}</p></div></div>
+${statusPill(p)}
+<p class="promise">${esc(p.promise)}</p>
+<ul class="tags" aria-label="Built with">${(p.stack || []).slice(0, 4).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
+<div class="actions">
+<div class="row">${primary}<button class="btn btn-ghost" type="button" commandfor="d-${p.slug}" command="show-modal">Details</button></div>
+${loginChip(p) || guide ? `<div class="row row-sub">${loginChip(p)}${guide}</div>` : ""}
+</div>
+</div>
+</article>`;
+}
+
+function dialog(p) {
+  const gallery = p.images.length
+    ? `<div class="gal" tabindex="0" aria-label="${esc(p.name)} screens">${p.images.map((im) => `<figure class="g-${im.shape}">${img(im, p)}<figcaption>${esc(im.c)}</figcaption></figure>`).join("")}</div>`
+    : `<div class="gal-private">${lockIc}<p>${esc(p.private || "Screens stay private.")}</p></div>`;
+  const tryBits = [];
+  if (openable(p)) tryBits.push(ext(p.live.url, "Try it live", "btn btn-primary"));
+  if (p.login) tryBits.push(loginChip(p));
+  if (p.loginNote) tryBits.push(`<p class="note">${esc(p.loginNote)}</p>`);
+  if (p.note) tryBits.push(`<p class="note">${esc(p.note)}</p>`);
+  if (p.private) tryBits.push(`<p class="note">${esc(p.private)} It runs for a real customer, so there is no public demo.</p>`);
+  const more = [];
+  if (p.guide) more.push(ext(p.guide, "Guide and manual", "tlink"));
+  for (const l of p.links || []) more.push(ext(l.url, l.label, "tlink"));
+  if (more.length) tryBits.push(`<div class="more">${more.join("")}</div>`);
+  if (openable(p)) tryBits.push(`<p class="url"><span>Link</span> <code>${esc(p.live.url.replace(/^https?:\/\//, ""))}</code></p>`);
+  return `<dialog id="d-${p.slug}" class="sheet" closedby="any" aria-labelledby="t-${p.slug}" style="--b:${p.brand}">
+<div class="sheet-in">
+<header class="sheet-head">${logo(p, 48)}<div>${names(p, "h2", "t-" + p.slug)}<p class="kind">${esc(p.kind)} ${statusPill(p)}</p></div><button class="x" type="button" commandfor="d-${p.slug}" command="close" aria-label="Close">${closeIc}</button></header>
+<p class="sheet-promise">${esc(p.promise)}</p>
+${gallery}
+<div class="sheet-grid">
+<div>
+<h3>What it does</h3>
+<ul class="facts">${p.facts.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
+<h3>Who it is for</h3>
+<p>${esc(p.who)}</p>
+${p.offer ? `<h3>Price</h3><p>${esc(p.offer)}</p>` : ""}
+</div>
+<aside class="try">
+<h3>Try it</h3>
+${tryBits.join("\n")}
+<h3>Built with</h3>
+<ul class="tags">${(p.stack || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
+</aside>
+</div>
+</div>
+</dialog>`;
+}
+
+function chips() {
+  const all = `<button class="fchip" type="button" data-f="all" aria-pressed="true">All <span>${list.length}</span></button>`;
+  const inds = cfg.industries
+    .map((g) => ({ ...g, n: list.filter((p) => p.industry === g.id).length }))
+    .filter((g) => g.n)
+    .map((g) => `<button class="fchip" type="button" data-f="${g.id}" aria-pressed="false">${esc(g.label)} <span>${g.n}</span></button>`)
+    .join("");
+  const live = `<button class="fchip fchip-live" type="button" data-live-toggle aria-pressed="false"><i aria-hidden="true"></i>Try now <span>${counts.live}</span></button>`;
+  return all + inds + live;
+}
+
+function heroCovers() {
+  return cfg.hero
+    .map((s, i) => {
+      const p = bySlug.get(s);
+      const im = p.images[0];
+      return `<a class="hc hc-${i}" href="#p-${p.slug}" style="--b:${p.brand}">${img(im, p, { priority: i === 0 })}</a>`;
+    })
+    .join("");
+}
+
+function running() {
+  return cfg.running
+    .map((s) => {
+      const p = bySlug.get(s);
+      const link = openable(p) ? ext(p.live.url, p.live.url.replace(/^https?:\/\//, "").replace(/\/$/, ""), "tlink") : `<span class="priv-tag">${lockIc}Private, for a client</span>`;
+      return `<li style="--b:${p.brand}"><div class="r-head">${logo(p, 32)}${names(p, "h3")}</div><p>${esc(p.promise)}</p>${link}</li>`;
+    })
+    .join("");
+}
+
+const html = template
+  .replaceAll("{{BUILT}}", String(counts.built))
+  .replaceAll("{{LIVE}}", String(counts.live))
+  .replaceAll("{{USE}}", String(counts.use))
+  .replace("{{HERO_COVERS}}", heroCovers())
+  .replace("{{RUNNING}}", running())
+  .replace("{{CHIPS}}", chips())
+  .replace("{{CARDS}}", list.map(card).join("\n"))
+  .replace("{{DIALOGS}}", list.map(dialog).join("\n"));
+
 writeFileSync(join(root, "index.html"), html);
-console.log("items", items.length, "live", liveCount, "exhibit", ex.length);
+console.log(`index.html: ${counts.built} products, ${counts.live} open now, ${counts.use} in use`);
