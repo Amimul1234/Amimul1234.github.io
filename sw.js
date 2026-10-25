@@ -1,4 +1,4 @@
-const CACHE = "ae-2026-10-10-2";
+const CACHE = "ae-2026-10-25-1";
 const CORE = [
   "./",
   "index.html",
@@ -9,12 +9,8 @@ const CORE = [
   "assets/fonts/ibm-plex-mono-400-latin.woff2",
   "assets/fonts/ibm-plex-mono-500-latin.woff2",
   "assets/fonts/ibm-plex-sans-400-latin.woff2",
-  "assets/fonts/ibm-plex-sans-400i-latin.woff2",
   "assets/fonts/ibm-plex-sans-500-latin.woff2",
   "assets/fonts/ibm-plex-sans-600-latin.woff2",
-  "assets/fonts/ibm-plex-sans-condensed-500-latin.woff2",
-  "assets/fonts/ibm-plex-sans-condensed-600-latin.woff2",
-  "assets/fonts/ibm-plex-sans-condensed-700-latin.woff2",
   "assets/fonts/noto-sans-bengali-var.woff2",
 ];
 

@@ -41,7 +41,8 @@
    "Next.js",
    "Flutter",
    "PWA"
-  ]
+  ],
+  "kw": "লন্ড্রি ধোলাই laundry"
  },
  {
   "slug": "safarkhata",
@@ -112,7 +113,8 @@
    "Go",
    "MySQL",
    "Vanilla JS"
-  ]
+  ],
+  "kw": "ট্রাভেল এজেন্সি হজ্জ উমরাহ পাসপোর্ট ভিসা travel"
  },
  {
   "slug": "salesdesk",
@@ -141,7 +143,8 @@
    "MySQL",
    "JavaScript",
    "PWA"
-  ]
+  ],
+  "kw": "সেলস কল সিআরএম crm"
  },
  {
   "slug": "vending",
@@ -171,7 +174,8 @@
    "bKash",
    "Docker",
    "ESP32"
-  ]
+  ],
+  "kw": "ভেন্ডিং মেশিন বিকাশ"
  },
  {
   "slug": "medihisab",
@@ -245,7 +249,8 @@
    "Spring Boot",
    "MySQL",
    "Firebase"
-  ]
+  ],
+  "kw": "ফার্মেসি ফার্মেসী ওষুধ ঔষধ pharmacy medicine"
  },
  {
   "slug": "halkhata",
@@ -312,7 +317,8 @@
    "Go",
    "SQLite",
    "Android"
-  ]
+  ],
+  "kw": "সুপার শপ মুদি দোকান পিওএস grocery pos"
  },
  {
   "slug": "fita",
@@ -380,7 +386,8 @@
    "SQLite",
    "PWA",
    "IndexedDB"
-  ]
+  ],
+  "kw": "দর্জি টেইলার্স tailor"
  },
  {
   "slug": "prangon",
@@ -434,7 +441,8 @@
    "MySQL",
    "Flutter",
    "Caddy"
-  ]
+  ],
+  "kw": "স্কুল ওয়েবসাইট school website"
  },
  {
   "slug": "akhra",
@@ -483,7 +491,8 @@
    "Next.js",
    "TypeScript",
    "RFID"
-  ]
+  ],
+  "kw": "জিম gym fitness"
  },
  {
   "slug": "alna",
@@ -552,7 +561,8 @@
    "SQLite",
    "PWA",
    "IndexedDB"
-  ]
+  ],
+  "kw": "কাপড় শোরুম পোশাক clothing pos"
  },
  {
   "slug": "hatbodol",
@@ -621,7 +631,8 @@
    "SQLite",
    "Flutter",
    "Docker"
-  ]
+  ],
+  "kw": "কুরিয়ার পার্সেল courier delivery"
  },
  {
   "slug": "chimni",
@@ -684,7 +695,8 @@
    "Go",
    "Flutter",
    "SQLite"
-  ]
+  ],
+  "kw": "ইটভাটা ইট brick kiln"
  },
  {
   "slug": "maath",
@@ -740,7 +752,8 @@
    "SQLite",
    "Flutter",
    "PWA"
-  ]
+  ],
+  "kw": "এসআর ডিস্ট্রিবিউটর sr distributor"
  },
  {
   "slug": "mezban",
@@ -786,7 +799,8 @@
    "MySQL",
    "PWA",
    "Server-sent events"
-  ]
+  ],
+  "kw": "রেস্তোরাঁ রেস্টুরেন্ট restaurant pos"
  },
  {
   "slug": "tuitiondesk",
@@ -848,7 +862,8 @@
    "SQLite",
    "Flutter",
    "Docker"
-  ]
+  ],
+  "kw": "টিউশন মিডিয়া টিউটর tuition"
  },
  {
   "slug": "upasthit",
@@ -895,7 +910,8 @@
    "MySQL",
    "Flutter",
    "Caddy"
-  ]
+  ],
+  "kw": "হাজিরা উপস্থিতি attendance"
  },
  {
   "slug": "malkhana",
@@ -942,7 +958,8 @@
    "SQLite",
    "PWA",
    "IndexedDB"
-  ]
+  ],
+  "kw": "হার্ডওয়্যার সিমেন্ট রড hardware pos"
  },
  {
   "slug": "nirog",
@@ -992,7 +1009,8 @@
    "Row-level security",
    "TypeScript",
    "PWA"
-  ]
+  ],
+  "kw": "হাসপাতাল ক্লিনিক ডাক্তার hospital clinic"
  },
  {
   "slug": "thaba",
@@ -1056,7 +1074,8 @@
    "Go",
    "SQLite",
    "Vanilla JS"
-  ]
+  ],
+  "kw": "পেট শপ বিড়াল কুকুর pet"
  },
  {
   "slug": "daksho",
@@ -1119,7 +1138,8 @@
    "Go",
    "SQLite",
    "JavaScript"
-  ]
+  ],
+  "kw": "ট্রেনিং সেন্টার কম্পিউটার training"
  },
  {
   "slug": "garighor",
@@ -1170,7 +1190,8 @@
    "MySQL",
    "JavaScript",
    "Docker"
-  ]
+  ],
+  "kw": "গাড়ি শোরুম car"
  },
  {
   "slug": "lokkhobhed",
@@ -1206,7 +1227,8 @@
    "Go",
    "SQLite",
    "JavaScript"
-  ]
+  ],
+  "kw": "চাকরি পরীক্ষা বিসিএস এমসিকিউ exam mcq"
  },
  {
   "slug": "orna",
@@ -1243,7 +1265,8 @@
    "HTML",
    "CSS",
    "IndexedDB"
-  ]
+  ],
+  "kw": "পাকিস্তানি ড্রেস পোশাক fashion"
  },
  {
   "slug": "kanchi",
@@ -1286,7 +1309,8 @@
    "HTML",
    "CSS",
    "JavaScript"
-  ]
+  ],
+  "kw": "সেলুন পার্লার salon"
  },
  {
   "slug": "jobab",
@@ -1328,7 +1352,8 @@
    "MySQL",
    "JavaScript",
    "Playwright"
-  ]
+  ],
+  "kw": "ইনবক্স ফেসবুক পেজ inbox facebook"
  },
  {
   "slug": "daak",
@@ -1369,7 +1394,8 @@
    "Asterisk",
    "SIP",
    "Docker"
-  ]
+  ],
+  "kw": "কল ফোন call"
  },
  {
   "slug": "cjobs",
@@ -1407,7 +1433,8 @@
    "MySQL",
    "Flutter",
    "PWA"
-  ]
+  ],
+  "kw": "কাজ আয় jobs"
  },
  {
   "slug": "thala",
@@ -1456,7 +1483,8 @@
    "JavaScript",
    "HTML",
    "CSS"
-  ]
+  ],
+  "kw": "খাবার ডেলিভারি রেস্তোরাঁ food delivery"
  },
  {
   "slug": "nexa",
@@ -1502,7 +1530,8 @@
    "Vue 3",
    "bKash",
    "CUPS"
-  ]
+  ],
+  "kw": "প্রিন্ট print"
  },
  {
   "slug": "swad",
@@ -1547,7 +1576,8 @@
    "JavaScript",
    "SVG",
    "GeoJSON"
-  ]
+  ],
+  "kw": "খাবার ম্যাপ জেলা food map"
  },
  {
   "slug": "shishir",
@@ -1591,7 +1621,8 @@
    "JavaScript",
    "Python",
    "Caddy"
-  ]
+  ],
+  "kw": "স্কিনকেয়ার skincare"
  },
  {
   "slug": "tuitionkhata",
@@ -1645,7 +1676,8 @@
    "Go",
    "MySQL",
    "Android"
-  ]
+  ],
+  "kw": "টিউশন টিউটর ফি tutor"
  },
  {
   "slug": "quiltblocks",
@@ -1693,7 +1725,8 @@
    "Dart",
    "Android",
    "AdMob"
-  ]
+  ],
+  "kw": "গেম পাজল game puzzle"
  },
  {
   "slug": "pressmark",
@@ -1736,7 +1769,8 @@
    "pdf.js",
    "WebAssembly",
    "PWA"
-  ]
+  ],
+  "kw": "পিডিএফ pdf"
  },
  {
   "slug": "tirish",
@@ -1773,7 +1807,8 @@
    "MySQL",
    "PWA",
    "Kotlin"
-  ]
+  ],
+  "kw": "মুরগি পোল্ট্রি খাদ্য poultry feed"
  },
  {
   "slug": "chaka",
@@ -1813,7 +1848,8 @@
    "Go",
    "SQLite",
    "Flutter"
-  ]
+  ],
+  "kw": "ইজিবাইক গ্যারেজ ভাড়া garage"
  },
  {
   "slug": "rickshaw",
@@ -1848,6 +1884,7 @@
    "Flutter",
    "Dart",
    "AdMob"
-  ]
+  ],
+  "kw": "রিকশা গেম game"
  }
 ]

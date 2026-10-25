@@ -3,7 +3,7 @@
   "short_name": "A. Ehsan",
   "start_url": "/",
   "display": "browser",
-  "background_color": "#EEF0EC",
-  "theme_color": "#121513",
+  "background_color": "#F7F6F2",
+  "theme_color": "#2A2A2A",
   "icons": [{ "src": "assets/mark.svg", "sizes": "any", "type": "image/svg+xml" }]
 }

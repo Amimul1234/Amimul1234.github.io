@@ -59,7 +59,10 @@ const closeIc = '<svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d=
 const ext = (url, label, cls) => `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}${arrow}</a>`;
 
 function logo(p, size = 40) {
-  if (!p.logo) return `<span class="logo logo-none" aria-hidden="true"></span>`;
+  if (!p.logo) {
+    const glyph = p.private ? lockIc : `<span lang="bn">${esc([...new Intl.Segmenter("bn", { granularity: "grapheme" }).segment(p.bn)][0].segment)}</span>`;
+    return `<span class="logo logo-none" aria-hidden="true">${glyph}</span>`;
+  }
   return `<img class="logo" src="assets/logos/${esc(p.logo)}" width="${size}" height="${size}" alt="" loading="lazy" decoding="async">`;
 }
 
@@ -91,7 +94,7 @@ function names(p, tag, id) {
 }
 
 function card(p, i) {
-  const q = [p.name, p.bn, p.kind, p.industry, p.promise, ...(p.stack || [])].join(" ").toLowerCase();
+  const q = [p.name, p.bn, p.kind, p.industry, p.kw, p.promise, ...(p.stack || [])].join(" ").toLowerCase();
   const primary = openable(p)
     ? ext(p.live.url, p.live.url.includes("play.google.com") ? p.live.label : "Try it live", "btn btn-primary")
     : p.private
@@ -108,8 +111,8 @@ ${statusPill(p)}
 <p class="promise">${esc(p.promise)}</p>
 <ul class="tags" aria-label="Built with">${(p.stack || []).slice(0, 4).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>
 <div class="actions">
+<div class="row row-sub">${loginChip(p)}${guide}</div>
 <div class="row">${primary}<button class="btn btn-ghost" type="button" commandfor="d-${p.slug}" command="show-modal">Details</button></div>
-${loginChip(p) || guide ? `<div class="row row-sub">${loginChip(p)}${guide}</div>` : ""}
 </div>
 </div>
 </article>`;
