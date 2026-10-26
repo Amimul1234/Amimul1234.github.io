@@ -1629,15 +1629,23 @@
   "who": "Private tutors and small coaching batches.",
   "status": {
    "tone": "review",
-   "label": "In Play review"
+   "label": "Play closed test"
   },
   "brand": "#0E5C3B",
   "logo": "tuitionkhata.webp",
-  "note": "The Play closed test is in review; the opt-in link works once Google approves it.",
+  "note": "Live on the Play closed test, and the APK is a direct download from the server.",
   "images": [
    {
     "f": "tuitionkhata-1.webp",
-    "c": "Home: total dues and who is late"
+    "c": "Home: batches, students and SMS balance, with Buy SMS"
+   },
+   {
+    "f": "tuitionkhata-7.webp",
+    "c": "Student page: tick the due months and collect"
+   },
+   {
+    "f": "tuitionkhata-8.webp",
+    "c": "Six months of income, all batches or one"
    },
    {
     "f": "tuitionkhata-2.webp",
@@ -1663,13 +1671,14 @@
   "facts": [
    "Batches, students, attendance and monthly fees",
    "Bulk reminders and receipts by SMS",
-   "Partial payments carried to the next month"
+   "SMS credits bought in the app with bKash, credited instantly",
+   "Six-month income chart per batch"
   ],
   "offer": "৳400 a month, ৳2,160 for 6 months or ৳3,840 for a year.",
   "stack": [
    "Flutter",
    "Go",
-   "MySQL",
+   "SQLite",
    "Android"
   ],
   "kw": "টিউশন টিউটর ফি tutor"
