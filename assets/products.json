@@ -1681,7 +1681,17 @@
    "SQLite",
    "Android"
   ],
-  "kw": "টিউশন টিউটর ফি tutor"
+  "kw": "টিউশন টিউটর ফি tutor",
+  "links": [
+   {
+    "label": "Join the testers group",
+    "url": "https://groups.google.com/g/tuitionkhata-testers"
+   },
+   {
+    "label": "Then opt in on Play",
+    "url": "https://play.google.com/apps/testing/app.tuitionkhata.khata"
+   }
+  ]
  },
  {
   "slug": "quiltblocks",
@@ -1741,8 +1751,8 @@
   "promise": "33 PDF tools that work on your own device, so nothing is uploaded.",
   "who": "Anyone who merges, compresses, signs or converts PDFs.",
   "status": {
-   "tone": "proto",
-   "label": "Built, not deployed"
+   "tone": "demo",
+   "label": "Live"
   },
   "brand": "#1D463C",
   "logo": "pressmark.svg",
@@ -1774,7 +1784,12 @@
    "WebAssembly",
    "PWA"
   ],
-  "kw": "পিডিএফ pdf"
+  "kw": "পিডিএফ pdf",
+  "live": {
+   "url": "https://pressmark.dcampusbd.com",
+   "label": "Try it live"
+  },
+  "loginNote": "Everything runs in the browser. Files never leave the device."
  },
  {
   "slug": "tirish",
@@ -1785,8 +1800,8 @@
   "promise": "A feed dealer knows what each farmer owes per batch of birds until the batch is sold.",
   "who": "Poultry feed dealers.",
   "status": {
-   "tone": "proto",
-   "label": "Built, not deployed"
+   "tone": "demo",
+   "label": "Live demo"
   },
   "brand": "#17427E",
   "logo": "tirish.svg",
@@ -1812,7 +1827,13 @@
    "PWA",
    "Kotlin"
   ],
-  "kw": "মুরগি পোল্ট্রি খাদ্য poultry feed"
+  "kw": "মুরগি পোল্ট্রি খাদ্য poultry feed",
+  "live": {
+   "url": "https://tirish.dcampusbd.com",
+   "label": "Try it live"
+  },
+  "login": "bogura · 01711000000 / namuja-bosta-2026",
+  "loginNote": "Shop, phone, password. The demo shop resets every night."
  },
  {
   "slug": "chaka",
@@ -1824,7 +1845,7 @@
   "who": "Garages that rent easy-bikes, battery rickshaws and autos by the day.",
   "status": {
    "tone": "proto",
-   "label": "Built, not deployed"
+   "label": "Prototype · app built"
   },
   "brand": "#3C4248",
   "logo": "chaka.svg",
@@ -1853,7 +1874,12 @@
    "SQLite",
    "Flutter"
   ],
-  "kw": "ইজিবাইক গ্যারেজ ভাড়া garage"
+  "kw": "ইজিবাইক গ্যারেজ ভাড়া garage",
+  "live": {
+   "url": "https://chaka.dcampusbd.com",
+   "label": "Try the prototype"
+  },
+  "loginNote": "45 days of a demo garage. Switch owner or manager and go offline from the side panel."
  },
  {
   "slug": "rickshaw",
@@ -1865,7 +1891,7 @@
   "who": "Casual players.",
   "status": {
    "tone": "proto",
-   "label": "Built, not published"
+   "label": "Playable prototype"
   },
   "brand": "#D9482B",
   "note": "Built, not published yet.",
@@ -1889,6 +1915,211 @@
    "Dart",
    "AdMob"
   ],
-  "kw": "রিকশা গেম game"
+  "kw": "রিকশা গেম game",
+  "live": {
+   "url": "https://rickshaw.dcampusbd.com",
+   "label": "Play it"
+  }
+ },
+ {
+  "slug": "pala",
+  "name": "Pala",
+  "bn": "পালা",
+  "kind": "Doctor's chamber call bell",
+  "industry": "health",
+  "promise": "Patients see the serial now being seen from home, so the chamber corridor stops filling up.",
+  "who": "Chamber doctors and their assistants.",
+  "status": {
+   "tone": "demo",
+   "label": "Live"
+  },
+  "brand": "#B86E0E",
+  "logo": "pala.webp",
+  "live": {
+   "url": "https://pala.147.93.168.43.sslip.io/demo",
+   "label": "Try it live"
+  },
+  "loginNote": "The demo chamber moves one patient every 3 minutes. Open it on a phone to see what a patient sees.",
+  "links": [
+   {
+    "label": "Download the Android app",
+    "url": "https://pala.147.93.168.43.sslip.io/download"
+   }
+  ],
+  "images": [
+   {
+    "f": "pala-1.webp",
+    "c": "The bell: one tap calls the next patient"
+   },
+   {
+    "f": "pala-2.webp",
+    "c": "Patient page: the serial being seen, live"
+   },
+   {
+    "f": "pala-3.webp",
+    "c": "Landing page with the live demo"
+   }
+  ],
+  "facts": [
+   "One phone runs the chamber: give a serial, call the next one, mark late or on a break",
+   "Patients check the live serial from a link or the poster QR, no app needed",
+   "No patient name or phone ever leaves the doctor's phone",
+   "Taps made offline are queued and sent when the network returns",
+   "18 server tests, including two taps at once advancing the queue only once"
+  ],
+  "stack": [
+   "Go",
+   "SQLite",
+   "Flutter",
+   "Caddy"
+  ],
+  "kw": "ডাক্তার চেম্বার সিরিয়াল doctor serial"
+ },
+ {
+  "slug": "visit",
+  "name": "Visit",
+  "bn": "ভিজিট",
+  "kind": "Video doctor consultations",
+  "industry": "health",
+  "promise": "A doctor calls within 10 minutes, or the full fee goes back to the patient's wallet automatically.",
+  "who": "Patients anywhere in Bangladesh and BMDC-registered doctors.",
+  "status": {
+   "tone": "demo",
+   "label": "Live demo · test mode"
+  },
+  "brand": "#2340A8",
+  "logo": "visit.svg",
+  "live": {
+   "url": "https://visit-demo.dcampusbd.com",
+   "label": "Try it live"
+  },
+  "loginNote": "Patient app and doctor app side by side in one browser tab. Doctors are fictional, payments are demo only, the code is 123456.",
+  "links": [
+   {
+    "label": "Android apps (patient and doctor)",
+    "url": "https://visit.147.93.168.43.sslip.io"
+   }
+  ],
+  "images": [
+   {
+    "f": "visit-1.webp",
+    "c": "Prescription with BMDC number and a QR anyone can verify"
+   },
+   {
+    "f": "visit-2.webp",
+    "c": "Payment with the 10-minute refund promise"
+   },
+   {
+    "f": "visit-3.webp",
+    "c": "Patient and doctor apps side by side in the web demo"
+   }
+  ],
+  "facts": [
+   "Real two-way video calls; drops to audio when the network is weak",
+   "BMDC telemedicine rules built in: drugs allowed on video, refills only, diagnosis required",
+   "Automatic refund if no doctor calls within 10 minutes",
+   "Admin board: doctor approval, refunds, payouts, prescription audit",
+   "Flutter patient and doctor apps tested end to end on an emulator with a live video peer"
+  ],
+  "stack": [
+   "Go",
+   "SQLite",
+   "WebSocket",
+   "WebRTC",
+   "Flutter"
+  ],
+  "kw": "ডাক্তার ভিডিও টেলিমেডিসিন telemedicine doctor"
+ },
+ {
+  "slug": "checkup",
+  "name": "Checkup",
+  "bn": "চেকআপ",
+  "kind": "Facebook Page audit",
+  "industry": "sales",
+  "promise": "A shop learns where buyers drop off on its Facebook Page, with proof, before spending on ads.",
+  "who": "Facebook shops and small businesses selling through a Page.",
+  "status": {
+   "tone": "demo",
+   "label": "Live · taking requests"
+  },
+  "brand": "#004AAC",
+  "logo": "checkup.svg",
+  "live": {
+   "url": "https://checkup.147.93.168.43.sslip.io",
+   "label": "Visit the site"
+  },
+  "loginNote": "The site takes real requests: a Page link and a phone number. The report is sent later.",
+  "images": [
+   {
+    "f": "checkup-1.webp",
+    "c": "Request a free checkup with just the Page link"
+   },
+   {
+    "f": "checkup-2.webp",
+    "c": "The same page on a phone"
+   }
+  ],
+  "facts": [
+   "Needs only the public Page link, never a login or password",
+   "Reads the Page, posts, ads and website, then writes a scored Bangla PDF report",
+   "Free score and top three problems; the full report is paid",
+   "Request queue and admin with a notification for every new request"
+  ],
+  "stack": [
+   "Python",
+   "Node.js",
+   "Playwright",
+   "Lighthouse"
+  ],
+  "kw": "ফেসবুক পেজ অডিট facebook page audit"
+ },
+ {
+  "slug": "darsgah",
+  "name": "Darsgah",
+  "bn": "দরসগাহ",
+  "kind": "Madrasa management",
+  "industry": "edu",
+  "promise": "Zakat money can only be spent where it is allowed, and every taka of a madrasa's funds is accounted for.",
+  "who": "Qawmi residential and hifz madrasas, 80 to 600 students.",
+  "status": {
+   "tone": "proto",
+   "label": "Prototype"
+  },
+  "brand": "#3E3A8C",
+  "live": {
+   "url": "https://darsgah.dcampusbd.com",
+   "label": "Try the prototype"
+  },
+  "loginNote": "Switch between principal, office, teacher and collector from the left panel.",
+  "images": [
+   {
+    "f": "darsgah-1.webp",
+    "c": "Principal's home with the Hijri date and today's decisions"
+   },
+   {
+    "f": "darsgah-2.webp",
+    "c": "Zakat fund: only eligible spending is allowed"
+   },
+   {
+    "f": "darsgah-3.webp",
+    "c": "Hifz halqa: today's lessons heard, page by page"
+   },
+   {
+    "f": "darsgah-4.webp",
+    "c": "Desktop view with the role switcher"
+   }
+  ],
+  "facts": [
+   "Fund rules: zakat can't pay salaries or bills, only eligible students",
+   "Offline digital receipt book for donation collectors",
+   "Hifz progress per student, with a link guardians can open",
+   "Hijri and Bangla dates on every screen"
+  ],
+  "stack": [
+   "JavaScript",
+   "HTML",
+   "CSS"
+  ],
+  "kw": "মাদরাসা হিফজ যাকাত madrasa"
  }
 ]

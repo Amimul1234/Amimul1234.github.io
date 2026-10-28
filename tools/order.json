@@ -1,22 +1,86 @@
 {
  "industries": [
-  {"id": "services", "label": "Services"},
-  {"id": "retail", "label": "Shops & retail"},
-  {"id": "health", "label": "Health"},
-  {"id": "edu", "label": "Education"},
-  {"id": "trade", "label": "Field & trade"},
-  {"id": "sales", "label": "Sales"},
-  {"id": "apps", "label": "Apps & games"}
+  {
+   "id": "services",
+   "label": "Services"
+  },
+  {
+   "id": "retail",
+   "label": "Shops & retail"
+  },
+  {
+   "id": "health",
+   "label": "Health"
+  },
+  {
+   "id": "edu",
+   "label": "Education"
+  },
+  {
+   "id": "trade",
+   "label": "Field & trade"
+  },
+  {
+   "id": "sales",
+   "label": "Sales"
+  },
+  {
+   "id": "apps",
+   "label": "Apps & games"
+  }
  ],
- "hero": ["safarkhata", "medihisab", "halkhata"],
- "running": ["cleanerboy", "safarkhata", "salesdesk", "vending"],
+ "hero": [
+  "safarkhata",
+  "medihisab",
+  "halkhata"
+ ],
+ "running": [
+  "cleanerboy",
+  "safarkhata",
+  "salesdesk",
+  "vending"
+ ],
  "order": [
-  "safarkhata", "medihisab", "halkhata", "alna", "fita", "hatbodol",
-  "thaba", "daksho", "chimni", "maath", "tuitiondesk", "prangon",
-  "mezban", "nirog", "akhra", "malkhana", "garighor", "upasthit",
-  "cleanerboy", "salesdesk", "vending",
-  "lokkhobhed", "jobab", "daak", "cjobs", "thala", "orna", "kanchi",
-  "nexa", "tuitionkhata", "shishir", "swad", "quiltblocks",
-  "pressmark", "tirish", "chaka", "rickshaw"
+  "safarkhata",
+  "medihisab",
+  "halkhata",
+  "alna",
+  "fita",
+  "hatbodol",
+  "thaba",
+  "daksho",
+  "chimni",
+  "maath",
+  "tirish",
+  "chaka",
+  "tuitiondesk",
+  "prangon",
+  "darsgah",
+  "mezban",
+  "nirog",
+  "pala",
+  "visit",
+  "akhra",
+  "malkhana",
+  "garighor",
+  "upasthit",
+  "cleanerboy",
+  "salesdesk",
+  "vending",
+  "lokkhobhed",
+  "jobab",
+  "daak",
+  "checkup",
+  "cjobs",
+  "thala",
+  "orna",
+  "kanchi",
+  "nexa",
+  "tuitionkhata",
+  "shishir",
+  "swad",
+  "quiltblocks",
+  "pressmark",
+  "rickshaw"
  ]
 }
